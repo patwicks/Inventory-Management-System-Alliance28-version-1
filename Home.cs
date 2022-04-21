@@ -49,7 +49,6 @@ namespace Inventory_System_Management_Alliance28
         {
             activeTabIndicator.Top = btnProduct.Top;
             userControlProduct1.BringToFront();
-
         }
     }
 }

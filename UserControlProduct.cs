@@ -146,5 +146,13 @@ namespace Inventory_System_Management_Alliance28
                 editForm.Show();
             }
         }
+
+        private void btnWithdraw_Click(object sender, EventArgs e)
+        {
+            WithdrawForm wForm = new WithdrawForm();
+
+
+            wForm.Show();
+        }
     }
 }
