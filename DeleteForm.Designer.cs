@@ -82,11 +82,11 @@ namespace Inventory_System_Management_Alliance28
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(338, 17);
+            this.label1.Location = new System.Drawing.Point(302, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 28);
+            this.label1.Size = new System.Drawing.Size(201, 28);
             this.label1.TabIndex = 3;
-            this.label1.Text = "EDIT PRODUCT";
+            this.label1.Text = "DELETE PRODUCT";
             // 
             // label7
             // 
@@ -167,6 +167,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnCancel.TabIndex = 51;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 

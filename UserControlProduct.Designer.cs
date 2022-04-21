@@ -39,6 +39,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnWithdraw = new System.Windows.Forms.Button();
             this.ITEMCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +51,7 @@ namespace Inventory_System_Management_Alliance28
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.WITHDRAW = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,7 +86,8 @@ namespace Inventory_System_Management_Alliance28
             this.IMAGE,
             this.Column9,
             this.EDIT,
-            this.DELETE});
+            this.DELETE,
+            this.WITHDRAW});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,6 +103,7 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.Name = "dataGridProduct";
             this.dataGridProduct.ReadOnly = true;
             this.dataGridProduct.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridProduct.RowHeadersVisible = false;
             this.dataGridProduct.RowHeadersWidth = 50;
             this.dataGridProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridProduct.Size = new System.Drawing.Size(1014, 680);
@@ -159,7 +163,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(145, 21);
+            this.btnRefresh.Location = new System.Drawing.Point(261, 21);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(115, 30);
             this.btnRefresh.TabIndex = 3;
@@ -177,6 +181,21 @@ namespace Inventory_System_Management_Alliance28
             this.label1.Size = new System.Drawing.Size(229, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Search by Product name or Code:";
+            // 
+            // btnWithdraw
+            // 
+            this.btnWithdraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
+            this.btnWithdraw.FlatAppearance.BorderSize = 0;
+            this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWithdraw.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWithdraw.ForeColor = System.Drawing.Color.White;
+            this.btnWithdraw.Location = new System.Drawing.Point(140, 21);
+            this.btnWithdraw.Name = "btnWithdraw";
+            this.btnWithdraw.Size = new System.Drawing.Size(115, 30);
+            this.btnWithdraw.TabIndex = 5;
+            this.btnWithdraw.Text = "Withdraw";
+            this.btnWithdraw.UseVisualStyleBackColor = false;
+            this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
             // 
             // ITEMCODE
             // 
@@ -258,10 +277,18 @@ namespace Inventory_System_Management_Alliance28
             this.DELETE.Name = "DELETE";
             this.DELETE.ReadOnly = true;
             // 
+            // WITHDRAW
+            // 
+            this.WITHDRAW.HeaderText = "";
+            this.WITHDRAW.Image = ((System.Drawing.Image)(resources.GetObject("WITHDRAW.Image")));
+            this.WITHDRAW.Name = "WITHDRAW";
+            this.WITHDRAW.ReadOnly = true;
+            // 
             // UserControlProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnWithdraw);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnAddProduct);
@@ -293,6 +320,7 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnWithdraw;
         private System.Windows.Forms.DataGridViewTextBoxColumn ITEMCODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTNAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn CATEGORY;
@@ -304,5 +332,6 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.DataGridViewImageColumn Column9;
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DELETE;
+        private System.Windows.Forms.DataGridViewImageColumn WITHDRAW;
     }
 }
