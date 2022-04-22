@@ -107,6 +107,18 @@
     <Compile Include="UserControlProduct.Designer.cs">
       <DependentUpon>UserControlProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm.Designer.cs">
+      <DependentUpon>ViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFormWithdraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFormWithdraw.Designer.cs">
+      <DependentUpon>ViewFormWithdraw.cs</DependentUpon>
+    </Compile>
     <Compile Include="WithdrawForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlProduct.resx">
       <DependentUpon>UserControlProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm.resx">
+      <DependentUpon>ViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFormWithdraw.resx">
+      <DependentUpon>ViewFormWithdraw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WithdrawForm.resx">
       <DependentUpon>WithdrawForm.cs</DependentUpon>
