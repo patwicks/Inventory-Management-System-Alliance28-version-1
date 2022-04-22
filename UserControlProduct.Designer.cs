@@ -200,15 +200,13 @@ namespace Inventory_System_Management_Alliance28
             // ITEMCODE
             // 
             this.ITEMCODE.DataPropertyName = "ITEMCODE";
-            this.ITEMCODE.Frozen = true;
-            this.ITEMCODE.HeaderText = "";
+            this.ITEMCODE.HeaderText = "ITEM CODE";
             this.ITEMCODE.Name = "ITEMCODE";
             this.ITEMCODE.ReadOnly = true;
             // 
             // PRODUCTNAME
             // 
             this.PRODUCTNAME.DataPropertyName = "PRODUCTNAME";
-            this.PRODUCTNAME.Frozen = true;
             this.PRODUCTNAME.HeaderText = "PRODUCT NAME";
             this.PRODUCTNAME.Name = "PRODUCTNAME";
             this.PRODUCTNAME.ReadOnly = true;
@@ -216,7 +214,6 @@ namespace Inventory_System_Management_Alliance28
             // CATEGORY
             // 
             this.CATEGORY.DataPropertyName = "CATEGORY";
-            this.CATEGORY.Frozen = true;
             this.CATEGORY.HeaderText = "CATEGORY";
             this.CATEGORY.Name = "CATEGORY";
             this.CATEGORY.ReadOnly = true;
@@ -224,7 +221,6 @@ namespace Inventory_System_Management_Alliance28
             // QUANTITY
             // 
             this.QUANTITY.DataPropertyName = "QUANTITY";
-            this.QUANTITY.Frozen = true;
             this.QUANTITY.HeaderText = "QUANTITY";
             this.QUANTITY.Name = "QUANTITY";
             this.QUANTITY.ReadOnly = true;
@@ -232,7 +228,6 @@ namespace Inventory_System_Management_Alliance28
             // WARRANTY
             // 
             this.WARRANTY.DataPropertyName = "WARRANTY";
-            this.WARRANTY.Frozen = true;
             this.WARRANTY.HeaderText = "WARRANTY";
             this.WARRANTY.Name = "WARRANTY";
             this.WARRANTY.ReadOnly = true;
@@ -240,7 +235,6 @@ namespace Inventory_System_Management_Alliance28
             // DESCRIPTION
             // 
             this.DESCRIPTION.DataPropertyName = "DESCRIPTION";
-            this.DESCRIPTION.Frozen = true;
             this.DESCRIPTION.HeaderText = "DESCRIPTION";
             this.DESCRIPTION.Name = "DESCRIPTION";
             this.DESCRIPTION.ReadOnly = true;
@@ -248,7 +242,6 @@ namespace Inventory_System_Management_Alliance28
             // DATEADDED
             // 
             this.DATEADDED.DataPropertyName = "TIMESTAMP";
-            this.DATEADDED.Frozen = true;
             this.DATEADDED.HeaderText = "DATE ADDED";
             this.DATEADDED.Name = "DATEADDED";
             this.DATEADDED.ReadOnly = true;
@@ -256,7 +249,6 @@ namespace Inventory_System_Management_Alliance28
             // IMAGE
             // 
             this.IMAGE.DataPropertyName = "IMAGE";
-            this.IMAGE.Frozen = true;
             this.IMAGE.HeaderText = "IMAGE";
             this.IMAGE.Name = "IMAGE";
             this.IMAGE.ReadOnly = true;

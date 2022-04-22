@@ -11,18 +11,15 @@ using MySql.Data.MySqlClient;
 
 namespace Inventory_System_Management_Alliance28
 {
-    public partial class WithdrawForm : Form
+    public partial class GridWithdrawForm : Form
     {
-
-        string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
-        public WithdrawForm()
+        public string itemCode { get; set; }
+        public string productName { get; set; }
+        public string productQuantity { get; set; }
+        public string productImage { get; set; }
+        public GridWithdrawForm()
         {
             InitializeComponent();
-        }
-
-        private void WithdrawForm_Load(object sender, EventArgs e)
-        {
-           txtItemCode.Select();
         }
 
         private void btnCloseForm_Click(object sender, EventArgs e)
@@ -30,57 +27,21 @@ namespace Inventory_System_Management_Alliance28
             Hide();
         }
 
-        private void txtItemCode_TextChanged(object sender, EventArgs e)
+        private void GridWithdrawForm_Load(object sender, EventArgs e)
         {
-            string searchQuery = "SELECT PRODUCTNAME, QUANTITY,IMAGE FROM table_products WHERE ITEMCODE = '"+ txtItemCode.Text +"'";
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
-            MySqlDataReader reader;
-
-            connection.Open();
-
-            reader = searchCommand.ExecuteReader();
-            try {
+            txtItemCode.Text = itemCode;
+            txtProductName.Text = productName;
+            txtCurrentStock.Text = productQuantity;
             
-            if(txtItemCode.Text.Length >= 8)
-                {
-                    if(reader.HasRows)
-                    {
-                        while(reader.Read())
-                        {
-                            //MessageBox.Show("Item found");
 
-                            txtProductName.Text = reader.GetValue(0).ToString();
-                            txtCurrentStock.Text = reader.GetValue(1).ToString();
-                            lbImage.Text = reader.GetValue(2).ToString();
-
-
-                            Image image = Image.FromFile(Application.StartupPath + @"\Images\" + lbImage.Text);
-                            pbItemImage.Image = image;
-                        }
-                    }
-                    else
-                    {
-                        error.Visible = true;
-                        error.Text = "Product not found";
-
-
-                        txtProductName.Text = "";
-                        txtCurrentStock.Text = "";
-                        lbImage.Text = "";
-                        pbItemImage.Image = null;
-
-                    }
-                }
-            
-            } catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            reader.Dispose();
-            reader.Close();
-            connection.Close();
+            Image image = Image.FromFile(Application.StartupPath + @"\Images\" + productImage);
+            pbItemImage.Image = image;
         }
+
+        string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+       
+
+        
 
         private void btnWithdraw_Click(object sender, EventArgs e)
         {
@@ -88,20 +49,20 @@ namespace Inventory_System_Management_Alliance28
             string transactionID = myuuid.ToString();
             //Sql staffs here
             string transactionType = "Widthraw";
-            string insertQuery = "INSERT INTO table_withdrawal(TRANSACTION_ID, ITEM_CODE, PRODUCT_NAME, QUANTITY, TRANSACTION_TYPE, CLIENT_NAME,IMAGE) VALUES('" + transactionID + "', '" + txtItemCode.Text + "', '" + txtProductName.Text + "', '" + txtQuantity.Text + "', '" + transactionType + "' , '" + txtClientName.Text + "', '" + lbImage.Text + "' )";
+            string insertQuery = "INSERT INTO table_withdrawal(TRANSACTION_ID, ITEM_CODE, PRODUCT_NAME, QUANTITY, TRANSACTION_TYPE, CLIENT_NAME,IMAGE) VALUES('" + transactionID + "', '" + txtItemCode.Text + "', '" + txtProductName.Text + "', '" + txtQuantity.Text + "', '" + transactionType + "' , '" + txtClientName.Text + "', '" + productImage + "' )";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
 
             connection.Open();
-            //Validation
-           
-            if(txtItemCode.Text == "")
+
+            if (txtItemCode.Text == "")
             {
                 error.Visible = true;
                 error.Text = "ITEM CODE is required!";
 
             }
-            else if(txtItemCode.Text.Length < 8) {
+            else if (txtItemCode.Text.Length < 8)
+            {
                 error.Visible = true;
                 error.Text = "Invalid ITEM CODE!";
             }
@@ -115,7 +76,7 @@ namespace Inventory_System_Management_Alliance28
                 error.Visible = true;
                 error.Text = "Withdrawal QUANTITY is required!";
             }
-            else if(!int.TryParse(txtQuantity.Text, out int n))
+            else if (!int.TryParse(txtQuantity.Text, out int n))
             {
                 error.Visible = true;
                 error.Text = "Please input numerical value on QUANTITY!";
@@ -152,7 +113,6 @@ namespace Inventory_System_Management_Alliance28
             }
 
             connection.Close();
-
         }
 
         //Subtract the stock in withrawal item
@@ -165,7 +125,7 @@ namespace Inventory_System_Management_Alliance28
 
             lbNewNoStock.Text = total.ToString();
 
-            string updateQuery = "UPDATE table_products SET QUANTITY = '"+lbNewNoStock.Text+"' WHERE ITEMCODE='"+txtItemCode.Text +"'";
+            string updateQuery = "UPDATE table_products SET QUANTITY = '" + lbNewNoStock.Text + "' WHERE ITEMCODE='" + txtItemCode.Text + "'";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand updateCommand = new MySqlCommand(updateQuery, connection);
             MySqlDataReader reader;

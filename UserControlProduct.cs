@@ -39,7 +39,10 @@ namespace Inventory_System_Management_Alliance28
             dataGridProduct.Columns[5].Width = 200;
             dataGridProduct.Columns[6].Width = 150;
             dataGridProduct.Columns[7].Width = 150;
-            
+            dataGridProduct.Columns[9].Width = 50;
+            dataGridProduct.Columns[10].Width = 50;
+            dataGridProduct.Columns[11].Width = 50;
+
 
             foreach (DataGridViewColumn column in dataGridProduct.Columns)
             {
@@ -153,6 +156,16 @@ namespace Inventory_System_Management_Alliance28
                 editForm.productImageName = dataGridProduct.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
 
                 editForm.Show();
+            }
+            else if (dataGridProduct.Columns[e.ColumnIndex].Name == "WITHDRAW")
+            {
+                GridWithdrawForm GWForm = new GridWithdrawForm();
+
+                GWForm.itemCode = dataGridProduct.Rows[e.RowIndex].Cells["ITEMCODE"].FormattedValue.ToString();
+                GWForm.productName = dataGridProduct.Rows[e.RowIndex].Cells["PRODUCTNAME"].FormattedValue.ToString();
+                GWForm.productQuantity = dataGridProduct.Rows[e.RowIndex].Cells["QUANTITY"].FormattedValue.ToString();
+                GWForm.productImage = dataGridProduct.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
+                GWForm.Show();
             }
         }
 
