@@ -35,15 +35,11 @@ namespace Inventory_System_Management_Alliance28
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAccount = new System.Windows.Forms.Button();
-            this.btnTransaction = new System.Windows.Forms.Button();
-            this.btnWithdrawItem = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnProduct = new System.Windows.Forms.Button();
@@ -57,11 +53,11 @@ namespace Inventory_System_Management_Alliance28
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.userControlProduct1 = new Inventory_System_Management_Alliance28.UserControlProduct();
             this.userControlDashboard1 = new Inventory_System_Management_Alliance28.UserControlDashboard();
+            this.btnTransaction = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
@@ -79,15 +75,12 @@ namespace Inventory_System_Management_Alliance28
             this.panelSideMenu.Controls.Add(this.label7);
             this.panelSideMenu.Controls.Add(this.label6);
             this.panelSideMenu.Controls.Add(this.label5);
-            this.panelSideMenu.Controls.Add(this.label4);
             this.panelSideMenu.Controls.Add(this.pictureBox8);
             this.panelSideMenu.Controls.Add(this.pictureBox7);
             this.panelSideMenu.Controls.Add(this.pictureBox6);
-            this.panelSideMenu.Controls.Add(this.pictureBox5);
             this.panelSideMenu.Controls.Add(this.btnLogout);
             this.panelSideMenu.Controls.Add(this.btnAccount);
             this.panelSideMenu.Controls.Add(this.btnTransaction);
-            this.panelSideMenu.Controls.Add(this.btnWithdrawItem);
             this.panelSideMenu.Controls.Add(this.label3);
             this.panelSideMenu.Controls.Add(this.pictureBox4);
             this.panelSideMenu.Controls.Add(this.btnProduct);
@@ -113,7 +106,7 @@ namespace Inventory_System_Management_Alliance28
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(56, 406);
+            this.label7.Location = new System.Drawing.Point(56, 348);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 20);
             this.label7.TabIndex = 19;
@@ -124,7 +117,7 @@ namespace Inventory_System_Management_Alliance28
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(56, 349);
+            this.label6.Location = new System.Drawing.Point(56, 293);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 20);
             this.label6.TabIndex = 18;
@@ -135,27 +128,16 @@ namespace Inventory_System_Management_Alliance28
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(56, 294);
+            this.label5.Location = new System.Drawing.Point(56, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 20);
             this.label5.TabIndex = 17;
             this.label5.Text = "TRANSACTION";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(56, 238);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 20);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "WITHDRAW ITEM";
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(24, 403);
+            this.pictureBox8.Location = new System.Drawing.Point(24, 345);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(25, 25);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -165,7 +147,7 @@ namespace Inventory_System_Management_Alliance28
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(24, 346);
+            this.pictureBox7.Location = new System.Drawing.Point(24, 290);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(25, 25);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -175,22 +157,12 @@ namespace Inventory_System_Management_Alliance28
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(24, 291);
+            this.pictureBox6.Location = new System.Drawing.Point(24, 236);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(25, 25);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 13;
             this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(24, 236);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 12;
-            this.pictureBox5.TabStop = false;
             // 
             // btnLogout
             // 
@@ -201,7 +173,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(0, 386);
+            this.btnLogout.Location = new System.Drawing.Point(0, 331);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(250, 55);
             this.btnLogout.TabIndex = 11;
@@ -216,41 +188,11 @@ namespace Inventory_System_Management_Alliance28
             this.btnAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccount.ForeColor = System.Drawing.Color.White;
-            this.btnAccount.Location = new System.Drawing.Point(0, 331);
+            this.btnAccount.Location = new System.Drawing.Point(0, 276);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(250, 55);
             this.btnAccount.TabIndex = 10;
             this.btnAccount.UseVisualStyleBackColor = true;
-            // 
-            // btnTransaction
-            // 
-            this.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransaction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnTransaction.FlatAppearance.BorderSize = 0;
-            this.btnTransaction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransaction.ForeColor = System.Drawing.Color.White;
-            this.btnTransaction.Location = new System.Drawing.Point(0, 276);
-            this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Size = new System.Drawing.Size(250, 55);
-            this.btnTransaction.TabIndex = 9;
-            this.btnTransaction.UseVisualStyleBackColor = true;
-            // 
-            // btnWithdrawItem
-            // 
-            this.btnWithdrawItem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnWithdrawItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnWithdrawItem.FlatAppearance.BorderSize = 0;
-            this.btnWithdrawItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnWithdrawItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnWithdrawItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWithdrawItem.ForeColor = System.Drawing.Color.White;
-            this.btnWithdrawItem.Location = new System.Drawing.Point(0, 221);
-            this.btnWithdrawItem.Name = "btnWithdrawItem";
-            this.btnWithdrawItem.Size = new System.Drawing.Size(250, 55);
-            this.btnWithdrawItem.TabIndex = 8;
-            this.btnWithdrawItem.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -408,6 +350,20 @@ namespace Inventory_System_Management_Alliance28
             this.userControlDashboard1.Size = new System.Drawing.Size(1020, 750);
             this.userControlDashboard1.TabIndex = 3;
             // 
+            // btnTransaction
+            // 
+            this.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransaction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnTransaction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnTransaction.Location = new System.Drawing.Point(0, 221);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Size = new System.Drawing.Size(250, 55);
+            this.btnTransaction.TabIndex = 9;
+            this.btnTransaction.UseVisualStyleBackColor = true;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -434,7 +390,6 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -463,17 +418,14 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnAccount;
-        private System.Windows.Forms.Button btnTransaction;
-        private System.Windows.Forms.Button btnWithdrawItem;
         private UserControlDashboard userControlDashboard1;
         private UserControlProduct userControlProduct1;
         private System.Windows.Forms.Panel activeTabIndicator;
+        private System.Windows.Forms.Button btnTransaction;
     }
 }
