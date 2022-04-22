@@ -39,6 +39,15 @@ namespace Inventory_System_Management_Alliance28
             dataGridProduct.Columns[5].Width = 200;
             dataGridProduct.Columns[6].Width = 150;
             dataGridProduct.Columns[7].Width = 150;
+            
+
+            foreach (DataGridViewColumn column in dataGridProduct.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+               
+            }
+
+           
 
 
             dataGridProduct.EnableHeadersVisualStyles = false;
