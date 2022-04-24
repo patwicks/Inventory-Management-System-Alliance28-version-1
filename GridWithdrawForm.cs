@@ -17,6 +17,7 @@ namespace Inventory_System_Management_Alliance28
         public string productName { get; set; }
         public string productQuantity { get; set; }
         public string productImage { get; set; }
+        public string productWarranty { get; set; }
         public GridWithdrawForm()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace Inventory_System_Management_Alliance28
             txtItemCode.Text = itemCode;
             txtProductName.Text = productName;
             txtCurrentStock.Text = productQuantity;
+            txtWarranty.Text = productWarranty;
             
 
             Image image = Image.FromFile(Application.StartupPath + @"\Images\" + productImage);
@@ -49,7 +51,7 @@ namespace Inventory_System_Management_Alliance28
             string transactionID = myuuid.ToString();
             //Sql staffs here
             string transactionType = "Widthraw";
-            string insertQuery = "INSERT INTO table_withdrawal(TRANSACTION_ID, ITEM_CODE, PRODUCT_NAME, QUANTITY, TRANSACTION_TYPE, CLIENT_NAME,IMAGE) VALUES('" + transactionID + "', '" + txtItemCode.Text + "', '" + txtProductName.Text + "', '" + txtQuantity.Text + "', '" + transactionType + "' , '" + txtClientName.Text + "', '" + productImage + "' )";
+            string insertQuery = "INSERT INTO table_withdrawal(TRANSACTION_ID, ITEM_CODE, PRODUCT_NAME, QUANTITY, WARRANTY, TRANSACTION_TYPE, CLIENT_NAME,IMAGE) VALUES('" + transactionID + "', '" + txtItemCode.Text + "', '" + txtProductName.Text + "', '" + txtQuantity.Text + "' , '" + txtWarranty.Text + "', '" + transactionType + "' , '" + txtClientName.Text + "', '" + productImage + "' )";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
 
@@ -104,6 +106,7 @@ namespace Inventory_System_Management_Alliance28
                         MessageBox.Show("Successfully Withdraw Item!");
                         error.Visible = false;
                         error.Text = "";
+                        Hide();
                     }
                     else
                     {

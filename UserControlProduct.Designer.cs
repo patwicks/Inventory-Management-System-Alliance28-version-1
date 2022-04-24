@@ -40,6 +40,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnWithdraw = new System.Windows.Forms.Button();
+            this.CLIPBOARD = new System.Windows.Forms.DataGridViewImageColumn();
             this.ITEMCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +77,7 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridProduct.ColumnHeadersHeight = 50;
             this.dataGridProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CLIPBOARD,
             this.ITEMCODE,
             this.PRODUCTNAME,
             this.CATEGORY,
@@ -197,12 +199,21 @@ namespace Inventory_System_Management_Alliance28
             this.btnWithdraw.UseVisualStyleBackColor = false;
             this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
             // 
+            // CLIPBOARD
+            // 
+            this.CLIPBOARD.HeaderText = "";
+            this.CLIPBOARD.Image = ((System.Drawing.Image)(resources.GetObject("CLIPBOARD.Image")));
+            this.CLIPBOARD.Name = "CLIPBOARD";
+            this.CLIPBOARD.ReadOnly = true;
+            this.CLIPBOARD.Width = 50;
+            // 
             // ITEMCODE
             // 
             this.ITEMCODE.DataPropertyName = "ITEMCODE";
             this.ITEMCODE.HeaderText = "ITEM CODE";
             this.ITEMCODE.Name = "ITEMCODE";
             this.ITEMCODE.ReadOnly = true;
+            this.ITEMCODE.ToolTipText = "Click to Copy";
             // 
             // PRODUCTNAME
             // 
@@ -322,6 +333,7 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnWithdraw;
+        private System.Windows.Forms.DataGridViewImageColumn CLIPBOARD;
         private System.Windows.Forms.DataGridViewTextBoxColumn ITEMCODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTNAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn CATEGORY;

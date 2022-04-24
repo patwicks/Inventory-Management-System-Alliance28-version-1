@@ -54,6 +54,9 @@ namespace Inventory_System_Management_Alliance28
             this.label3 = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtWarranty = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -63,12 +66,13 @@ namespace Inventory_System_Management_Alliance28
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseForm)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbNewNoStock
             // 
             this.lbNewNoStock.AutoSize = true;
-            this.lbNewNoStock.Location = new System.Drawing.Point(36, 94);
+            this.lbNewNoStock.Location = new System.Drawing.Point(36, 72);
             this.lbNewNoStock.Name = "lbNewNoStock";
             this.lbNewNoStock.Size = new System.Drawing.Size(0, 19);
             this.lbNewNoStock.TabIndex = 93;
@@ -79,7 +83,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.txtCurrentStock);
-            this.panel7.Location = new System.Drawing.Point(256, 265);
+            this.panel7.Location = new System.Drawing.Point(256, 238);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(335, 34);
             this.panel7.TabIndex = 90;
@@ -102,7 +106,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.txtProductName);
-            this.panel6.Location = new System.Drawing.Point(256, 197);
+            this.panel6.Location = new System.Drawing.Point(256, 182);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(335, 34);
             this.panel6.TabIndex = 89;
@@ -124,9 +128,9 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panel5.Controls.Add(this.pbItemImage);
-            this.panel5.Location = new System.Drawing.Point(32, 130);
+            this.panel5.Location = new System.Drawing.Point(32, 108);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(215, 172);
+            this.panel5.Size = new System.Drawing.Size(208, 217);
             this.panel5.TabIndex = 88;
             // 
             // pbItemImage
@@ -134,7 +138,7 @@ namespace Inventory_System_Management_Alliance28
             this.pbItemImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbItemImage.Location = new System.Drawing.Point(0, 0);
             this.pbItemImage.Name = "pbItemImage";
-            this.pbItemImage.Size = new System.Drawing.Size(215, 172);
+            this.pbItemImage.Size = new System.Drawing.Size(208, 217);
             this.pbItemImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbItemImage.TabIndex = 42;
             this.pbItemImage.TabStop = false;
@@ -144,7 +148,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.txtItemCode);
-            this.panel4.Location = new System.Drawing.Point(256, 130);
+            this.panel4.Location = new System.Drawing.Point(256, 125);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(335, 34);
             this.panel4.TabIndex = 87;
@@ -169,7 +173,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWithdraw.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWithdraw.ForeColor = System.Drawing.Color.White;
-            this.btnWithdraw.Location = new System.Drawing.Point(87, 490);
+            this.btnWithdraw.Location = new System.Drawing.Point(87, 476);
             this.btnWithdraw.Name = "btnWithdraw";
             this.btnWithdraw.Size = new System.Drawing.Size(437, 45);
             this.btnWithdraw.TabIndex = 86;
@@ -193,7 +197,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.txtQuantity);
-            this.panel3.Location = new System.Drawing.Point(32, 406);
+            this.panel3.Location = new System.Drawing.Point(32, 414);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(559, 34);
             this.panel3.TabIndex = 85;
@@ -203,7 +207,7 @@ namespace Inventory_System_Management_Alliance28
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(253, 246);
+            this.label5.Location = new System.Drawing.Point(253, 219);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 16);
             this.label5.TabIndex = 84;
@@ -223,7 +227,7 @@ namespace Inventory_System_Management_Alliance28
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(29, 382);
+            this.label4.Location = new System.Drawing.Point(29, 390);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 16);
             this.label4.TabIndex = 83;
@@ -235,7 +239,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtClientName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtClientName.Location = new System.Drawing.Point(7, 7);
+            this.txtClientName.Location = new System.Drawing.Point(7, 6);
             this.txtClientName.Name = "txtClientName";
             this.txtClientName.Size = new System.Drawing.Size(545, 20);
             this.txtClientName.TabIndex = 0;
@@ -245,7 +249,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtClientName);
-            this.panel2.Location = new System.Drawing.Point(32, 334);
+            this.panel2.Location = new System.Drawing.Point(32, 350);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(559, 34);
             this.panel2.TabIndex = 81;
@@ -255,7 +259,7 @@ namespace Inventory_System_Management_Alliance28
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(253, 178);
+            this.label2.Location = new System.Drawing.Point(253, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 16);
             this.label2.TabIndex = 80;
@@ -266,7 +270,7 @@ namespace Inventory_System_Management_Alliance28
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(253, 111);
+            this.label7.Location = new System.Drawing.Point(253, 106);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 16);
             this.label7.TabIndex = 79;
@@ -300,7 +304,7 @@ namespace Inventory_System_Management_Alliance28
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(29, 315);
+            this.label3.Location = new System.Drawing.Point(29, 331);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 82;
@@ -332,11 +336,47 @@ namespace Inventory_System_Management_Alliance28
             this.panel1.Size = new System.Drawing.Size(618, 62);
             this.panel1.TabIndex = 77;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.txtWarranty);
+            this.panel8.Location = new System.Drawing.Point(256, 294);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(335, 34);
+            this.panel8.TabIndex = 95;
+            // 
+            // txtWarranty
+            // 
+            this.txtWarranty.BackColor = System.Drawing.Color.White;
+            this.txtWarranty.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtWarranty.Enabled = false;
+            this.txtWarranty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWarranty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtWarranty.Location = new System.Drawing.Point(6, 6);
+            this.txtWarranty.Name = "txtWarranty";
+            this.txtWarranty.ReadOnly = true;
+            this.txtWarranty.Size = new System.Drawing.Size(322, 20);
+            this.txtWarranty.TabIndex = 66;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(253, 275);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 16);
+            this.label6.TabIndex = 94;
+            this.label6.Text = "WARRANTY";
+            // 
             // GridWithdrawForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 567);
+            this.ClientSize = new System.Drawing.Size(618, 557);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lbNewNoStock);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -356,7 +396,7 @@ namespace Inventory_System_Management_Alliance28
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GridWithdrawForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GridWithdrawForm";
@@ -376,6 +416,8 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseForm)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,5 +449,8 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label error;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox txtWarranty;
+        private System.Windows.Forms.Label label6;
     }
 }
