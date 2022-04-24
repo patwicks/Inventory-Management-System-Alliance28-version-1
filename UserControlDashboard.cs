@@ -32,6 +32,8 @@ namespace Inventory_System_Management_Alliance28
             recent_withdraw();
             //datagrid
             datagrid_design();
+
+          
             //current time and data
             //lbCurrentTime.Text = DateTime.Now.ToLongTimeString();
             lbCurrenDate.Text = DateTime.Now.ToLongDateString();
@@ -83,11 +85,28 @@ namespace Inventory_System_Management_Alliance28
             dataGridrecentW.Columns[0].Width = 50;
             dataGridrecentW.Columns[1].Width = 200;
             dataGridrecentW.Columns[2].Width = 249;
+
+            //
+
+            foreach (DataGridViewColumn column in dataGridProduct.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+
+            }
+
+            foreach (DataGridViewColumn column in dataGridrecentW.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+
+            }
+
+            dataGridProduct.EnableHeadersVisualStyles = false;
+            dataGridrecentW.EnableHeadersVisualStyles = false;
         }
         //load recet withdraw items
         public void recent_withdraw()
         {
-            string loadQuery = "SELECT TRANSACTION_ID,ITEM_CODE,PRODUCT_NAME,QUANTITY,TRANSACTION_TYPE,CLIENT_NAME,TIMESTAMP,IMAGE FROM table_withdrawal ORDER BY TIMESTAMP DESC LIMIT 5";
+            string loadQuery = "SELECT TRANSACTION_ID,ITEM_CODE,PRODUCT_NAME,QUANTITY,WARRANTY,TRANSACTION_TYPE,CLIENT_NAME,TIMESTAMP,IMAGE FROM table_withdrawal ORDER BY TIMESTAMP DESC LIMIT 5";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
@@ -134,24 +153,8 @@ namespace Inventory_System_Management_Alliance28
 
             connection.Close();
         }
-        private void timerProduct_Tick(object sender, EventArgs e)
-        {
-            int val = Convert.ToInt16(lbProduct.Text);
+       
 
-            if (lbProduct.Text == "000000")
-            {
-                return;
-            }
-            else if (val < Int32.Parse(lbProduct.Text))
-            {
-                val += 1;
-                lbProduct.Text = val.ToString();
-            }
-            else
-            {
-                timerProduct.Stop();
-            }
-        }
 
         private void clock_Tick(object sender, EventArgs e)
         {
@@ -159,6 +162,17 @@ namespace Inventory_System_Management_Alliance28
         }
 
         private void dataGridProduct_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            //wrong
+        }
+
+        private void dataGridrecentW_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Wrong
+            
+        }
+
+        private void dataGridProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridProduct.Columns[e.ColumnIndex].Name == "VIEW")
             {
@@ -173,25 +187,32 @@ namespace Inventory_System_Management_Alliance28
                 ViewForm.productDescription = dataGridProduct.Rows[e.RowIndex].Cells["DESCRIPTION"].FormattedValue.ToString();
                 ViewForm.productImageName = dataGridProduct.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
                 ViewForm.productTimestamp = dataGridProduct.Rows[e.RowIndex].Cells["TIMESTAMP"].FormattedValue.ToString();
+                ViewForm.Show();
 
-                
+
             }
         }
 
-        private void dataGridrecentW_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridrecentW_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //RECENT WITHDRAW ITEM
-            ViewFormWithdraw Withdrawform = new ViewFormWithdraw(); 
-            dataGridrecentW.CurrentRow.Selected = true;
-            Withdrawform.Wtransaction_id = dataGridrecentW.Rows[e.RowIndex].Cells["TRANSACTION_ID"].FormattedValue.ToString();
-            Withdrawform.Witemcode = dataGridrecentW.Rows[e.RowIndex].Cells["ITEM_CODE"].FormattedValue.ToString();
-            Withdrawform.Wproductname = dataGridrecentW.Rows[e.RowIndex].Cells["PRODUCT_NAME"].FormattedValue.ToString();
-            Withdrawform.Wquantity = dataGridrecentW.Rows[e.RowIndex].Cells["PQUANTITY"].FormattedValue.ToString();
-            Withdrawform.Wtransaction_type = dataGridrecentW.Rows[e.RowIndex].Cells["TRANSACTION_TYPE"].FormattedValue.ToString();
-            Withdrawform.Wclient_name = dataGridrecentW.Rows[e.RowIndex].Cells["CLIENT_NAME"].FormattedValue.ToString();
-            Withdrawform.Wtimestamp = dataGridrecentW.Rows[e.RowIndex].Cells["PTIMESTAMP"].FormattedValue.ToString();
-            Withdrawform.Wimage = dataGridrecentW.Rows[e.RowIndex].Cells["PIMAGE"].FormattedValue.ToString();
-            Withdrawform.Show();
+            if (dataGridrecentW.Columns[e.ColumnIndex].Name == "wVIEW")
+            {
+                ViewFormWithdraw Withdrawform = new ViewFormWithdraw();
+                dataGridrecentW.CurrentRow.Selected = true;
+                Withdrawform.Wtransaction_id = dataGridrecentW.Rows[e.RowIndex].Cells["TRANSACTION_ID"].FormattedValue.ToString();
+                Withdrawform.Witemcode = dataGridrecentW.Rows[e.RowIndex].Cells["ITEM_CODE"].FormattedValue.ToString();
+                Withdrawform.Wproductname = dataGridrecentW.Rows[e.RowIndex].Cells["PRODUCT_NAME"].FormattedValue.ToString();
+                Withdrawform.Wquantity = dataGridrecentW.Rows[e.RowIndex].Cells["PQUANTITY"].FormattedValue.ToString();
+                Withdrawform.Wtransaction_type = dataGridrecentW.Rows[e.RowIndex].Cells["TRANSACTION_TYPE"].FormattedValue.ToString();
+                Withdrawform.Wclient_name = dataGridrecentW.Rows[e.RowIndex].Cells["CLIENT_NAME"].FormattedValue.ToString();
+                Withdrawform.Wtimestamp = dataGridrecentW.Rows[e.RowIndex].Cells["PTIMESTAMP"].FormattedValue.ToString();
+                Withdrawform.Wimage = dataGridrecentW.Rows[e.RowIndex].Cells["PIMAGE"].FormattedValue.ToString();
+                Withdrawform.Wwarranty = dataGridrecentW.Rows[e.RowIndex].Cells["WARRANTY"].FormattedValue.ToString();
+                Withdrawform.Show();
+            }
         }
+
+       
     }
 }

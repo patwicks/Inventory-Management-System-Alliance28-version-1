@@ -21,6 +21,7 @@ namespace Inventory_System_Management_Alliance28
         public string Wclient_name { get; set; }
         public string Wtimestamp { get; set; }
         public string Wimage { get; set; }
+        public string Wwarranty { get; set; }
 
         public ViewFormWithdraw()
         {
@@ -37,6 +38,7 @@ namespace Inventory_System_Management_Alliance28
             txttransaction_type.Text = Wtransaction_type;
             txtclient_name.Text = Wclient_name;
             txtDateAdded.Text = Wtimestamp;
+            txtWarranty.Text = Wwarranty;
 
             Image img = Image.FromFile(Application.StartupPath + @"\Images\" + Wimage);
             pbItemImage.Image = img;

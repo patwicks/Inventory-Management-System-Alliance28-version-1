@@ -32,7 +32,7 @@ namespace Inventory_System_Management_Alliance28
 
         private void txtItemCode_TextChanged(object sender, EventArgs e)
         {
-            string searchQuery = "SELECT PRODUCTNAME, QUANTITY,IMAGE FROM table_products WHERE ITEMCODE = '"+ txtItemCode.Text +"'";
+            string searchQuery = "SELECT PRODUCTNAME, QUANTITY,IMAGE,WARRANTY FROM table_products WHERE ITEMCODE = '" + txtItemCode.Text +"'";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
             MySqlDataReader reader;
@@ -53,6 +53,7 @@ namespace Inventory_System_Management_Alliance28
                             txtProductName.Text = reader.GetValue(0).ToString();
                             txtCurrentStock.Text = reader.GetValue(1).ToString();
                             lbImage.Text = reader.GetValue(2).ToString();
+                            txtWarranty.Text = reader.GetValue(3).ToString();
 
 
                             Image image = Image.FromFile(Application.StartupPath + @"\Images\" + lbImage.Text);
@@ -88,7 +89,7 @@ namespace Inventory_System_Management_Alliance28
             string transactionID = myuuid.ToString();
             //Sql staffs here
             string transactionType = "Widthraw";
-            string insertQuery = "INSERT INTO table_withdrawal(TRANSACTION_ID, ITEM_CODE, PRODUCT_NAME, QUANTITY, TRANSACTION_TYPE, CLIENT_NAME,IMAGE) VALUES('" + transactionID + "', '" + txtItemCode.Text + "', '" + txtProductName.Text + "', '" + txtQuantity.Text + "', '" + transactionType + "' , '" + txtClientName.Text + "', '" + lbImage.Text + "' )";
+            string insertQuery = "INSERT INTO table_withdrawal(TRANSACTION_ID, ITEM_CODE, PRODUCT_NAME, QUANTITY, WARRANTY, TRANSACTION_TYPE, CLIENT_NAME,IMAGE) VALUES('" + transactionID + "', '" + txtItemCode.Text + "', '" + txtProductName.Text + "', '" + txtQuantity.Text + "', '" + txtWarranty.Text + "', '" + transactionType + "' , '" + txtClientName.Text + "', '" + lbImage.Text + "' )";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
 
@@ -143,6 +144,7 @@ namespace Inventory_System_Management_Alliance28
                         MessageBox.Show("Successfully Withdraw Item!");
                         error.Visible = false;
                         error.Text = "";
+                        Hide();
                     }
                     else
                     {

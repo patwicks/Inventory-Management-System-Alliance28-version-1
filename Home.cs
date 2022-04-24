@@ -42,7 +42,12 @@ namespace Inventory_System_Management_Alliance28
         {
             activeTabIndicator.Top = btnDashboard.Top;
             userControlDashboard1.BringToFront();
+            //Dashboard Data Counter from public function - User Control Dashboard
             userControlDashboard1.countProducts();
+            userControlDashboard1.countTransactions();
+            //DatagridView data Show
+            userControlDashboard1.recent_added();
+            userControlDashboard1.recent_withdraw();
         }
 
         private void btnProduct_Click(object sender, EventArgs e)

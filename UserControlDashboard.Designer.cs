@@ -31,10 +31,10 @@ namespace Inventory_System_Management_Alliance28
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbProduct = new System.Windows.Forms.Label();
@@ -55,7 +55,6 @@ namespace Inventory_System_Management_Alliance28
             this.label4 = new System.Windows.Forms.Label();
             this.lbAccount = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.timerProduct = new System.Windows.Forms.Timer(this.components);
             this.lbCurrentTime = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbCurrenDate = new System.Windows.Forms.Label();
@@ -65,6 +64,16 @@ namespace Inventory_System_Management_Alliance28
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dataGridrecentW = new System.Windows.Forms.DataGridView();
+            this.wVIEW = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.TRANSACTION_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITEM_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRODUCT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PQUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRANSACTION_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLIENT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PTIMESTAMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PIMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridProduct = new System.Windows.Forms.DataGridView();
             this.VIEW = new System.Windows.Forms.DataGridViewImageColumn();
@@ -77,16 +86,7 @@ namespace Inventory_System_Management_Alliance28
             this.PRODUCTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.TRANSACTION_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ITEM_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRODUCT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PQUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRANSACTION_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CLIENT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PTIMESTAMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PIMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -110,6 +110,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(4, 61);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 140);
             this.panel1.TabIndex = 0;
@@ -118,7 +119,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label1.Location = new System.Drawing.Point(-2, 118);
+            this.label1.Location = new System.Drawing.Point(-3, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(240, 20);
             this.label1.TabIndex = 5;
@@ -129,7 +130,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.lbProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbProduct.Location = new System.Drawing.Point(2, 63);
+            this.lbProduct.Location = new System.Drawing.Point(3, 63);
             this.lbProduct.Name = "lbProduct";
             this.lbProduct.Size = new System.Drawing.Size(240, 50);
             this.lbProduct.TabIndex = 4;
@@ -139,20 +140,21 @@ namespace Inventory_System_Management_Alliance28
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(68, 28);
+            this.label2.Location = new System.Drawing.Point(68, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 24);
+            this.label2.Size = new System.Drawing.Size(107, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "PRODUCTS";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(62, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(62, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -165,6 +167,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel2.Controls.Add(this.lbTransaction);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Location = new System.Drawing.Point(260, 61);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 140);
             this.panel2.TabIndex = 1;
@@ -183,11 +186,11 @@ namespace Inventory_System_Management_Alliance28
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(68, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 24);
+            this.label3.Size = new System.Drawing.Size(149, 23);
             this.label3.TabIndex = 6;
             this.label3.Text = "TRANSACTIONS";
             // 
@@ -197,7 +200,7 @@ namespace Inventory_System_Management_Alliance28
             this.lbTransaction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbTransaction.Location = new System.Drawing.Point(3, 63);
             this.lbTransaction.Name = "lbTransaction";
-            this.lbTransaction.Size = new System.Drawing.Size(236, 50);
+            this.lbTransaction.Size = new System.Drawing.Size(237, 50);
             this.lbTransaction.TabIndex = 5;
             this.lbTransaction.Text = "0";
             this.lbTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -206,8 +209,9 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(13, 10);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 40);
+            this.pictureBox3.Size = new System.Drawing.Size(49, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -220,6 +224,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel3.Controls.Add(this.lbDeletedItem);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Location = new System.Drawing.Point(772, 61);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(240, 140);
             this.panel3.TabIndex = 1;
@@ -228,7 +233,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label8.Location = new System.Drawing.Point(-2, 118);
+            this.label8.Location = new System.Drawing.Point(-3, 118);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(240, 20);
             this.label8.TabIndex = 5;
@@ -238,11 +243,11 @@ namespace Inventory_System_Management_Alliance28
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(73, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 24);
+            this.label5.Size = new System.Drawing.Size(137, 23);
             this.label5.TabIndex = 8;
             this.label5.Text = "DELETED ITEMS";
             // 
@@ -261,8 +266,9 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(57, 41);
+            this.pictureBox4.Size = new System.Drawing.Size(57, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -275,6 +281,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel4.Controls.Add(this.lbAccount);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Location = new System.Drawing.Point(515, 61);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(240, 140);
             this.panel4.TabIndex = 2;
@@ -293,11 +300,11 @@ namespace Inventory_System_Management_Alliance28
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(76, 27);
+            this.label4.Location = new System.Drawing.Point(75, 27);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 24);
+            this.label4.Size = new System.Drawing.Size(115, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "ACCOUNTS";
             // 
@@ -305,7 +312,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.lbAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbAccount.Location = new System.Drawing.Point(2, 62);
+            this.lbAccount.Location = new System.Drawing.Point(3, 62);
             this.lbAccount.Name = "lbAccount";
             this.lbAccount.Size = new System.Drawing.Size(239, 50);
             this.lbAccount.TabIndex = 6;
@@ -316,24 +323,20 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(14, 7);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 47);
+            this.pictureBox2.Size = new System.Drawing.Size(57, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // timerProduct
-            // 
-            this.timerProduct.Interval = 5000;
-            this.timerProduct.Tick += new System.EventHandler(this.timerProduct_Tick);
-            // 
             // lbCurrentTime
             // 
             this.lbCurrentTime.AutoSize = true;
-            this.lbCurrentTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCurrentTime.Location = new System.Drawing.Point(197, 9);
+            this.lbCurrentTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCurrentTime.Location = new System.Drawing.Point(198, 10);
             this.lbCurrentTime.Name = "lbCurrentTime";
-            this.lbCurrentTime.Size = new System.Drawing.Size(62, 16);
+            this.lbCurrentTime.Size = new System.Drawing.Size(64, 17);
             this.lbCurrentTime.TabIndex = 3;
             this.lbCurrentTime.Text = "12:00 NN";
             // 
@@ -342,7 +345,8 @@ namespace Inventory_System_Management_Alliance28
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel5.Controls.Add(this.lbCurrenDate);
             this.panel5.Controls.Add(this.lbCurrentTime);
-            this.panel5.Location = new System.Drawing.Point(733, 3);
+            this.panel5.Location = new System.Drawing.Point(733, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(281, 38);
             this.panel5.TabIndex = 4;
@@ -350,10 +354,10 @@ namespace Inventory_System_Management_Alliance28
             // lbCurrenDate
             // 
             this.lbCurrenDate.AutoSize = true;
-            this.lbCurrenDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCurrenDate.Location = new System.Drawing.Point(13, 9);
+            this.lbCurrenDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCurrenDate.Location = new System.Drawing.Point(13, 10);
             this.lbCurrenDate.Name = "lbCurrenDate";
-            this.lbCurrenDate.Size = new System.Drawing.Size(159, 16);
+            this.lbCurrenDate.Size = new System.Drawing.Size(168, 17);
             this.lbCurrenDate.TabIndex = 4;
             this.lbCurrenDate.Text = "Monday, January 01 2022";
             // 
@@ -365,31 +369,31 @@ namespace Inventory_System_Management_Alliance28
             // Dashboard
             // 
             this.Dashboard.AutoSize = true;
-            this.Dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboard.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Dashboard.Location = new System.Drawing.Point(5, 16);
+            this.Dashboard.Location = new System.Drawing.Point(5, 15);
             this.Dashboard.Name = "Dashboard";
-            this.Dashboard.Size = new System.Drawing.Size(140, 29);
+            this.Dashboard.Size = new System.Drawing.Size(141, 28);
             this.Dashboard.TabIndex = 7;
             this.Dashboard.Text = "Dashboard";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 270);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 303);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(180, 20);
+            this.label9.Size = new System.Drawing.Size(206, 21);
             this.label9.TabIndex = 9;
             this.label9.Text = "Recently Added product";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(513, 270);
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(513, 303);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(199, 20);
+            this.label10.Size = new System.Drawing.Size(226, 21);
             this.label10.TabIndex = 9;
             this.label10.Text = "Recently Withdraw product";
             // 
@@ -398,10 +402,10 @@ namespace Inventory_System_Management_Alliance28
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel7.Controls.Add(this.dataGridrecentW);
             this.panel7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(517, 305);
+            this.panel7.Location = new System.Drawing.Point(517, 338);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(500, 320);
+            this.panel7.Size = new System.Drawing.Size(500, 305);
             this.panel7.TabIndex = 11;
             // 
             // dataGridrecentW
@@ -414,16 +418,16 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridrecentW.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridrecentW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridrecentW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridrecentW.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridrecentW.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
             this.dataGridrecentW.ColumnHeadersHeight = 30;
             this.dataGridrecentW.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn1,
+            this.wVIEW,
             this.dataGridViewImageColumn2,
             this.TRANSACTION_ID,
             this.ITEM_CODE,
@@ -433,37 +437,119 @@ namespace Inventory_System_Management_Alliance28
             this.CLIENT_NAME,
             this.PTIMESTAMP,
             this.PIMAGE});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridrecentW.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle50.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridrecentW.DefaultCellStyle = dataGridViewCellStyle50;
             this.dataGridrecentW.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dataGridrecentW.Location = new System.Drawing.Point(0, 19);
+            this.dataGridrecentW.Location = new System.Drawing.Point(0, 0);
+            this.dataGridrecentW.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridrecentW.MultiSelect = false;
             this.dataGridrecentW.Name = "dataGridrecentW";
             this.dataGridrecentW.ReadOnly = true;
             this.dataGridrecentW.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridrecentW.RowHeadersVisible = false;
             this.dataGridrecentW.RowHeadersWidth = 50;
+            this.dataGridrecentW.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridrecentW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridrecentW.Size = new System.Drawing.Size(500, 301);
+            this.dataGridrecentW.Size = new System.Drawing.Size(500, 305);
             this.dataGridrecentW.TabIndex = 1;
             this.dataGridrecentW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridrecentW_CellClick);
+            this.dataGridrecentW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridrecentW_CellContentClick);
+            // 
+            // wVIEW
+            // 
+            this.wVIEW.HeaderText = "";
+            this.wVIEW.Image = ((System.Drawing.Image)(resources.GetObject("wVIEW.Image")));
+            this.wVIEW.Name = "wVIEW";
+            this.wVIEW.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.DataPropertyName = "PICTURE";
+            this.dataGridViewImageColumn2.HeaderText = "PICTURE";
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            // 
+            // TRANSACTION_ID
+            // 
+            this.TRANSACTION_ID.DataPropertyName = "TRANSACTION_ID";
+            this.TRANSACTION_ID.HeaderText = "TRANSACTION ID";
+            this.TRANSACTION_ID.Name = "TRANSACTION_ID";
+            this.TRANSACTION_ID.ReadOnly = true;
+            this.TRANSACTION_ID.Width = 50;
+            // 
+            // ITEM_CODE
+            // 
+            this.ITEM_CODE.DataPropertyName = "ITEM_CODE";
+            this.ITEM_CODE.HeaderText = "ITEM CODE";
+            this.ITEM_CODE.Name = "ITEM_CODE";
+            this.ITEM_CODE.ReadOnly = true;
+            this.ITEM_CODE.Visible = false;
+            // 
+            // PRODUCT_NAME
+            // 
+            this.PRODUCT_NAME.DataPropertyName = "PRODUCT_NAME";
+            this.PRODUCT_NAME.HeaderText = "PRODUCT NAME";
+            this.PRODUCT_NAME.Name = "PRODUCT_NAME";
+            this.PRODUCT_NAME.ReadOnly = true;
+            this.PRODUCT_NAME.Width = 149;
+            // 
+            // PQUANTITY
+            // 
+            this.PQUANTITY.DataPropertyName = "QUANTITY";
+            this.PQUANTITY.HeaderText = "QUANTITY";
+            this.PQUANTITY.Name = "PQUANTITY";
+            this.PQUANTITY.ReadOnly = true;
+            this.PQUANTITY.Visible = false;
+            // 
+            // TRANSACTION_TYPE
+            // 
+            this.TRANSACTION_TYPE.DataPropertyName = "TRANSACTION_TYPE";
+            this.TRANSACTION_TYPE.HeaderText = "TRANSACTION TYPE";
+            this.TRANSACTION_TYPE.Name = "TRANSACTION_TYPE";
+            this.TRANSACTION_TYPE.ReadOnly = true;
+            this.TRANSACTION_TYPE.Visible = false;
+            // 
+            // CLIENT_NAME
+            // 
+            this.CLIENT_NAME.DataPropertyName = "CLIENT_NAME";
+            this.CLIENT_NAME.HeaderText = "CLIENT NAME";
+            this.CLIENT_NAME.Name = "CLIENT_NAME";
+            this.CLIENT_NAME.ReadOnly = true;
+            this.CLIENT_NAME.Visible = false;
+            // 
+            // PTIMESTAMP
+            // 
+            this.PTIMESTAMP.DataPropertyName = "TIMESTAMP";
+            this.PTIMESTAMP.HeaderText = "TIMESTAMP";
+            this.PTIMESTAMP.Name = "PTIMESTAMP";
+            this.PTIMESTAMP.ReadOnly = true;
+            this.PTIMESTAMP.Visible = false;
+            // 
+            // PIMAGE
+            // 
+            this.PIMAGE.DataPropertyName = "IMAGE";
+            this.PIMAGE.HeaderText = "IMAGE";
+            this.PIMAGE.Name = "PIMAGE";
+            this.PIMAGE.ReadOnly = true;
+            this.PIMAGE.Visible = false;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel6.Controls.Add(this.dataGridProduct);
             this.panel6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(5, 305);
+            this.panel6.Location = new System.Drawing.Point(5, 338);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(500, 320);
+            this.panel6.Size = new System.Drawing.Size(500, 305);
             this.panel6.TabIndex = 10;
             // 
             // dataGridProduct
@@ -476,13 +562,13 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle51;
             this.dataGridProduct.ColumnHeadersHeight = 30;
             this.dataGridProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.VIEW,
@@ -495,27 +581,30 @@ namespace Inventory_System_Management_Alliance28
             this.PRODUCTNAME,
             this.QUANTITY,
             this.IMAGE});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle52.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle52;
             this.dataGridProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dataGridProduct.Location = new System.Drawing.Point(0, 19);
+            this.dataGridProduct.Location = new System.Drawing.Point(0, 0);
+            this.dataGridProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridProduct.MultiSelect = false;
             this.dataGridProduct.Name = "dataGridProduct";
             this.dataGridProduct.ReadOnly = true;
             this.dataGridProduct.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridProduct.RowHeadersVisible = false;
             this.dataGridProduct.RowHeadersWidth = 50;
+            this.dataGridProduct.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridProduct.Size = new System.Drawing.Size(500, 301);
+            this.dataGridProduct.Size = new System.Drawing.Size(500, 305);
             this.dataGridProduct.TabIndex = 1;
             this.dataGridProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellClick_1);
+            this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick);
             // 
             // VIEW
             // 
@@ -595,89 +684,21 @@ namespace Inventory_System_Management_Alliance28
             this.IMAGE.ReadOnly = true;
             this.IMAGE.Visible = false;
             // 
-            // dataGridViewImageColumn1
+            // panel8
             // 
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.DataPropertyName = "PICTURE";
-            this.dataGridViewImageColumn2.HeaderText = "PICTURE";
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            // 
-            // TRANSACTION_ID
-            // 
-            this.TRANSACTION_ID.DataPropertyName = "TRANSACTION_ID";
-            this.TRANSACTION_ID.HeaderText = "TRANSACTION ID";
-            this.TRANSACTION_ID.Name = "TRANSACTION_ID";
-            this.TRANSACTION_ID.ReadOnly = true;
-            this.TRANSACTION_ID.Width = 50;
-            // 
-            // ITEM_CODE
-            // 
-            this.ITEM_CODE.DataPropertyName = "ITEM_CODE";
-            this.ITEM_CODE.HeaderText = "ITEM CODE";
-            this.ITEM_CODE.Name = "ITEM_CODE";
-            this.ITEM_CODE.ReadOnly = true;
-            this.ITEM_CODE.Visible = false;
-            // 
-            // PRODUCT_NAME
-            // 
-            this.PRODUCT_NAME.DataPropertyName = "PRODUCT_NAME";
-            this.PRODUCT_NAME.HeaderText = "PRODUCT NAME";
-            this.PRODUCT_NAME.Name = "PRODUCT_NAME";
-            this.PRODUCT_NAME.ReadOnly = true;
-            this.PRODUCT_NAME.Width = 149;
-            // 
-            // PQUANTITY
-            // 
-            this.PQUANTITY.DataPropertyName = "QUANTITY";
-            this.PQUANTITY.HeaderText = "QUANTITY";
-            this.PQUANTITY.Name = "PQUANTITY";
-            this.PQUANTITY.ReadOnly = true;
-            this.PQUANTITY.Visible = false;
-            // 
-            // TRANSACTION_TYPE
-            // 
-            this.TRANSACTION_TYPE.DataPropertyName = "TRANSACTION_TYPE";
-            this.TRANSACTION_TYPE.HeaderText = "TRANSACTION TYPE";
-            this.TRANSACTION_TYPE.Name = "TRANSACTION_TYPE";
-            this.TRANSACTION_TYPE.ReadOnly = true;
-            this.TRANSACTION_TYPE.Visible = false;
-            // 
-            // CLIENT_NAME
-            // 
-            this.CLIENT_NAME.DataPropertyName = "CLIENT_NAME";
-            this.CLIENT_NAME.HeaderText = "CLIENT NAME";
-            this.CLIENT_NAME.Name = "CLIENT_NAME";
-            this.CLIENT_NAME.ReadOnly = true;
-            this.CLIENT_NAME.Visible = false;
-            // 
-            // PTIMESTAMP
-            // 
-            this.PTIMESTAMP.DataPropertyName = "TIMESTAMP";
-            this.PTIMESTAMP.HeaderText = "TIMESTAMP";
-            this.PTIMESTAMP.Name = "PTIMESTAMP";
-            this.PTIMESTAMP.ReadOnly = true;
-            this.PTIMESTAMP.Visible = false;
-            // 
-            // PIMAGE
-            // 
-            this.PIMAGE.DataPropertyName = "IMAGE";
-            this.PIMAGE.HeaderText = "IMAGE";
-            this.PIMAGE.Name = "PIMAGE";
-            this.PIMAGE.ReadOnly = true;
-            this.PIMAGE.Visible = false;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel8.Location = new System.Drawing.Point(12, 242);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(994, 52);
+            this.panel8.TabIndex = 12;
             // 
             // UserControlDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label10);
@@ -690,7 +711,7 @@ namespace Inventory_System_Management_Alliance28
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximumSize = new System.Drawing.Size(1020, 750);
             this.MinimumSize = new System.Drawing.Size(1020, 750);
             this.Name = "UserControlDashboard";
@@ -731,7 +752,6 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbProduct;
-        private System.Windows.Forms.Timer timerProduct;
         private System.Windows.Forms.Label lbTransaction;
         private System.Windows.Forms.Label lbDeletedItem;
         private System.Windows.Forms.Label lbAccount;
@@ -763,7 +783,7 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTNAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn QUANTITY;
         private System.Windows.Forms.DataGridViewTextBoxColumn IMAGE;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn wVIEW;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn TRANSACTION_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ITEM_CODE;
@@ -773,5 +793,6 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.DataGridViewTextBoxColumn CLIENT_NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn PTIMESTAMP;
         private System.Windows.Forms.DataGridViewTextBoxColumn PIMAGE;
+        private System.Windows.Forms.Panel panel8;
     }
 }

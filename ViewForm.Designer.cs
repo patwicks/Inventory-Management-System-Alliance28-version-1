@@ -54,7 +54,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtDateAdded.Enabled = false;
             this.txtDateAdded.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDateAdded.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtDateAdded.Location = new System.Drawing.Point(436, 210);
+            this.txtDateAdded.Location = new System.Drawing.Point(436, 130);
             this.txtDateAdded.Name = "txtDateAdded";
             this.txtDateAdded.ReadOnly = true;
             this.txtDateAdded.Size = new System.Drawing.Size(362, 19);
@@ -65,7 +65,7 @@ namespace Inventory_System_Management_Alliance28
             this.date.AutoSize = true;
             this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date.ForeColor = System.Drawing.Color.Gray;
-            this.date.Location = new System.Drawing.Point(433, 191);
+            this.date.Location = new System.Drawing.Point(433, 111);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(77, 13);
             this.date.TabIndex = 92;
@@ -77,7 +77,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtDescription.Enabled = false;
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtDescription.Location = new System.Drawing.Point(436, 277);
+            this.txtDescription.Location = new System.Drawing.Point(436, 180);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ReadOnly = true;
@@ -90,7 +90,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtWarranty.Enabled = false;
             this.txtWarranty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWarranty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtWarranty.Location = new System.Drawing.Point(436, 82);
+            this.txtWarranty.Location = new System.Drawing.Point(436, 34);
             this.txtWarranty.Name = "txtWarranty";
             this.txtWarranty.ReadOnly = true;
             this.txtWarranty.Size = new System.Drawing.Size(362, 19);
@@ -102,7 +102,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtQuantity.Enabled = false;
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtQuantity.Location = new System.Drawing.Point(436, 147);
+            this.txtQuantity.Location = new System.Drawing.Point(436, 80);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.ReadOnly = true;
             this.txtQuantity.Size = new System.Drawing.Size(362, 19);
@@ -114,7 +114,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtCategory.Enabled = false;
             this.txtCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtCategory.Location = new System.Drawing.Point(48, 455);
+            this.txtCategory.Location = new System.Drawing.Point(22, 405);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.ReadOnly = true;
             this.txtCategory.Size = new System.Drawing.Size(362, 19);
@@ -126,7 +126,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtProductName.Enabled = false;
             this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtProductName.Location = new System.Drawing.Point(48, 375);
+            this.txtProductName.Location = new System.Drawing.Point(22, 338);
             this.txtProductName.Multiline = true;
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.ReadOnly = true;
@@ -139,7 +139,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtItemCode.Enabled = false;
             this.txtItemCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItemCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtItemCode.Location = new System.Drawing.Point(48, 315);
+            this.txtItemCode.Location = new System.Drawing.Point(22, 290);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.ReadOnly = true;
             this.txtItemCode.Size = new System.Drawing.Size(362, 19);
@@ -147,9 +147,9 @@ namespace Inventory_System_Management_Alliance28
             // 
             // pbItemImage
             // 
-            this.pbItemImage.Location = new System.Drawing.Point(12, 12);
+            this.pbItemImage.Location = new System.Drawing.Point(22, 16);
             this.pbItemImage.Name = "pbItemImage";
-            this.pbItemImage.Size = new System.Drawing.Size(405, 274);
+            this.pbItemImage.Size = new System.Drawing.Size(388, 243);
             this.pbItemImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbItemImage.TabIndex = 77;
             this.pbItemImage.TabStop = false;
@@ -159,7 +159,7 @@ namespace Inventory_System_Management_Alliance28
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(433, 63);
+            this.label7.Location = new System.Drawing.Point(433, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 90;
@@ -170,7 +170,7 @@ namespace Inventory_System_Management_Alliance28
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(433, 258);
+            this.label6.Location = new System.Drawing.Point(433, 161);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 13);
             this.label6.TabIndex = 89;
@@ -181,7 +181,7 @@ namespace Inventory_System_Management_Alliance28
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(433, 131);
+            this.label5.Location = new System.Drawing.Point(433, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 88;
@@ -192,7 +192,7 @@ namespace Inventory_System_Management_Alliance28
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(45, 436);
+            this.label4.Location = new System.Drawing.Point(19, 386);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 13);
             this.label4.TabIndex = 87;
@@ -203,7 +203,7 @@ namespace Inventory_System_Management_Alliance28
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(45, 356);
+            this.label3.Location = new System.Drawing.Point(19, 319);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 86;
@@ -214,7 +214,7 @@ namespace Inventory_System_Management_Alliance28
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(45, 291);
+            this.label2.Location = new System.Drawing.Point(19, 273);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 85;
@@ -224,7 +224,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 488);
+            this.ClientSize = new System.Drawing.Size(818, 459);
             this.Controls.Add(this.txtDateAdded);
             this.Controls.Add(this.date);
             this.Controls.Add(this.txtDescription);
@@ -240,6 +240,7 @@ namespace Inventory_System_Management_Alliance28
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Details";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
