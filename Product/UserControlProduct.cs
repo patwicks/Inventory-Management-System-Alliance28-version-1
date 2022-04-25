@@ -187,5 +187,31 @@ namespace Inventory_System_Management_Alliance28
 
             wForm.Show();
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            //Print Excell
+            if (dataGridProduct.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application xcellApp = new Microsoft.Office.Interop.Excel.Application();
+                xcellApp.Application.Workbooks.Add(Type.Missing);
+
+                for (int i = 1; i < dataGridProduct.Columns.Count + 1; i++)
+                {
+                    xcellApp.Cells[1, i] = dataGridProduct.Columns[i - 1].HeaderText;
+
+                }
+
+                for (int i = 0; i < dataGridProduct.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridProduct.Columns.Count; j++)
+                    {
+                        xcellApp.Cells[i + 2, j + 1] = dataGridProduct.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                xcellApp.Columns.AutoFit();
+                xcellApp.Visible = true;
+            }
+        }
     }
 }
