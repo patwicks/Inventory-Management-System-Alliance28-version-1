@@ -199,14 +199,30 @@ namespace Inventory_System_Management_Alliance28
                 for (int i = 1; i < dataGridProduct.Columns.Count + 1; i++)
                 {
                     xcellApp.Cells[1, i] = dataGridProduct.Columns[i - 1].HeaderText;
+                    // Remove the Value of headertext on last column - PICTURE headertext
+                    if (i == 13)
+                    {
+                        xcellApp.Cells[1, 13] = null;
+                    }
 
                 }
 
                 for (int i = 0; i < dataGridProduct.Rows.Count; i++)
                 {
-                    for (int j = 0; j < dataGridProduct.Columns.Count; j++)
+                    //Start printing Value on Column 4 or to Item Code Column
+                    for (int j = 4; j < dataGridProduct.Columns.Count; j++)
                     {
-                        xcellApp.Cells[i + 2, j + 1] = dataGridProduct.Rows[i].Cells[j].Value.ToString();
+                       
+                            xcellApp.Cells[i + 2, j + 1] = dataGridProduct.Rows[i].Cells[j].Value.ToString();
+
+                        //Break the loop if J value is equal to 11 (Image) Column - Picture cell Value will not be included
+
+                        if(j == 11)
+                        {
+                            break;
+                        }
+                        
+                       
                     }
                 }
                 xcellApp.Columns.AutoFit();
