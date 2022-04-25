@@ -69,7 +69,8 @@ namespace Inventory_System_Management_Alliance28
         //load the data on gridView function
         public void loadProducts()
         {
-            string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP, IMAGE FROM table_products ORDER BY PRODUCTNAME ASC";
+            string status = "Active";
+            string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP, IMAGE FROM table_products WHERE STATUS = '"+ status +"' ORDER BY PRODUCTNAME ASC";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
@@ -105,10 +106,11 @@ namespace Inventory_System_Management_Alliance28
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlDataAdapter adapter;
             DataTable dt;
+            string status = "Active";
 
             connection.Open();
 
-            adapter = new MySqlDataAdapter("SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP , IMAGE  FROM table_products WHERE PRODUCTNAME LIKE '" + txtSearch.Text + "%' || ITEMCODE LIKE '" + txtSearch.Text + "%' ", connection);
+            adapter = new MySqlDataAdapter("SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP , IMAGE  FROM table_products WHERE (PRODUCTNAME LIKE '" + txtSearch.Text + "%' || ITEMCODE LIKE '" + txtSearch.Text + "%') AND (STATUS='"+ status +"') ", connection);
             dt = new DataTable();
             
             adapter.Fill(dt);

@@ -17,6 +17,7 @@ namespace Inventory_System_Management_Alliance28
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
         string category = "";
         string warranty = "";
+        string status = "Active";
         public AddProduct()
         {
             InitializeComponent();
@@ -131,7 +132,7 @@ namespace Inventory_System_Management_Alliance28
 
         private void saveNewProduct()
         {
-            string insertQuery = "INSERT INTO table_products(ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, IMAGE) VALUES('" + txtItemCode.Text + "', '" + txtProductName.Text + "','" + category + "', '" + txtQuantity.Text + "','" + warranty + "','" + txtDescription.Text + "', '" + Path.GetFileName(pbItemImage.ImageLocation) + "')";
+            string insertQuery = "INSERT INTO table_products(ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, STATUS, IMAGE) VALUES('" + txtItemCode.Text + "', '" + txtProductName.Text + "','" + category + "', '" + txtQuantity.Text + "','" + warranty + "','" + txtDescription.Text + "','"+ status +"', '" + Path.GetFileName(pbItemImage.ImageLocation) + "')";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
 
@@ -159,7 +160,7 @@ namespace Inventory_System_Management_Alliance28
                 error.Text = ex.Message;
             }
             connection.Close();
-            File.Copy(lbImageFileName.Text, Application.StartupPath + @"\Images\" + Path.GetFileName(pbItemImage.ImageLocation));
+            File.Copy(lbImageFileName.Text, Directory.GetCurrentDirectory() + @"\Images\" + Path.GetFileName(pbItemImage.ImageLocation));
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

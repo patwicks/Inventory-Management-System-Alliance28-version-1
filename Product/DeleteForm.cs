@@ -52,7 +52,8 @@ namespace Inventory_System_Management_Alliance28
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string deleteQuery = "DELETE FROM table_products WHERE ITEMCODE = '" + txtItemCode.Text + "'";
+            string status = "Deleted";
+            string deleteQuery = "UPDATE table_products SET STATUS='" + status + "' WHERE ITEMCODE='"+txtItemCode.Text +"' ";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand deleteCommand = new MySqlCommand(deleteQuery, connection);
             MySqlDataReader reader;

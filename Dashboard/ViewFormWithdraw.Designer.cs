@@ -271,7 +271,7 @@ namespace Inventory_System_Management_Alliance28
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewFormWithdraw";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Details";
+            this.Text = "Details Withdrawal Product";
             this.Load += new System.EventHandler(this.ViewFormWithdraw_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbItemImage)).EndInit();
             this.ResumeLayout(false);

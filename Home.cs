@@ -55,5 +55,11 @@ namespace Inventory_System_Management_Alliance28
             activeTabIndicator.Top = btnProduct.Top;
             userControlProduct1.BringToFront();
         }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            activeTabIndicator.Top = btnTransaction.Top;
+            userControlTransaction1.BringToFront();
+        }
     }
 }

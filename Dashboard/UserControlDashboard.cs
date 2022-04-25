@@ -24,12 +24,21 @@ namespace Inventory_System_Management_Alliance28
         private void UserControlDashboard_Load(object sender, EventArgs e)
         {   //recent added items
             recent_added();
+
             //Count Transaction
             countTransactions();
            //countprod 
             countProducts();
+
+            //count Deleted products
+            countDeletedProducts();
+
+            //count account registered
+            countAccounts();
+
             //recent withdraw item
             recent_withdraw();
+
             //datagrid
             datagrid_design();
 
@@ -42,8 +51,9 @@ namespace Inventory_System_Management_Alliance28
         //count products
         public void countProducts()
         {
+            string status = "Active";
             string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
-            string searchQuery = "SELECT ITEMCODE FROM table_products";
+            string searchQuery = "SELECT ITEMCODE FROM table_products WHERE STATUS ='" + status + "'";
 
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
@@ -55,6 +65,25 @@ namespace Inventory_System_Management_Alliance28
             dt.Clear();
             adapter.Fill(dt);
             lbProduct.Text = dt.Rows.Count.ToString();
+        }
+
+        //count Deleted products
+        public void countDeletedProducts()
+        {
+            string status = "Deleted";
+            string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+            string searchQuery = "SELECT ITEMCODE FROM table_products WHERE STATUS ='"+ status +"'";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            DataTable dt = new DataTable();
+
+            adapter.SelectCommand = searchCommand;
+            dt.Clear();
+            adapter.Fill(dt);
+            lbDeletedItem.Text = dt.Rows.Count.ToString();
         }
         //count transactions
         public void countTransactions()
@@ -72,6 +101,26 @@ namespace Inventory_System_Management_Alliance28
             dt.Clear();
             adapter.Fill(dt);
             lbTransaction.Text = dt.Rows.Count.ToString();
+        }
+
+        //count account registered
+
+        //count transactions
+        public void countAccounts()
+        {
+            string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+            string searchQuery = "SELECT * FROM table_account";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            DataTable dt = new DataTable();
+
+            adapter.SelectCommand = searchCommand;
+            dt.Clear();
+            adapter.Fill(dt);
+            lbAccount.Text = dt.Rows.Count.ToString();
         }
         //datagrid design
         public void datagrid_design()
@@ -106,7 +155,8 @@ namespace Inventory_System_Management_Alliance28
         //load recet withdraw items
         public void recent_withdraw()
         {
-            string loadQuery = "SELECT TRANSACTION_ID,ITEM_CODE,PRODUCT_NAME,QUANTITY,WARRANTY,TRANSACTION_TYPE,CLIENT_NAME,TIMESTAMP,IMAGE FROM table_withdrawal ORDER BY TIMESTAMP DESC LIMIT 5";
+            string status = "Active";
+            string loadQuery = "SELECT TRANSACTION_ID,ITEM_CODE,PRODUCT_NAME,QUANTITY,WARRANTY,TRANSACTION_TYPE,CLIENT_NAME,TIMESTAMP,IMAGE FROM table_withdrawal WHERE STATUS='"+ status +"' ORDER BY TIMESTAMP DESC LIMIT 5";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
@@ -131,7 +181,8 @@ namespace Inventory_System_Management_Alliance28
         //load recent added items
         public void recent_added()
         {
-            string loadQuery = "SELECT ITEMCODE,PRODUCTNAME,CATEGORY,QUANTITY,WARRANTY,DESCRIPTION,IMAGE,TIMESTAMP FROM TABLE_PRODUCTS ORDER BY TIMESTAMP DESC LIMIT 5";
+            string status = "Active";
+            string loadQuery = "SELECT ITEMCODE,PRODUCTNAME,CATEGORY,QUANTITY,WARRANTY,DESCRIPTION,IMAGE,TIMESTAMP FROM TABLE_PRODUCTS WHERE STATUS = '"+ status +"' ORDER BY TIMESTAMP DESC LIMIT 5";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();

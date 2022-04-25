@@ -85,11 +85,12 @@ namespace Inventory_System_Management_Alliance28
 
         private void btnWithdraw_Click(object sender, EventArgs e)
         {
+            string status = "Active";
             Guid myuuid = Guid.NewGuid();
             string transactionID = myuuid.ToString();
             //Sql staffs here
             string transactionType = "Widthraw";
-            string insertQuery = "INSERT INTO table_withdrawal(TRANSACTION_ID, ITEM_CODE, PRODUCT_NAME, QUANTITY, WARRANTY, TRANSACTION_TYPE, CLIENT_NAME,IMAGE) VALUES('" + transactionID + "', '" + txtItemCode.Text + "', '" + txtProductName.Text + "', '" + txtQuantity.Text + "', '" + txtWarranty.Text + "', '" + transactionType + "' , '" + txtClientName.Text + "', '" + lbImage.Text + "' )";
+            string insertQuery = "INSERT INTO table_withdrawal(TRANSACTION_ID, ITEM_CODE, PRODUCT_NAME, QUANTITY, WARRANTY, TRANSACTION_TYPE, CLIENT_NAME,STATUS, IMAGE) VALUES('" + transactionID + "', '" + txtItemCode.Text + "', '" + txtProductName.Text + "', '" + txtQuantity.Text + "', '" + txtWarranty.Text + "', '" + transactionType + "' , '" + txtClientName.Text + "', '"+ status +"' ,'" + lbImage.Text + "' )";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
 
