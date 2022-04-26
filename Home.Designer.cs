@@ -33,7 +33,7 @@ namespace Inventory_System_Management_Alliance28
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTrash = new System.Windows.Forms.Button();
             this.activeTabIndicator = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@ namespace Inventory_System_Management_Alliance28
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panelSideMenu.Controls.Add(this.label4);
             this.panelSideMenu.Controls.Add(this.pictureBox5);
-            this.panelSideMenu.Controls.Add(this.button1);
+            this.panelSideMenu.Controls.Add(this.btnTrash);
             this.panelSideMenu.Controls.Add(this.activeTabIndicator);
             this.panelSideMenu.Controls.Add(this.label7);
             this.panelSideMenu.Controls.Add(this.label6);
@@ -122,19 +122,20 @@ namespace Inventory_System_Management_Alliance28
             this.pictureBox5.TabIndex = 21;
             this.pictureBox5.TabStop = false;
             // 
-            // button1
+            // btnTrash
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 278);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 55);
-            this.button1.TabIndex = 20;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTrash.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnTrash.FlatAppearance.BorderSize = 0;
+            this.btnTrash.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnTrash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnTrash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTrash.ForeColor = System.Drawing.Color.White;
+            this.btnTrash.Location = new System.Drawing.Point(12, 278);
+            this.btnTrash.Name = "btnTrash";
+            this.btnTrash.Size = new System.Drawing.Size(238, 55);
+            this.btnTrash.TabIndex = 20;
+            this.btnTrash.UseVisualStyleBackColor = true;
+            this.btnTrash.Click += new System.EventHandler(this.btnTrash_Click);
             // 
             // activeTabIndicator
             // 
@@ -220,6 +221,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnLogout.Size = new System.Drawing.Size(250, 55);
             this.btnLogout.TabIndex = 11;
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnAccount
             // 
@@ -234,6 +236,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnAccount.Size = new System.Drawing.Size(250, 55);
             this.btnAccount.TabIndex = 10;
             this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnTransaction
             // 
@@ -484,7 +487,7 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.Button btnTransaction;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTrash;
         private Widthdrawal.UserControlTransaction userControlTransaction1;
     }
 }

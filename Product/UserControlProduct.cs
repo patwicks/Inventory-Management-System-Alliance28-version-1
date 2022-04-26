@@ -203,8 +203,9 @@ namespace Inventory_System_Management_Alliance28
                     if (i == 13)
                     {
                         xcellApp.Cells[1, 13] = null;
-                    }
 
+                    }
+                   
                 }
 
                 for (int i = 0; i < dataGridProduct.Rows.Count; i++)

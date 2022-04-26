@@ -263,7 +263,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(261, 21);
+            this.btnRefresh.Location = new System.Drawing.Point(382, 21);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(115, 30);
             this.btnRefresh.TabIndex = 3;
@@ -304,7 +304,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExport.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(382, 21);
+            this.btnExport.Location = new System.Drawing.Point(261, 21);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(115, 30);
             this.btnExport.TabIndex = 6;
