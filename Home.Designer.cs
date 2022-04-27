@@ -31,6 +31,13 @@ namespace Inventory_System_Management_Alliance28
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnStocks = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
+            this.btnAccount = new System.Windows.Forms.PictureBox();
+            this.btnTrash = new System.Windows.Forms.PictureBox();
+            this.btnTransaction = new System.Windows.Forms.PictureBox();
+            this.btnProduct = new System.Windows.Forms.PictureBox();
+            this.btnDashboard = new System.Windows.Forms.PictureBox();
             this.activeTabIndicator = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,23 +47,18 @@ namespace Inventory_System_Management_Alliance28
             this.userControlProduct1 = new Inventory_System_Management_Alliance28.UserControlProduct();
             this.userControlDashboard1 = new Inventory_System_Management_Alliance28.UserControlDashboard();
             this.userControlTransaction1 = new Inventory_System_Management_Alliance28.Widthdrawal.UserControlTransaction();
-            this.btnDashboard = new System.Windows.Forms.PictureBox();
-            this.btnProduct = new System.Windows.Forms.PictureBox();
-            this.btnTransaction = new System.Windows.Forms.PictureBox();
-            this.btnTrash = new System.Windows.Forms.PictureBox();
-            this.btnAccount = new System.Windows.Forms.PictureBox();
-            this.btnLogout = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnStocks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTrash)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTransaction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDashboard)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDashboard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTransaction)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTrash)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAccount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -64,6 +66,7 @@ namespace Inventory_System_Management_Alliance28
             this.panelSideMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panelSideMenu.Controls.Add(this.btnStocks);
             this.panelSideMenu.Controls.Add(this.btnLogout);
             this.panelSideMenu.Controls.Add(this.btnAccount);
             this.panelSideMenu.Controls.Add(this.btnTrash);
@@ -76,6 +79,76 @@ namespace Inventory_System_Management_Alliance28
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(250, 800);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // btnStocks
+            // 
+            this.btnStocks.Image = ((System.Drawing.Image)(resources.GetObject("btnStocks.Image")));
+            this.btnStocks.Location = new System.Drawing.Point(7, 277);
+            this.btnStocks.Name = "btnStocks";
+            this.btnStocks.Size = new System.Drawing.Size(243, 54);
+            this.btnStocks.TabIndex = 12;
+            this.btnStocks.TabStop = false;
+            this.btnStocks.Click += new System.EventHandler(this.btnStocks_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(7, 442);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(243, 54);
+            this.btnLogout.TabIndex = 11;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
+            this.btnAccount.Location = new System.Drawing.Point(7, 387);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(243, 54);
+            this.btnAccount.TabIndex = 10;
+            this.btnAccount.TabStop = false;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            // 
+            // btnTrash
+            // 
+            this.btnTrash.Image = ((System.Drawing.Image)(resources.GetObject("btnTrash.Image")));
+            this.btnTrash.Location = new System.Drawing.Point(7, 332);
+            this.btnTrash.Name = "btnTrash";
+            this.btnTrash.Size = new System.Drawing.Size(243, 54);
+            this.btnTrash.TabIndex = 9;
+            this.btnTrash.TabStop = false;
+            this.btnTrash.Click += new System.EventHandler(this.btnTrash_Click);
+            // 
+            // btnTransaction
+            // 
+            this.btnTransaction.Image = ((System.Drawing.Image)(resources.GetObject("btnTransaction.Image")));
+            this.btnTransaction.Location = new System.Drawing.Point(7, 222);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Size = new System.Drawing.Size(243, 54);
+            this.btnTransaction.TabIndex = 8;
+            this.btnTransaction.TabStop = false;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
+            // 
+            // btnProduct
+            // 
+            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
+            this.btnProduct.Location = new System.Drawing.Point(7, 167);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(243, 54);
+            this.btnProduct.TabIndex = 7;
+            this.btnProduct.TabStop = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
+            this.btnDashboard.Location = new System.Drawing.Point(7, 112);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(243, 54);
+            this.btnDashboard.TabIndex = 6;
+            this.btnDashboard.TabStop = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // activeTabIndicator
             // 
@@ -172,66 +245,6 @@ namespace Inventory_System_Management_Alliance28
             this.userControlTransaction1.Size = new System.Drawing.Size(1020, 772);
             this.userControlTransaction1.TabIndex = 5;
             // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
-            this.btnDashboard.Location = new System.Drawing.Point(7, 112);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(243, 54);
-            this.btnDashboard.TabIndex = 6;
-            this.btnDashboard.TabStop = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
-            // btnProduct
-            // 
-            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
-            this.btnProduct.Location = new System.Drawing.Point(7, 167);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(243, 54);
-            this.btnProduct.TabIndex = 7;
-            this.btnProduct.TabStop = false;
-            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
-            // 
-            // btnTransaction
-            // 
-            this.btnTransaction.Image = ((System.Drawing.Image)(resources.GetObject("btnTransaction.Image")));
-            this.btnTransaction.Location = new System.Drawing.Point(7, 222);
-            this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Size = new System.Drawing.Size(243, 54);
-            this.btnTransaction.TabIndex = 8;
-            this.btnTransaction.TabStop = false;
-            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
-            // 
-            // btnTrash
-            // 
-            this.btnTrash.Image = ((System.Drawing.Image)(resources.GetObject("btnTrash.Image")));
-            this.btnTrash.Location = new System.Drawing.Point(7, 277);
-            this.btnTrash.Name = "btnTrash";
-            this.btnTrash.Size = new System.Drawing.Size(243, 54);
-            this.btnTrash.TabIndex = 9;
-            this.btnTrash.TabStop = false;
-            this.btnTrash.Click += new System.EventHandler(this.btnTrash_Click);
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
-            this.btnAccount.Location = new System.Drawing.Point(7, 332);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(243, 54);
-            this.btnAccount.TabIndex = 10;
-            this.btnAccount.TabStop = false;
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(7, 387);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(243, 54);
-            this.btnLogout.TabIndex = 11;
-            this.btnLogout.TabStop = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -255,17 +268,18 @@ namespace Inventory_System_Management_Alliance28
             this.Text = "INVENTORY MANAGEMENT SYSTEM";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelSideMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnStocks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTrash)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTransaction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDashboard)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDashboard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTransaction)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTrash)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAccount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,5 +302,6 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.PictureBox btnTransaction;
         private System.Windows.Forms.PictureBox btnProduct;
         private System.Windows.Forms.PictureBox btnDashboard;
+        private System.Windows.Forms.PictureBox btnStocks;
     }
 }

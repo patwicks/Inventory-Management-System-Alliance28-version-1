@@ -56,6 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="inventory_systemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inventory_systemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Product\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +198,17 @@
     <EmbeddedResource Include="Widthdrawal\UserControlTransaction.resx">
       <DependentUpon>UserControlTransaction.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="inventory_systemDataSet.xsc">
+      <DependentUpon>inventory_systemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="inventory_systemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>inventory_systemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inventory_systemDataSet.xss">
+      <DependentUpon>inventory_systemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

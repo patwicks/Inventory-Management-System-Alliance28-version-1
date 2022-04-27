@@ -31,10 +31,12 @@ namespace Inventory_System_Management_Alliance28
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbProduct = new System.Windows.Forms.Label();
@@ -63,30 +65,41 @@ namespace Inventory_System_Management_Alliance28
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.dataGridrecentW = new System.Windows.Forms.DataGridView();
-            this.wVIEW = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.TRANSACTION_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ITEM_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRODUCT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PQUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRANSACTION_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CLIENT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PTIMESTAMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PIMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridProduct = new System.Windows.Forms.DataGridView();
-            this.VIEW = new System.Windows.Forms.DataGridViewImageColumn();
-            this.PICTURE = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ITEMCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WARRANTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIMESTAMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRODUCTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRODUCTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIMESTAMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WARRANTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITEMCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PICTURE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.VIEW = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridProduct = new System.Windows.Forms.DataGridView();
+            this.PIMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PTIMESTAMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLIENT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRANSACTION_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PQUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRODUCT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITEM_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRANSACTION_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.wVIEW = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridrecentW = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.dataGridViewOutofStock = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATEADDED = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -97,9 +110,11 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridrecentW)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridrecentW)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOutofStock)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,7 +124,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel1.Controls.Add(this.lbProduct);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(4, 61);
+            this.panel1.Location = new System.Drawing.Point(4, 56);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 140);
@@ -166,7 +181,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lbTransaction);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(260, 61);
+            this.panel2.Location = new System.Drawing.Point(260, 56);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 140);
@@ -223,7 +238,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.lbDeletedItem);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(772, 61);
+            this.panel3.Location = new System.Drawing.Point(772, 56);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(240, 140);
@@ -280,7 +295,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.lbAccount);
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(515, 61);
+            this.panel4.Location = new System.Drawing.Point(515, 56);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(240, 140);
@@ -381,7 +396,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 303);
+            this.label9.Location = new System.Drawing.Point(5, 219);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(206, 21);
             this.label9.TabIndex = 9;
@@ -391,7 +406,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(513, 303);
+            this.label10.Location = new System.Drawing.Point(512, 219);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(226, 21);
             this.label10.TabIndex = 9;
@@ -402,155 +417,100 @@ namespace Inventory_System_Management_Alliance28
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel7.Controls.Add(this.dataGridrecentW);
             this.panel7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(517, 338);
+            this.panel7.Location = new System.Drawing.Point(516, 249);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(500, 305);
             this.panel7.TabIndex = 11;
-            // 
-            // dataGridrecentW
-            // 
-            this.dataGridrecentW.AllowUserToAddRows = false;
-            this.dataGridrecentW.AllowUserToDeleteRows = false;
-            this.dataGridrecentW.AllowUserToResizeColumns = false;
-            this.dataGridrecentW.AllowUserToResizeRows = false;
-            this.dataGridrecentW.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.dataGridrecentW.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridrecentW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dataGridrecentW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle49.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle49.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridrecentW.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
-            this.dataGridrecentW.ColumnHeadersHeight = 30;
-            this.dataGridrecentW.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.wVIEW,
-            this.dataGridViewImageColumn2,
-            this.TRANSACTION_ID,
-            this.ITEM_CODE,
-            this.PRODUCT_NAME,
-            this.PQUANTITY,
-            this.TRANSACTION_TYPE,
-            this.CLIENT_NAME,
-            this.PTIMESTAMP,
-            this.PIMAGE});
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle50.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle50.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridrecentW.DefaultCellStyle = dataGridViewCellStyle50;
-            this.dataGridrecentW.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dataGridrecentW.Location = new System.Drawing.Point(0, 0);
-            this.dataGridrecentW.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridrecentW.MultiSelect = false;
-            this.dataGridrecentW.Name = "dataGridrecentW";
-            this.dataGridrecentW.ReadOnly = true;
-            this.dataGridrecentW.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridrecentW.RowHeadersVisible = false;
-            this.dataGridrecentW.RowHeadersWidth = 50;
-            this.dataGridrecentW.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridrecentW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridrecentW.Size = new System.Drawing.Size(500, 305);
-            this.dataGridrecentW.TabIndex = 1;
-            this.dataGridrecentW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridrecentW_CellClick);
-            this.dataGridrecentW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridrecentW_CellContentClick);
-            // 
-            // wVIEW
-            // 
-            this.wVIEW.HeaderText = "";
-            this.wVIEW.Image = ((System.Drawing.Image)(resources.GetObject("wVIEW.Image")));
-            this.wVIEW.Name = "wVIEW";
-            this.wVIEW.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.DataPropertyName = "PICTURE";
-            this.dataGridViewImageColumn2.HeaderText = "PICTURE";
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            // 
-            // TRANSACTION_ID
-            // 
-            this.TRANSACTION_ID.DataPropertyName = "TRANSACTION_ID";
-            this.TRANSACTION_ID.HeaderText = "TRANSACTION ID";
-            this.TRANSACTION_ID.Name = "TRANSACTION_ID";
-            this.TRANSACTION_ID.ReadOnly = true;
-            this.TRANSACTION_ID.Width = 50;
-            // 
-            // ITEM_CODE
-            // 
-            this.ITEM_CODE.DataPropertyName = "ITEM_CODE";
-            this.ITEM_CODE.HeaderText = "ITEM CODE";
-            this.ITEM_CODE.Name = "ITEM_CODE";
-            this.ITEM_CODE.ReadOnly = true;
-            this.ITEM_CODE.Visible = false;
-            // 
-            // PRODUCT_NAME
-            // 
-            this.PRODUCT_NAME.DataPropertyName = "PRODUCT_NAME";
-            this.PRODUCT_NAME.HeaderText = "PRODUCT NAME";
-            this.PRODUCT_NAME.Name = "PRODUCT_NAME";
-            this.PRODUCT_NAME.ReadOnly = true;
-            this.PRODUCT_NAME.Width = 149;
-            // 
-            // PQUANTITY
-            // 
-            this.PQUANTITY.DataPropertyName = "QUANTITY";
-            this.PQUANTITY.HeaderText = "QUANTITY";
-            this.PQUANTITY.Name = "PQUANTITY";
-            this.PQUANTITY.ReadOnly = true;
-            this.PQUANTITY.Visible = false;
-            // 
-            // TRANSACTION_TYPE
-            // 
-            this.TRANSACTION_TYPE.DataPropertyName = "TRANSACTION_TYPE";
-            this.TRANSACTION_TYPE.HeaderText = "TRANSACTION TYPE";
-            this.TRANSACTION_TYPE.Name = "TRANSACTION_TYPE";
-            this.TRANSACTION_TYPE.ReadOnly = true;
-            this.TRANSACTION_TYPE.Visible = false;
-            // 
-            // CLIENT_NAME
-            // 
-            this.CLIENT_NAME.DataPropertyName = "CLIENT_NAME";
-            this.CLIENT_NAME.HeaderText = "CLIENT NAME";
-            this.CLIENT_NAME.Name = "CLIENT_NAME";
-            this.CLIENT_NAME.ReadOnly = true;
-            this.CLIENT_NAME.Visible = false;
-            // 
-            // PTIMESTAMP
-            // 
-            this.PTIMESTAMP.DataPropertyName = "TIMESTAMP";
-            this.PTIMESTAMP.HeaderText = "TIMESTAMP";
-            this.PTIMESTAMP.Name = "PTIMESTAMP";
-            this.PTIMESTAMP.ReadOnly = true;
-            this.PTIMESTAMP.Visible = false;
-            // 
-            // PIMAGE
-            // 
-            this.PIMAGE.DataPropertyName = "IMAGE";
-            this.PIMAGE.HeaderText = "IMAGE";
-            this.PIMAGE.Name = "PIMAGE";
-            this.PIMAGE.ReadOnly = true;
-            this.PIMAGE.Visible = false;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel6.Controls.Add(this.dataGridProduct);
             this.panel6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(5, 338);
+            this.panel6.Location = new System.Drawing.Point(4, 249);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(500, 305);
             this.panel6.TabIndex = 10;
+            // 
+            // IMAGE
+            // 
+            this.IMAGE.DataPropertyName = "IMAGE";
+            this.IMAGE.HeaderText = "IMAGE";
+            this.IMAGE.Name = "IMAGE";
+            this.IMAGE.ReadOnly = true;
+            this.IMAGE.Visible = false;
+            // 
+            // QUANTITY
+            // 
+            this.QUANTITY.DataPropertyName = "QUANTITY";
+            this.QUANTITY.HeaderText = "QUANTITY";
+            this.QUANTITY.Name = "QUANTITY";
+            this.QUANTITY.ReadOnly = true;
+            // 
+            // PRODUCTNAME
+            // 
+            this.PRODUCTNAME.DataPropertyName = "PRODUCTNAME";
+            this.PRODUCTNAME.HeaderText = "PRODUCT NAME";
+            this.PRODUCTNAME.Name = "PRODUCTNAME";
+            this.PRODUCTNAME.ReadOnly = true;
+            this.PRODUCTNAME.Width = 200;
+            // 
+            // TIMESTAMP
+            // 
+            this.TIMESTAMP.DataPropertyName = "TIMESTAMP";
+            this.TIMESTAMP.HeaderText = "TIMESTAMP";
+            this.TIMESTAMP.Name = "TIMESTAMP";
+            this.TIMESTAMP.ReadOnly = true;
+            this.TIMESTAMP.Visible = false;
+            // 
+            // DESCRIPTION
+            // 
+            this.DESCRIPTION.DataPropertyName = "DESCRIPTION";
+            this.DESCRIPTION.HeaderText = "DESCRIPTION";
+            this.DESCRIPTION.Name = "DESCRIPTION";
+            this.DESCRIPTION.ReadOnly = true;
+            this.DESCRIPTION.Visible = false;
+            // 
+            // WARRANTY
+            // 
+            this.WARRANTY.DataPropertyName = "WARRANTY";
+            this.WARRANTY.HeaderText = "WARRANTY";
+            this.WARRANTY.Name = "WARRANTY";
+            this.WARRANTY.ReadOnly = true;
+            this.WARRANTY.Visible = false;
+            // 
+            // CATEGORY
+            // 
+            this.CATEGORY.DataPropertyName = "CATEGORY";
+            this.CATEGORY.HeaderText = "CATEGORY";
+            this.CATEGORY.Name = "CATEGORY";
+            this.CATEGORY.ReadOnly = true;
+            this.CATEGORY.Visible = false;
+            // 
+            // ITEMCODE
+            // 
+            this.ITEMCODE.DataPropertyName = "ITEMCODE";
+            this.ITEMCODE.HeaderText = "ITEMCODE";
+            this.ITEMCODE.Name = "ITEMCODE";
+            this.ITEMCODE.ReadOnly = true;
+            this.ITEMCODE.Visible = false;
+            // 
+            // PICTURE
+            // 
+            this.PICTURE.DataPropertyName = "PICTURE";
+            this.PICTURE.HeaderText = "PICTURE";
+            this.PICTURE.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.PICTURE.Name = "PICTURE";
+            this.PICTURE.ReadOnly = true;
+            // 
+            // VIEW
+            // 
+            this.VIEW.HeaderText = "";
+            this.VIEW.Image = ((System.Drawing.Image)(resources.GetObject("VIEW.Image")));
+            this.VIEW.Name = "VIEW";
+            this.VIEW.ReadOnly = true;
             // 
             // dataGridProduct
             // 
@@ -562,13 +522,13 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle51.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridProduct.ColumnHeadersHeight = 30;
             this.dataGridProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.VIEW,
@@ -581,15 +541,15 @@ namespace Inventory_System_Management_Alliance28
             this.PRODUCTNAME,
             this.QUANTITY,
             this.IMAGE});
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle52.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle52.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.dataGridProduct.Location = new System.Drawing.Point(0, 0);
             this.dataGridProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -606,93 +566,275 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellClick_1);
             this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick);
             // 
-            // VIEW
+            // PIMAGE
             // 
-            this.VIEW.HeaderText = "";
-            this.VIEW.Image = ((System.Drawing.Image)(resources.GetObject("VIEW.Image")));
-            this.VIEW.Name = "VIEW";
-            this.VIEW.ReadOnly = true;
+            this.PIMAGE.DataPropertyName = "IMAGE";
+            this.PIMAGE.HeaderText = "IMAGE";
+            this.PIMAGE.Name = "PIMAGE";
+            this.PIMAGE.ReadOnly = true;
+            this.PIMAGE.Visible = false;
             // 
-            // PICTURE
+            // PTIMESTAMP
             // 
-            this.PICTURE.DataPropertyName = "PICTURE";
-            this.PICTURE.HeaderText = "PICTURE";
-            this.PICTURE.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.PICTURE.Name = "PICTURE";
-            this.PICTURE.ReadOnly = true;
+            this.PTIMESTAMP.DataPropertyName = "TIMESTAMP";
+            this.PTIMESTAMP.HeaderText = "TIMESTAMP";
+            this.PTIMESTAMP.Name = "PTIMESTAMP";
+            this.PTIMESTAMP.ReadOnly = true;
+            this.PTIMESTAMP.Visible = false;
             // 
-            // ITEMCODE
+            // CLIENT_NAME
             // 
-            this.ITEMCODE.DataPropertyName = "ITEMCODE";
-            this.ITEMCODE.HeaderText = "ITEMCODE";
-            this.ITEMCODE.Name = "ITEMCODE";
-            this.ITEMCODE.ReadOnly = true;
-            this.ITEMCODE.Visible = false;
+            this.CLIENT_NAME.DataPropertyName = "CLIENT_NAME";
+            this.CLIENT_NAME.HeaderText = "CLIENT NAME";
+            this.CLIENT_NAME.Name = "CLIENT_NAME";
+            this.CLIENT_NAME.ReadOnly = true;
+            this.CLIENT_NAME.Visible = false;
             // 
-            // CATEGORY
+            // TRANSACTION_TYPE
             // 
-            this.CATEGORY.DataPropertyName = "CATEGORY";
-            this.CATEGORY.HeaderText = "CATEGORY";
-            this.CATEGORY.Name = "CATEGORY";
-            this.CATEGORY.ReadOnly = true;
-            this.CATEGORY.Visible = false;
+            this.TRANSACTION_TYPE.DataPropertyName = "TRANSACTION_TYPE";
+            this.TRANSACTION_TYPE.HeaderText = "TRANSACTION TYPE";
+            this.TRANSACTION_TYPE.Name = "TRANSACTION_TYPE";
+            this.TRANSACTION_TYPE.ReadOnly = true;
+            this.TRANSACTION_TYPE.Visible = false;
             // 
-            // WARRANTY
+            // PQUANTITY
             // 
-            this.WARRANTY.DataPropertyName = "WARRANTY";
-            this.WARRANTY.HeaderText = "WARRANTY";
-            this.WARRANTY.Name = "WARRANTY";
-            this.WARRANTY.ReadOnly = true;
-            this.WARRANTY.Visible = false;
+            this.PQUANTITY.DataPropertyName = "QUANTITY";
+            this.PQUANTITY.HeaderText = "QUANTITY";
+            this.PQUANTITY.Name = "PQUANTITY";
+            this.PQUANTITY.ReadOnly = true;
+            this.PQUANTITY.Visible = false;
             // 
-            // DESCRIPTION
+            // PRODUCT_NAME
             // 
-            this.DESCRIPTION.DataPropertyName = "DESCRIPTION";
-            this.DESCRIPTION.HeaderText = "DESCRIPTION";
-            this.DESCRIPTION.Name = "DESCRIPTION";
-            this.DESCRIPTION.ReadOnly = true;
-            this.DESCRIPTION.Visible = false;
+            this.PRODUCT_NAME.DataPropertyName = "PRODUCT_NAME";
+            this.PRODUCT_NAME.HeaderText = "PRODUCT NAME";
+            this.PRODUCT_NAME.Name = "PRODUCT_NAME";
+            this.PRODUCT_NAME.ReadOnly = true;
+            this.PRODUCT_NAME.Width = 149;
             // 
-            // TIMESTAMP
+            // ITEM_CODE
             // 
-            this.TIMESTAMP.DataPropertyName = "TIMESTAMP";
-            this.TIMESTAMP.HeaderText = "TIMESTAMP";
-            this.TIMESTAMP.Name = "TIMESTAMP";
-            this.TIMESTAMP.ReadOnly = true;
-            this.TIMESTAMP.Visible = false;
+            this.ITEM_CODE.DataPropertyName = "ITEM_CODE";
+            this.ITEM_CODE.HeaderText = "ITEM CODE";
+            this.ITEM_CODE.Name = "ITEM_CODE";
+            this.ITEM_CODE.ReadOnly = true;
+            this.ITEM_CODE.Visible = false;
             // 
-            // PRODUCTNAME
+            // TRANSACTION_ID
             // 
-            this.PRODUCTNAME.DataPropertyName = "PRODUCTNAME";
-            this.PRODUCTNAME.HeaderText = "PRODUCT NAME";
-            this.PRODUCTNAME.Name = "PRODUCTNAME";
-            this.PRODUCTNAME.ReadOnly = true;
-            this.PRODUCTNAME.Width = 200;
+            this.TRANSACTION_ID.DataPropertyName = "TRANSACTION_ID";
+            this.TRANSACTION_ID.HeaderText = "TRANSACTION ID";
+            this.TRANSACTION_ID.Name = "TRANSACTION_ID";
+            this.TRANSACTION_ID.ReadOnly = true;
+            this.TRANSACTION_ID.Width = 50;
             // 
-            // QUANTITY
+            // dataGridViewImageColumn2
             // 
-            this.QUANTITY.DataPropertyName = "QUANTITY";
-            this.QUANTITY.HeaderText = "QUANTITY";
-            this.QUANTITY.Name = "QUANTITY";
-            this.QUANTITY.ReadOnly = true;
+            this.dataGridViewImageColumn2.DataPropertyName = "PICTURE";
+            this.dataGridViewImageColumn2.HeaderText = "PICTURE";
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
             // 
-            // IMAGE
+            // wVIEW
             // 
-            this.IMAGE.DataPropertyName = "IMAGE";
-            this.IMAGE.HeaderText = "IMAGE";
-            this.IMAGE.Name = "IMAGE";
-            this.IMAGE.ReadOnly = true;
-            this.IMAGE.Visible = false;
+            this.wVIEW.HeaderText = "";
+            this.wVIEW.Image = ((System.Drawing.Image)(resources.GetObject("wVIEW.Image")));
+            this.wVIEW.Name = "wVIEW";
+            this.wVIEW.ReadOnly = true;
+            // 
+            // dataGridrecentW
+            // 
+            this.dataGridrecentW.AllowUserToAddRows = false;
+            this.dataGridrecentW.AllowUserToDeleteRows = false;
+            this.dataGridrecentW.AllowUserToResizeColumns = false;
+            this.dataGridrecentW.AllowUserToResizeRows = false;
+            this.dataGridrecentW.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.dataGridrecentW.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridrecentW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dataGridrecentW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridrecentW.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridrecentW.ColumnHeadersHeight = 30;
+            this.dataGridrecentW.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.wVIEW,
+            this.dataGridViewImageColumn2,
+            this.TRANSACTION_ID,
+            this.ITEM_CODE,
+            this.PRODUCT_NAME,
+            this.PQUANTITY,
+            this.TRANSACTION_TYPE,
+            this.CLIENT_NAME,
+            this.PTIMESTAMP,
+            this.PIMAGE});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridrecentW.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridrecentW.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dataGridrecentW.Location = new System.Drawing.Point(0, 0);
+            this.dataGridrecentW.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridrecentW.MultiSelect = false;
+            this.dataGridrecentW.Name = "dataGridrecentW";
+            this.dataGridrecentW.ReadOnly = true;
+            this.dataGridrecentW.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridrecentW.RowHeadersVisible = false;
+            this.dataGridrecentW.RowHeadersWidth = 50;
+            this.dataGridrecentW.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridrecentW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridrecentW.Size = new System.Drawing.Size(500, 305);
+            this.dataGridrecentW.TabIndex = 1;
+            this.dataGridrecentW.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridrecentW_CellClick);
+            this.dataGridrecentW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridrecentW_CellContentClick);
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel8.Location = new System.Drawing.Point(12, 242);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel8.Controls.Add(this.label11);
+            this.panel8.Controls.Add(this.dataGridViewOutofStock);
+            this.panel8.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.panel8.Location = new System.Drawing.Point(57, 561);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(994, 52);
+            this.panel8.Size = new System.Drawing.Size(906, 174);
             this.panel8.TabIndex = 12;
+            // 
+            // dataGridViewOutofStock
+            // 
+            this.dataGridViewOutofStock.AllowUserToAddRows = false;
+            this.dataGridViewOutofStock.AllowUserToDeleteRows = false;
+            this.dataGridViewOutofStock.AllowUserToResizeColumns = false;
+            this.dataGridViewOutofStock.AllowUserToResizeRows = false;
+            this.dataGridViewOutofStock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.dataGridViewOutofStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewOutofStock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dataGridViewOutofStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOutofStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewOutofStock.ColumnHeadersHeight = 28;
+            this.dataGridViewOutofStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.DATEADDED,
+            this.dataGridViewTextBoxColumn7,
+            this.Column9});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 8.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewOutofStock.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewOutofStock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dataGridViewOutofStock.Location = new System.Drawing.Point(2, 32);
+            this.dataGridViewOutofStock.MultiSelect = false;
+            this.dataGridViewOutofStock.Name = "dataGridViewOutofStock";
+            this.dataGridViewOutofStock.ReadOnly = true;
+            this.dataGridViewOutofStock.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewOutofStock.RowHeadersVisible = false;
+            this.dataGridViewOutofStock.RowHeadersWidth = 50;
+            this.dataGridViewOutofStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewOutofStock.Size = new System.Drawing.Size(904, 139);
+            this.dataGridViewOutofStock.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(398, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 21);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Out of Stock";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ITEMCODE";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ITEM CODE";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.ToolTipText = "Click to Copy";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "PRODUCTNAME";
+            this.dataGridViewTextBoxColumn2.HeaderText = "PRODUCT NAME";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "CATEGORY";
+            this.dataGridViewTextBoxColumn3.HeaderText = "CATEGORY";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "QUANTITY";
+            this.dataGridViewTextBoxColumn4.HeaderText = "QUANTITY";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "WARRANTY";
+            this.dataGridViewTextBoxColumn5.HeaderText = "WARRANTY";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "DESCRIPTION";
+            this.dataGridViewTextBoxColumn6.HeaderText = "DESCRIPTION";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // DATEADDED
+            // 
+            this.DATEADDED.DataPropertyName = "TIMESTAMP";
+            this.DATEADDED.HeaderText = "DATE ADDED";
+            this.DATEADDED.Name = "DATEADDED";
+            this.DATEADDED.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "IMAGE";
+            this.dataGridViewTextBoxColumn7.HeaderText = "IMAGE";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "PICTURE";
+            this.Column9.HeaderText = "PICTURE";
+            this.Column9.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // UserControlDashboard
             // 
@@ -711,7 +853,7 @@ namespace Inventory_System_Management_Alliance28
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximumSize = new System.Drawing.Size(1020, 750);
             this.MinimumSize = new System.Drawing.Size(1020, 750);
             this.Name = "UserControlDashboard";
@@ -732,9 +874,12 @@ namespace Inventory_System_Management_Alliance28
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridrecentW)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridrecentW)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOutofStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -770,8 +915,18 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataGridView dataGridrecentW;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView dataGridrecentW;
+        private System.Windows.Forms.DataGridViewImageColumn wVIEW;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TRANSACTION_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITEM_CODE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCT_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PQUANTITY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TRANSACTION_TYPE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENT_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PTIMESTAMP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PIMAGE;
         private System.Windows.Forms.DataGridView dataGridProduct;
         private System.Windows.Forms.DataGridViewImageColumn VIEW;
         private System.Windows.Forms.DataGridViewImageColumn PICTURE;
@@ -783,16 +938,17 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTNAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn QUANTITY;
         private System.Windows.Forms.DataGridViewTextBoxColumn IMAGE;
-        private System.Windows.Forms.DataGridViewImageColumn wVIEW;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TRANSACTION_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ITEM_CODE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCT_NAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PQUANTITY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TRANSACTION_TYPE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENT_NAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PTIMESTAMP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PIMAGE;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView dataGridViewOutofStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATEADDED;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewImageColumn Column9;
     }
 }

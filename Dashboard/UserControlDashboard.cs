@@ -42,6 +42,8 @@ namespace Inventory_System_Management_Alliance28
             //datagrid
             datagrid_design();
 
+            //load out of stock
+            loadOutofStockProduct();
           
             //current time and data
             //lbCurrentTime.Text = DateTime.Now.ToLongTimeString();
@@ -263,7 +265,33 @@ namespace Inventory_System_Management_Alliance28
                 Withdrawform.Show();
             }
         }
+        //load the out of stock product
+        public void loadOutofStockProduct()
+        {
+            string status = "Active";
+            string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP, IMAGE FROM table_products WHERE STATUS = '" + status + "' ORDER BY QUANTITY";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
 
-       
+            connection.Open();
+
+
+            dataAdapter.SelectCommand = loadCommand;
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+
+            dt.Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
+
+            foreach (DataRow row in dt.Rows)
+            {
+                row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
+            }
+            dataGridViewOutofStock.DataSource = dt;
+
+
+
+            connection.Close();
+        }
     }
 }
