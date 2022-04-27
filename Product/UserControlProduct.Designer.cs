@@ -101,7 +101,7 @@ namespace Inventory_System_Management_Alliance28
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dataGridProduct.Location = new System.Drawing.Point(3, 64);
+            this.dataGridProduct.Location = new System.Drawing.Point(3, 69);
             this.dataGridProduct.MultiSelect = false;
             this.dataGridProduct.Name = "dataGridProduct";
             this.dataGridProduct.ReadOnly = true;
@@ -109,7 +109,7 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.RowHeadersVisible = false;
             this.dataGridProduct.RowHeadersWidth = 50;
             this.dataGridProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridProduct.Size = new System.Drawing.Size(1014, 680);
+            this.dataGridProduct.Size = new System.Drawing.Size(1014, 676);
             this.dataGridProduct.TabIndex = 0;
             this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick);
             // 

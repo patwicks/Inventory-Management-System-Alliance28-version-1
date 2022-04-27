@@ -16,6 +16,7 @@ namespace Inventory_System_Management_Alliance28
     {
         //Global variable
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+
         public UserControlProduct()
         {
             InitializeComponent();
@@ -230,5 +231,7 @@ namespace Inventory_System_Management_Alliance28
                 xcellApp.Visible = true;
             }
         }
+
+      
     }
 }
