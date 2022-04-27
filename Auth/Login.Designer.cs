@@ -38,6 +38,8 @@ namespace Inventory_System_Management_Alliance28
             this.panelUsername = new System.Windows.Forms.Panel();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.panelPassword = new System.Windows.Forms.Panel();
+            this.btnshow = new System.Windows.Forms.PictureBox();
+            this.btnhide = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@ namespace Inventory_System_Management_Alliance28
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.Label();
-            this.btnshow = new System.Windows.Forms.PictureBox();
-            this.btnhide = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -143,6 +143,28 @@ namespace Inventory_System_Management_Alliance28
             this.panelPassword.Size = new System.Drawing.Size(350, 45);
             this.panelPassword.TabIndex = 4;
             // 
+            // btnshow
+            // 
+            this.btnshow.Image = ((System.Drawing.Image)(resources.GetObject("btnshow.Image")));
+            this.btnshow.Location = new System.Drawing.Point(319, 9);
+            this.btnshow.Name = "btnshow";
+            this.btnshow.Size = new System.Drawing.Size(24, 24);
+            this.btnshow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnshow.TabIndex = 21;
+            this.btnshow.TabStop = false;
+            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
+            // 
+            // btnhide
+            // 
+            this.btnhide.Image = ((System.Drawing.Image)(resources.GetObject("btnhide.Image")));
+            this.btnhide.Location = new System.Drawing.Point(319, 9);
+            this.btnhide.Name = "btnhide";
+            this.btnhide.Size = new System.Drawing.Size(24, 24);
+            this.btnhide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnhide.TabIndex = 22;
+            this.btnhide.TabStop = false;
+            this.btnhide.Click += new System.EventHandler(this.btnhide_Click);
+            // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
@@ -236,28 +258,6 @@ namespace Inventory_System_Management_Alliance28
             this.error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.error.UseCompatibleTextRendering = true;
             this.error.Visible = false;
-            // 
-            // btnshow
-            // 
-            this.btnshow.Image = ((System.Drawing.Image)(resources.GetObject("btnshow.Image")));
-            this.btnshow.Location = new System.Drawing.Point(319, 9);
-            this.btnshow.Name = "btnshow";
-            this.btnshow.Size = new System.Drawing.Size(24, 24);
-            this.btnshow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnshow.TabIndex = 21;
-            this.btnshow.TabStop = false;
-            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
-            // 
-            // btnhide
-            // 
-            this.btnhide.Image = ((System.Drawing.Image)(resources.GetObject("btnhide.Image")));
-            this.btnhide.Location = new System.Drawing.Point(319, 9);
-            this.btnhide.Name = "btnhide";
-            this.btnhide.Size = new System.Drawing.Size(24, 24);
-            this.btnhide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnhide.TabIndex = 22;
-            this.btnhide.TabStop = false;
-            this.btnhide.Click += new System.EventHandler(this.btnhide_Click);
             // 
             // Login
             // 

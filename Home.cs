@@ -36,8 +36,7 @@ namespace Inventory_System_Management_Alliance28
         {
             //Nothing
         }
-
-        // button tabs actions
+            // button tabs actions
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnDashboard.Top;
@@ -75,6 +74,9 @@ namespace Inventory_System_Management_Alliance28
         private void btnLogout_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnLogout.Top;
+            Login loginForm = new Login();
+            this.Hide();
+            loginForm.Show();
         }
     }
 }

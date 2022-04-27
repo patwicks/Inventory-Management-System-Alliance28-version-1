@@ -39,7 +39,9 @@ namespace Inventory_System_Management_Alliance28
             this.label3 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.panelPassword = new System.Windows.Forms.Panel();
+            this.btnshowp = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnhidep = new System.Windows.Forms.PictureBox();
             this.panelUsername = new System.Windows.Forms.Panel();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,21 +50,19 @@ namespace Inventory_System_Management_Alliance28
             this.txtAccountType = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnshowcp = new System.Windows.Forms.PictureBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.btnhidecp = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.Label();
-            this.btnshowp = new System.Windows.Forms.PictureBox();
-            this.btnhidep = new System.Windows.Forms.PictureBox();
-            this.btnshowcp = new System.Windows.Forms.PictureBox();
-            this.btnhidecp = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panelPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnshowp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnhidep)).BeginInit();
             this.panelUsername.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnshowp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnhidep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnshowcp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnhidecp)).BeginInit();
             this.SuspendLayout();
@@ -159,13 +159,24 @@ namespace Inventory_System_Management_Alliance28
             // panelPassword
             // 
             this.panelPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelPassword.Controls.Add(this.btnshowp);
             this.panelPassword.Controls.Add(this.txtPassword);
+            this.panelPassword.Controls.Add(this.btnshowp);
             this.panelPassword.Controls.Add(this.btnhidep);
             this.panelPassword.Location = new System.Drawing.Point(74, 311);
             this.panelPassword.Name = "panelPassword";
             this.panelPassword.Size = new System.Drawing.Size(350, 45);
             this.panelPassword.TabIndex = 12;
+            // 
+            // btnshowp
+            // 
+            this.btnshowp.Image = ((System.Drawing.Image)(resources.GetObject("btnshowp.Image")));
+            this.btnshowp.Location = new System.Drawing.Point(320, 9);
+            this.btnshowp.Name = "btnshowp";
+            this.btnshowp.Size = new System.Drawing.Size(24, 24);
+            this.btnshowp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnshowp.TabIndex = 22;
+            this.btnshowp.TabStop = false;
+            this.btnshowp.Click += new System.EventHandler(this.btnshowp_Click);
             // 
             // txtPassword
             // 
@@ -177,6 +188,17 @@ namespace Inventory_System_Management_Alliance28
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(308, 20);
             this.txtPassword.TabIndex = 0;
+            // 
+            // btnhidep
+            // 
+            this.btnhidep.Image = ((System.Drawing.Image)(resources.GetObject("btnhidep.Image")));
+            this.btnhidep.Location = new System.Drawing.Point(320, 9);
+            this.btnhidep.Name = "btnhidep";
+            this.btnhidep.Size = new System.Drawing.Size(24, 24);
+            this.btnhidep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnhidep.TabIndex = 23;
+            this.btnhidep.TabStop = false;
+            this.btnhidep.Click += new System.EventHandler(this.btnhidep_Click);
             // 
             // panelUsername
             // 
@@ -264,6 +286,17 @@ namespace Inventory_System_Management_Alliance28
             this.panel2.Size = new System.Drawing.Size(350, 45);
             this.panel2.TabIndex = 12;
             // 
+            // btnshowcp
+            // 
+            this.btnshowcp.Image = ((System.Drawing.Image)(resources.GetObject("btnshowcp.Image")));
+            this.btnshowcp.Location = new System.Drawing.Point(320, 9);
+            this.btnshowcp.Name = "btnshowcp";
+            this.btnshowcp.Size = new System.Drawing.Size(24, 24);
+            this.btnshowcp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnshowcp.TabIndex = 24;
+            this.btnshowcp.TabStop = false;
+            this.btnshowcp.Click += new System.EventHandler(this.btnshowcp_Click);
+            // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.BackColor = System.Drawing.Color.White;
@@ -274,6 +307,17 @@ namespace Inventory_System_Management_Alliance28
             this.txtConfirmPassword.PasswordChar = '•';
             this.txtConfirmPassword.Size = new System.Drawing.Size(308, 20);
             this.txtConfirmPassword.TabIndex = 0;
+            // 
+            // btnhidecp
+            // 
+            this.btnhidecp.Image = ((System.Drawing.Image)(resources.GetObject("btnhidecp.Image")));
+            this.btnhidecp.Location = new System.Drawing.Point(320, 9);
+            this.btnhidecp.Name = "btnhidecp";
+            this.btnhidecp.Size = new System.Drawing.Size(24, 24);
+            this.btnhidecp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnhidecp.TabIndex = 24;
+            this.btnhidecp.TabStop = false;
+            this.btnhidecp.Click += new System.EventHandler(this.btnhidecp_Click);
             // 
             // label9
             // 
@@ -298,50 +342,6 @@ namespace Inventory_System_Management_Alliance28
             this.error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.error.UseCompatibleTextRendering = true;
             this.error.Visible = false;
-            // 
-            // btnshowp
-            // 
-            this.btnshowp.Image = ((System.Drawing.Image)(resources.GetObject("btnshowp.Image")));
-            this.btnshowp.Location = new System.Drawing.Point(320, 9);
-            this.btnshowp.Name = "btnshowp";
-            this.btnshowp.Size = new System.Drawing.Size(24, 24);
-            this.btnshowp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnshowp.TabIndex = 22;
-            this.btnshowp.TabStop = false;
-            this.btnshowp.Click += new System.EventHandler(this.btnshowp_Click);
-            // 
-            // btnhidep
-            // 
-            this.btnhidep.Image = ((System.Drawing.Image)(resources.GetObject("btnhidep.Image")));
-            this.btnhidep.Location = new System.Drawing.Point(320, 9);
-            this.btnhidep.Name = "btnhidep";
-            this.btnhidep.Size = new System.Drawing.Size(24, 24);
-            this.btnhidep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnhidep.TabIndex = 23;
-            this.btnhidep.TabStop = false;
-            this.btnhidep.Click += new System.EventHandler(this.btnhidep_Click);
-            // 
-            // btnshowcp
-            // 
-            this.btnshowcp.Image = ((System.Drawing.Image)(resources.GetObject("btnshowcp.Image")));
-            this.btnshowcp.Location = new System.Drawing.Point(320, 9);
-            this.btnshowcp.Name = "btnshowcp";
-            this.btnshowcp.Size = new System.Drawing.Size(24, 24);
-            this.btnshowcp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnshowcp.TabIndex = 24;
-            this.btnshowcp.TabStop = false;
-            this.btnshowcp.Click += new System.EventHandler(this.btnshowcp_Click);
-            // 
-            // btnhidecp
-            // 
-            this.btnhidecp.Image = ((System.Drawing.Image)(resources.GetObject("btnhidecp.Image")));
-            this.btnhidecp.Location = new System.Drawing.Point(320, 9);
-            this.btnhidecp.Name = "btnhidecp";
-            this.btnhidecp.Size = new System.Drawing.Size(24, 24);
-            this.btnhidecp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnhidecp.TabIndex = 24;
-            this.btnhidecp.TabStop = false;
-            this.btnhidecp.Click += new System.EventHandler(this.btnhidecp_Click);
             // 
             // Register
             // 
@@ -377,14 +377,14 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.panelPassword.ResumeLayout(false);
             this.panelPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnshowp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnhidep)).EndInit();
             this.panelUsername.ResumeLayout(false);
             this.panelUsername.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnshowp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnhidep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnshowcp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnhidecp)).EndInit();
             this.ResumeLayout(false);
