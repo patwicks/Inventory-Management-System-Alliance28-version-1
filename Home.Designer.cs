@@ -417,7 +417,7 @@ namespace Inventory_System_Management_Alliance28
             this.userControlTransaction1.Location = new System.Drawing.Point(257, 28);
             this.userControlTransaction1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.userControlTransaction1.Name = "userControlTransaction1";
-            this.userControlTransaction1.Size = new System.Drawing.Size(1020, 762);
+            this.userControlTransaction1.Size = new System.Drawing.Size(1020, 772);
             this.userControlTransaction1.TabIndex = 5;
             // 
             // Home
