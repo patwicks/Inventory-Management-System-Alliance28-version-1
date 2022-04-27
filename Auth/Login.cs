@@ -82,5 +82,23 @@ namespace Inventory_System_Management_Alliance28
             reader.Close();
             connection.Close();
         }
+
+        private void btnshow_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '•')
+            {
+                btnhide.BringToFront();
+                txtPassword.PasswordChar = '\0';
+            }
+        }
+
+        private void btnhide_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                btnshow.BringToFront();
+                txtPassword.PasswordChar = '•';
+            }
+        }
     }
 }

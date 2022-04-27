@@ -46,11 +46,15 @@ namespace Inventory_System_Management_Alliance28
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.Label();
+            this.btnshow = new System.Windows.Forms.PictureBox();
+            this.btnhide = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelUsername.SuspendLayout();
             this.panelPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnshow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnhide)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -131,6 +135,8 @@ namespace Inventory_System_Management_Alliance28
             // panelPassword
             // 
             this.panelPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPassword.Controls.Add(this.btnshow);
+            this.panelPassword.Controls.Add(this.btnhide);
             this.panelPassword.Controls.Add(this.txtPassword);
             this.panelPassword.Location = new System.Drawing.Point(72, 347);
             this.panelPassword.Name = "panelPassword";
@@ -144,11 +150,10 @@ namespace Inventory_System_Management_Alliance28
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.txtPassword.Location = new System.Drawing.Point(6, 13);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(336, 20);
             this.txtPassword.TabIndex = 0;
             this.txtPassword.Text = "admin123";
-            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
@@ -232,6 +237,28 @@ namespace Inventory_System_Management_Alliance28
             this.error.UseCompatibleTextRendering = true;
             this.error.Visible = false;
             // 
+            // btnshow
+            // 
+            this.btnshow.Image = ((System.Drawing.Image)(resources.GetObject("btnshow.Image")));
+            this.btnshow.Location = new System.Drawing.Point(319, 9);
+            this.btnshow.Name = "btnshow";
+            this.btnshow.Size = new System.Drawing.Size(24, 24);
+            this.btnshow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnshow.TabIndex = 21;
+            this.btnshow.TabStop = false;
+            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
+            // 
+            // btnhide
+            // 
+            this.btnhide.Image = ((System.Drawing.Image)(resources.GetObject("btnhide.Image")));
+            this.btnhide.Location = new System.Drawing.Point(319, 9);
+            this.btnhide.Name = "btnhide";
+            this.btnhide.Size = new System.Drawing.Size(24, 24);
+            this.btnhide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnhide.TabIndex = 22;
+            this.btnhide.TabStop = false;
+            this.btnhide.Click += new System.EventHandler(this.btnhide_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -265,6 +292,8 @@ namespace Inventory_System_Management_Alliance28
             this.panelUsername.PerformLayout();
             this.panelPassword.ResumeLayout(false);
             this.panelPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnshow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnhide)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,6 +317,8 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label error;
+        private System.Windows.Forms.PictureBox btnshow;
+        private System.Windows.Forms.PictureBox btnhide;
     }
 }
 

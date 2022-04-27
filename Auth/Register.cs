@@ -131,6 +131,44 @@ namespace Inventory_System_Management_Alliance28
                 error.Text = "Something went wrong, try again!";
             }
         }
+        //Show and Hide Password
+        private void btnshowp_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '•')
+            {
+                btnhidep.BringToFront();
+                txtPassword.PasswordChar = '\0';
+            }
+        }
 
+        private void btnhidep_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                btnshowp.BringToFront();
+                txtPassword.PasswordChar = '•';
+            }
+        }
+        //end
+        
+        //Show and Hide Confrim Password
+        private void btnshowcp_Click(object sender, EventArgs e)
+        {
+            if (txtConfirmPassword.PasswordChar == '•')
+            {
+                btnhidecp.BringToFront();
+                txtConfirmPassword.PasswordChar = '\0';
+            }
+        }
+
+        private void btnhidecp_Click(object sender, EventArgs e)
+        {
+            if (txtConfirmPassword.PasswordChar == '\0')
+            {
+                btnshowcp.BringToFront();
+                txtConfirmPassword.PasswordChar = '•';
+            }
+        }
+        //end
     }
 }
