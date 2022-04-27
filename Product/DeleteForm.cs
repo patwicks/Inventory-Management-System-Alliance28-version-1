@@ -93,7 +93,7 @@ namespace Inventory_System_Management_Alliance28
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Do you want to cancel deleting?", "Delete", MessageBoxButtons.YesNo)==DialogResult.Yes)
+            if(MessageBox.Show("Do you want to cancel deleting?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==DialogResult.Yes)
             {
                 Hide();
             }

@@ -90,7 +90,7 @@ namespace Inventory_System_Management_Alliance28
                 else
                 {
                     //ask for confirmation before updating the product
-                    if(MessageBox.Show("Are you sure you want to update this Product?", "Update Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if(MessageBox.Show("Are you sure you want to update this Product?", "Update Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         //execute update command
                         reader = updateCommand.ExecuteReader();
@@ -167,7 +167,7 @@ namespace Inventory_System_Management_Alliance28
         private void btnCancel_Click(object sender, EventArgs e)
         {
             //ask for confirmation before updating the product
-            if (MessageBox.Show("Are you sure you want to cancel?", "Cancel Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to cancel?", "Cancel Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Hide();
             }

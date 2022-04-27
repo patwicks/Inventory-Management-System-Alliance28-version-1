@@ -97,7 +97,7 @@ namespace Inventory_System_Management_Alliance28
             else
             {
 
-                if (MessageBox.Show("Withdraw the Product?", "Widthrawal Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Withdraw the Product?", "Widthrawal Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     int returnValue = insertCommand.ExecuteNonQuery();
 

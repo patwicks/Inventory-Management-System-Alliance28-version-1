@@ -30,7 +30,7 @@ namespace Inventory_System_Management_Alliance28
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-           if(MessageBox.Show("Are you want to exit?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes)
+           if(MessageBox.Show("Are you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -79,9 +79,14 @@ namespace Inventory_System_Management_Alliance28
         private void btnLogout_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnLogout.Top;
-            Login loginForm = new Login();
-            this.Hide();
-            loginForm.Show();
+            if (MessageBox.Show("Are you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                
+                Login loginForm = new Login();
+                this.Hide();
+                loginForm.Show();
+            }
+            
         }
     }
 }
