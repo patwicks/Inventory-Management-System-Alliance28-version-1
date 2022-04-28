@@ -33,6 +33,14 @@ namespace Inventory_System_Management_Alliance28
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlProduct));
             this.dataGridProduct = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnWithdraw = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             this.CLIPBOARD = new System.Windows.Forms.DataGridViewImageColumn();
             this.ITEMCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,14 +54,6 @@ namespace Inventory_System_Management_Alliance28
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
             this.WITHDRAW = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAddProduct = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnWithdraw = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,103 +112,6 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.Size = new System.Drawing.Size(1014, 676);
             this.dataGridProduct.TabIndex = 0;
             this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick);
-            // 
-            // CLIPBOARD
-            // 
-            this.CLIPBOARD.HeaderText = "";
-            this.CLIPBOARD.Image = ((System.Drawing.Image)(resources.GetObject("CLIPBOARD.Image")));
-            this.CLIPBOARD.Name = "CLIPBOARD";
-            this.CLIPBOARD.ReadOnly = true;
-            this.CLIPBOARD.Width = 50;
-            // 
-            // ITEMCODE
-            // 
-            this.ITEMCODE.DataPropertyName = "ITEMCODE";
-            this.ITEMCODE.HeaderText = "ITEM CODE";
-            this.ITEMCODE.Name = "ITEMCODE";
-            this.ITEMCODE.ReadOnly = true;
-            this.ITEMCODE.ToolTipText = "Click to Copy";
-            // 
-            // PRODUCTNAME
-            // 
-            this.PRODUCTNAME.DataPropertyName = "PRODUCTNAME";
-            this.PRODUCTNAME.HeaderText = "PRODUCT NAME";
-            this.PRODUCTNAME.Name = "PRODUCTNAME";
-            this.PRODUCTNAME.ReadOnly = true;
-            // 
-            // CATEGORY
-            // 
-            this.CATEGORY.DataPropertyName = "CATEGORY";
-            this.CATEGORY.HeaderText = "CATEGORY";
-            this.CATEGORY.Name = "CATEGORY";
-            this.CATEGORY.ReadOnly = true;
-            // 
-            // QUANTITY
-            // 
-            this.QUANTITY.DataPropertyName = "QUANTITY";
-            this.QUANTITY.HeaderText = "QUANTITY";
-            this.QUANTITY.Name = "QUANTITY";
-            this.QUANTITY.ReadOnly = true;
-            // 
-            // WARRANTY
-            // 
-            this.WARRANTY.DataPropertyName = "WARRANTY";
-            this.WARRANTY.HeaderText = "WARRANTY";
-            this.WARRANTY.Name = "WARRANTY";
-            this.WARRANTY.ReadOnly = true;
-            // 
-            // DESCRIPTION
-            // 
-            this.DESCRIPTION.DataPropertyName = "DESCRIPTION";
-            this.DESCRIPTION.HeaderText = "DESCRIPTION";
-            this.DESCRIPTION.Name = "DESCRIPTION";
-            this.DESCRIPTION.ReadOnly = true;
-            // 
-            // DATEADDED
-            // 
-            this.DATEADDED.DataPropertyName = "TIMESTAMP";
-            this.DATEADDED.HeaderText = "DATE ADDED";
-            this.DATEADDED.Name = "DATEADDED";
-            this.DATEADDED.ReadOnly = true;
-            // 
-            // IMAGE
-            // 
-            this.IMAGE.DataPropertyName = "IMAGE";
-            this.IMAGE.HeaderText = "IMAGE";
-            this.IMAGE.Name = "IMAGE";
-            this.IMAGE.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "PICTURE";
-            this.Column9.HeaderText = "PICTURE";
-            this.Column9.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // EDIT
-            // 
-            this.EDIT.HeaderText = "";
-            this.EDIT.Image = ((System.Drawing.Image)(resources.GetObject("EDIT.Image")));
-            this.EDIT.Name = "EDIT";
-            this.EDIT.ReadOnly = true;
-            // 
-            // DELETE
-            // 
-            this.DELETE.HeaderText = "";
-            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
-            this.DELETE.Name = "DELETE";
-            this.DELETE.ReadOnly = true;
-            // 
-            // WITHDRAW
-            // 
-            this.WITHDRAW.Description = "WITHDRAW";
-            this.WITHDRAW.HeaderText = "";
-            this.WITHDRAW.Image = ((System.Drawing.Image)(resources.GetObject("WITHDRAW.Image")));
-            this.WITHDRAW.Name = "WITHDRAW";
-            this.WITHDRAW.ReadOnly = true;
             // 
             // panel1
             // 
@@ -312,6 +215,104 @@ namespace Inventory_System_Management_Alliance28
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
+            // CLIPBOARD
+            // 
+            this.CLIPBOARD.HeaderText = "";
+            this.CLIPBOARD.Image = ((System.Drawing.Image)(resources.GetObject("CLIPBOARD.Image")));
+            this.CLIPBOARD.Name = "CLIPBOARD";
+            this.CLIPBOARD.ReadOnly = true;
+            this.CLIPBOARD.Width = 50;
+            // 
+            // ITEMCODE
+            // 
+            this.ITEMCODE.DataPropertyName = "ITEMCODE";
+            this.ITEMCODE.HeaderText = "ITEM CODE";
+            this.ITEMCODE.Name = "ITEMCODE";
+            this.ITEMCODE.ReadOnly = true;
+            this.ITEMCODE.ToolTipText = "Click to Copy";
+            // 
+            // PRODUCTNAME
+            // 
+            this.PRODUCTNAME.DataPropertyName = "PRODUCTNAME";
+            this.PRODUCTNAME.HeaderText = "PRODUCT NAME";
+            this.PRODUCTNAME.Name = "PRODUCTNAME";
+            this.PRODUCTNAME.ReadOnly = true;
+            // 
+            // CATEGORY
+            // 
+            this.CATEGORY.DataPropertyName = "CATEGORY";
+            this.CATEGORY.HeaderText = "CATEGORY";
+            this.CATEGORY.Name = "CATEGORY";
+            this.CATEGORY.ReadOnly = true;
+            // 
+            // QUANTITY
+            // 
+            this.QUANTITY.DataPropertyName = "QUANTITY";
+            this.QUANTITY.HeaderText = "QUANTITY";
+            this.QUANTITY.Name = "QUANTITY";
+            this.QUANTITY.ReadOnly = true;
+            // 
+            // WARRANTY
+            // 
+            this.WARRANTY.DataPropertyName = "WARRANTY";
+            this.WARRANTY.HeaderText = "WARRANTY";
+            this.WARRANTY.Name = "WARRANTY";
+            this.WARRANTY.ReadOnly = true;
+            // 
+            // DESCRIPTION
+            // 
+            this.DESCRIPTION.DataPropertyName = "DESCRIPTION";
+            this.DESCRIPTION.HeaderText = "DESCRIPTION";
+            this.DESCRIPTION.Name = "DESCRIPTION";
+            this.DESCRIPTION.ReadOnly = true;
+            // 
+            // DATEADDED
+            // 
+            this.DATEADDED.DataPropertyName = "TIMESTAMP";
+            this.DATEADDED.HeaderText = "DATE ADDED";
+            this.DATEADDED.Name = "DATEADDED";
+            this.DATEADDED.ReadOnly = true;
+            // 
+            // IMAGE
+            // 
+            this.IMAGE.DataPropertyName = "IMAGE";
+            this.IMAGE.HeaderText = "IMAGE";
+            this.IMAGE.Name = "IMAGE";
+            this.IMAGE.ReadOnly = true;
+            this.IMAGE.Visible = false;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "PICTURE";
+            this.Column9.HeaderText = "PICTURE";
+            this.Column9.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // EDIT
+            // 
+            this.EDIT.HeaderText = "";
+            this.EDIT.Image = ((System.Drawing.Image)(resources.GetObject("EDIT.Image")));
+            this.EDIT.Name = "EDIT";
+            this.EDIT.ReadOnly = true;
+            // 
+            // DELETE
+            // 
+            this.DELETE.HeaderText = "";
+            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
+            this.DELETE.Name = "DELETE";
+            this.DELETE.ReadOnly = true;
+            // 
+            // WITHDRAW
+            // 
+            this.WITHDRAW.Description = "WITHDRAW";
+            this.WITHDRAW.HeaderText = "";
+            this.WITHDRAW.Image = ((System.Drawing.Image)(resources.GetObject("WITHDRAW.Image")));
+            this.WITHDRAW.Name = "WITHDRAW";
+            this.WITHDRAW.ReadOnly = true;
+            // 
             // UserControlProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -350,6 +351,7 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnWithdraw;
+        private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.DataGridViewImageColumn CLIPBOARD;
         private System.Windows.Forms.DataGridViewTextBoxColumn ITEMCODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTNAME;
@@ -363,6 +365,5 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DELETE;
         private System.Windows.Forms.DataGridViewImageColumn WITHDRAW;
-        private System.Windows.Forms.Button btnExport;
     }
 }

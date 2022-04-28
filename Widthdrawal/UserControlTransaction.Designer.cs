@@ -38,6 +38,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.COPY = new System.Windows.Forms.DataGridViewImageColumn();
             this.TRANSACTION_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLIENT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,7 +99,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridTransaction.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dataGridTransaction.Location = new System.Drawing.Point(3, 81);
+            this.dataGridTransaction.Location = new System.Drawing.Point(3, 85);
             this.dataGridTransaction.MultiSelect = false;
             this.dataGridTransaction.Name = "dataGridTransaction";
             this.dataGridTransaction.ReadOnly = true;
@@ -107,7 +108,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.dataGridTransaction.RowHeadersWidth = 50;
             this.dataGridTransaction.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridTransaction.Size = new System.Drawing.Size(1014, 681);
+            this.dataGridTransaction.Size = new System.Drawing.Size(1014, 677);
             this.dataGridTransaction.TabIndex = 1;
             this.dataGridTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTransaction_CellContentClick);
             // 
@@ -115,19 +116,19 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             // 
             this.Dashboard.AutoSize = true;
             this.Dashboard.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Dashboard.Location = new System.Drawing.Point(12, 28);
+            this.Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Dashboard.Location = new System.Drawing.Point(18, 34);
             this.Dashboard.Name = "Dashboard";
-            this.Dashboard.Size = new System.Drawing.Size(163, 28);
+            this.Dashboard.Size = new System.Drawing.Size(179, 28);
             this.Dashboard.TabIndex = 8;
-            this.Dashboard.Text = "Withraw Item";
+            this.Dashboard.Text = "Withdraw Item";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(686, 19);
+            this.label1.Location = new System.Drawing.Point(686, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 17);
             this.label1.TabIndex = 10;
@@ -139,7 +140,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(690, 37);
+            this.panel1.Location = new System.Drawing.Point(690, 38);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 30);
             this.panel1.TabIndex = 9;
@@ -163,6 +164,21 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(136)))));
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(551, 38);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(115, 30);
+            this.btnRefresh.TabIndex = 11;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // COPY
             // 
@@ -242,6 +258,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.IMAGE.HeaderText = "IMAGE";
             this.IMAGE.Name = "IMAGE";
             this.IMAGE.ReadOnly = true;
+            this.IMAGE.Visible = false;
             this.IMAGE.Width = 101;
             // 
             // PICTURE
@@ -270,6 +287,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Dashboard);
@@ -297,6 +315,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewImageColumn COPY;
         private System.Windows.Forms.DataGridViewTextBoxColumn TRANSACTION_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLIENT_NAME;

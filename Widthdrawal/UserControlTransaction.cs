@@ -72,7 +72,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             dataGridTransaction.Columns[5].Width = 100; //Quantity
             dataGridTransaction.Columns[6].Width = 200; //Warranty
 
-            dataGridTransaction.Columns[7].Width = 150; //Transaction type
+            dataGridTransaction.Columns[7].Width = 200; //Transaction type
             dataGridTransaction.Columns[8].Width = 200; //Withdrawal Date
             dataGridTransaction.Columns[9].Width = 150; //Image
             dataGridTransaction.Columns[10].Width = 100; //Picture
@@ -98,7 +98,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
 
             connection.Open();
 
-            adapter = new MySqlDataAdapter("SELECT TRANSACTION_ID, CLIENT_NAME, ITEM_CODE, PRODUCT_NAME, TRANSACTION_TYPE, WARRANTY, QUANTITY, TIMESTAMP, IMAGE  FROM table_withdrawal WHERE (TRANSACTION_ID LIKE '" + txtSearch.Text + "%' || CLIENT_NAME LIKE '" + txtSearch.Text + "%') AND (STATUS='" + status + "') ", connection);
+            adapter = new MySqlDataAdapter("SELECT TRANSACTION_ID, CLIENT_NAME, PRODUCT_NAME, ITEM_CODE, QUANTITY, WARRANTY, TRANSACTION_TYPE, TIMESTAMP, IMAGE  FROM table_withdrawal WHERE (TRANSACTION_ID LIKE '" + txtSearch.Text + "%' || CLIENT_NAME LIKE '" + txtSearch.Text + "%') AND (STATUS='" + status + "') ", connection);
             dt = new DataTable();
 
             adapter.Fill(dt);
@@ -142,6 +142,11 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             {
                 //
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            loadTransactions();
         }
     }
 }
