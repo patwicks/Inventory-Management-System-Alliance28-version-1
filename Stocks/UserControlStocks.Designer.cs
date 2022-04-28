@@ -29,9 +29,11 @@ namespace Inventory_System_Management_Alliance28.Stocks
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlStocks));
             this.dataGridStocks = new System.Windows.Forms.DataGridView();
+            this.ADD = new System.Windows.Forms.DataGridViewImageColumn();
             this.ITEMCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +43,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.DATEADDED = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Dashboard = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStocks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,15 +57,16 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.dataGridStocks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridStocks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridStocks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridStocks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridStocks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridStocks.ColumnHeadersHeight = 50;
             this.dataGridStocks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ADD,
             this.ITEMCODE,
             this.PRODUCTNAME,
             this.CATEGORY,
@@ -72,17 +76,17 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.DATEADDED,
             this.IMAGE,
             this.Column9});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridStocks.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridStocks.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridStocks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dataGridStocks.Location = new System.Drawing.Point(0, 54);
+            this.dataGridStocks.Location = new System.Drawing.Point(2, 67);
             this.dataGridStocks.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridStocks.MultiSelect = false;
             this.dataGridStocks.Name = "dataGridStocks";
@@ -91,8 +95,16 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.dataGridStocks.RowHeadersVisible = false;
             this.dataGridStocks.RowHeadersWidth = 50;
             this.dataGridStocks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridStocks.Size = new System.Drawing.Size(1015, 691);
+            this.dataGridStocks.Size = new System.Drawing.Size(1015, 678);
             this.dataGridStocks.TabIndex = 7;
+            this.dataGridStocks.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridStocks_CellFormatting);
+            // 
+            // ADD
+            // 
+            this.ADD.HeaderText = "";
+            this.ADD.Image = ((System.Drawing.Image)(resources.GetObject("ADD.Image")));
+            this.ADD.Name = "ADD";
+            this.ADD.ReadOnly = true;
             // 
             // ITEMCODE
             // 
@@ -150,6 +162,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.IMAGE.HeaderText = "IMAGE";
             this.IMAGE.Name = "IMAGE";
             this.IMAGE.ReadOnly = true;
+            this.IMAGE.Visible = false;
             // 
             // Column9
             // 
@@ -162,10 +175,22 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column9.Width = 200;
             // 
+            // Dashboard
+            // 
+            this.Dashboard.AutoSize = true;
+            this.Dashboard.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Dashboard.Location = new System.Drawing.Point(11, 15);
+            this.Dashboard.Name = "Dashboard";
+            this.Dashboard.Size = new System.Drawing.Size(152, 28);
+            this.Dashboard.TabIndex = 8;
+            this.Dashboard.Text = "Out of Stock";
+            // 
             // UserControlStocks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.dataGridStocks);
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -175,11 +200,13 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.Load += new System.EventHandler(this.UserControlStocks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStocks)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridStocks;
+        private System.Windows.Forms.DataGridViewImageColumn ADD;
         private System.Windows.Forms.DataGridViewTextBoxColumn ITEMCODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTNAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn CATEGORY;
@@ -189,5 +216,6 @@ namespace Inventory_System_Management_Alliance28.Stocks
         private System.Windows.Forms.DataGridViewTextBoxColumn DATEADDED;
         private System.Windows.Forms.DataGridViewTextBoxColumn IMAGE;
         private System.Windows.Forms.DataGridViewImageColumn Column9;
+        private System.Windows.Forms.Label Dashboard;
     }
 }

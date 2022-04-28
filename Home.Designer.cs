@@ -44,10 +44,10 @@ namespace Inventory_System_Management_Alliance28
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
-            this.userControlStocks1 = new Inventory_System_Management_Alliance28.Stocks.UserControlStocks();
             this.userControlTransaction1 = new Inventory_System_Management_Alliance28.Widthdrawal.UserControlTransaction();
             this.userControlProduct1 = new Inventory_System_Management_Alliance28.UserControlProduct();
             this.userControlDashboard1 = new Inventory_System_Management_Alliance28.UserControlDashboard();
+            this.userControlStocks1 = new Inventory_System_Management_Alliance28.Stocks.UserControlStocks();
             this.panelSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnStocks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
@@ -212,24 +212,14 @@ namespace Inventory_System_Management_Alliance28
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // userControlStocks1
-            // 
-            this.userControlStocks1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.userControlStocks1.Location = new System.Drawing.Point(259, 50);
-            this.userControlStocks1.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlStocks1.MaximumSize = new System.Drawing.Size(1020, 750);
-            this.userControlStocks1.Name = "userControlStocks1";
-            this.userControlStocks1.Size = new System.Drawing.Size(1020, 750);
-            this.userControlStocks1.TabIndex = 6;
-            // 
             // userControlTransaction1
             // 
             this.userControlTransaction1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userControlTransaction1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.userControlTransaction1.Location = new System.Drawing.Point(258, 28);
+            this.userControlTransaction1.Location = new System.Drawing.Point(254, 28);
             this.userControlTransaction1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.userControlTransaction1.Name = "userControlTransaction1";
-            this.userControlTransaction1.Size = new System.Drawing.Size(1020, 772);
+            this.userControlTransaction1.Size = new System.Drawing.Size(1023, 772);
             this.userControlTransaction1.TabIndex = 5;
             // 
             // userControlProduct1
@@ -248,13 +238,23 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.userControlDashboard1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userControlDashboard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.userControlDashboard1.Location = new System.Drawing.Point(255, 46);
+            this.userControlDashboard1.Location = new System.Drawing.Point(255, 47);
             this.userControlDashboard1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.userControlDashboard1.MaximumSize = new System.Drawing.Size(1020, 750);
             this.userControlDashboard1.MinimumSize = new System.Drawing.Size(1020, 750);
             this.userControlDashboard1.Name = "userControlDashboard1";
             this.userControlDashboard1.Size = new System.Drawing.Size(1020, 750);
             this.userControlDashboard1.TabIndex = 3;
+            // 
+            // userControlStocks1
+            // 
+            this.userControlStocks1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.userControlStocks1.Location = new System.Drawing.Point(255, 50);
+            this.userControlStocks1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlStocks1.MaximumSize = new System.Drawing.Size(1020, 750);
+            this.userControlStocks1.Name = "userControlStocks1";
+            this.userControlStocks1.Size = new System.Drawing.Size(1020, 750);
+            this.userControlStocks1.TabIndex = 6;
             // 
             // Home
             // 
@@ -265,10 +265,10 @@ namespace Inventory_System_Management_Alliance28
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelSideMenu);
-            this.Controls.Add(this.userControlDashboard1);
-            this.Controls.Add(this.userControlStocks1);
             this.Controls.Add(this.userControlTransaction1);
             this.Controls.Add(this.userControlProduct1);
+            this.Controls.Add(this.userControlDashboard1);
+            this.Controls.Add(this.userControlStocks1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

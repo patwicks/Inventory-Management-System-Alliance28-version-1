@@ -72,6 +72,7 @@ namespace Inventory_System_Management_Alliance28
         {
             activeTabIndicator.Top = btnStocks.Top;
             userControlStocks1.BringToFront();
+            userControlStocks1.loadStocks();
         }
         private void btnTrash_Click(object sender, EventArgs e)
         {

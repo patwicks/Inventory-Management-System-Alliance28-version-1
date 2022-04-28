@@ -34,7 +34,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
         public void loadStocks()
         {
             string status = "Active";
-            string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP, IMAGE FROM table_products WHERE QUANTITY <= 0 AND STATUS = '" + status + "'";
+            string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP, IMAGE FROM table_products WHERE ( QUANTITY <= 0 ) AND STATUS = '" + status + "'";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
@@ -63,15 +63,16 @@ namespace Inventory_System_Management_Alliance28.Stocks
         public void datagridtyle()
         {
             dataGridStocks.RowTemplate.Height = 50;
-            dataGridStocks.Columns[1].Width = 50;
-            dataGridStocks.Columns[1].Width = 100;
+            dataGridStocks.Columns[0].Width = 50;
+            dataGridStocks.Columns[1].Width = 150;
             dataGridStocks.Columns[2].Width = 200;
-            dataGridStocks.Columns[3].Width = 100;
+            dataGridStocks.Columns[3].Width = 200;
             dataGridStocks.Columns[4].Width = 100;
-            dataGridStocks.Columns[5].Width = 100;
-            dataGridStocks.Columns[6].Width = 200;
-            dataGridStocks.Columns[7].Width = 100;
-            dataGridStocks.Columns[8].Width = 100;    
+            dataGridStocks.Columns[5].Width = 150;
+            dataGridStocks.Columns[6].Width = 150;
+            dataGridStocks.Columns[7].Width = 200;
+            dataGridStocks.Columns[8].Width = 100;//image
+            dataGridStocks.Columns[9].Width = 100;
 
 
             foreach (DataGridViewColumn column in dataGridStocks.Columns)
@@ -84,6 +85,20 @@ namespace Inventory_System_Management_Alliance28.Stocks
 
 
             dataGridStocks.EnableHeadersVisualStyles = false;
+        }
+
+        private void dataGridStocks_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if(e.ColumnIndex == 4 & e.Value != null)
+            {
+
+                int val = int.Parse(e.Value.ToString());
+
+                if(val <= 0)
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(255, 204, 204);
+                }
+            }
         }
     }
 }
