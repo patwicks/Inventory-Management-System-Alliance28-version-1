@@ -142,6 +142,12 @@
     <Compile Include="Widthdrawal\DeleteTransaction.Designer.cs">
       <DependentUpon>DeleteTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widthdrawal\ReturnItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Widthdrawal\ReturnItem.Designer.cs">
+      <DependentUpon>ReturnItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widthdrawal\UserControlTransaction.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Widthdrawal\DeleteTransaction.resx">
       <DependentUpon>DeleteTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widthdrawal\ReturnItem.resx">
+      <DependentUpon>ReturnItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widthdrawal\UserControlTransaction.resx">
       <DependentUpon>UserControlTransaction.cs</DependentUpon>

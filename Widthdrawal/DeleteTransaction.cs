@@ -56,7 +56,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string status = "Deleted";
-            string deleteQuery = "UPDATE table_withdrawal SET STATUS='" + status + "' WHERE ITEMCODE='" + txtTransactionID.Text + "' ";
+            string deleteQuery = "UPDATE table_withdrawal SET STATUS='" + status + "' WHERE TRANSACTION_ID='" + txtTransactionID.Text + "' ";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand deleteCommand = new MySqlCommand(deleteQuery, connection);
             MySqlDataReader reader;

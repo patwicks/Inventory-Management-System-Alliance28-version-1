@@ -33,7 +33,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         public void loadTransactions()
         {
             string status = "Active";
-            string loadQuery = "SELECT TRANSACTION_ID, CLIENT_NAME, PRODUCT_NAME, ITEM_CODE, QUANTITY, WARRANTY, TRANSACTION_TYPE, TIMESTAMP, IMAGE  FROM table_withdrawal WHERE STATUS = '" + status + "' ORDER BY TIMESTAMP ASC";
+            string loadQuery = "SELECT TRANSACTION_ID, CLIENT_NAME, PRODUCT_NAME, ITEM_CODE, QUANTITY, WARRANTY, TRANSACTION_TYPE, TIMESTAMP, IMAGE  FROM table_withdrawal WHERE STATUS = '" + status + "' ORDER BY TIMESTAMP DESC";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
@@ -140,7 +140,18 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             }
             else if (dataGridTransaction.Columns[e.ColumnIndex].Name == "RETURN")
             {
-                //
+                dataGridTransaction.CurrentRow.Selected = true;
+                ReturnItem returnForm = new ReturnItem();
+                returnForm.transactionId = dataGridTransaction.Rows[e.RowIndex].Cells["TRANSACTION_ID"].FormattedValue.ToString();
+                returnForm.productName = dataGridTransaction.Rows[e.RowIndex].Cells["PRODUCT_NAME"].FormattedValue.ToString();
+                returnForm.clientName = dataGridTransaction.Rows[e.RowIndex].Cells["CLIENT_NAME"].FormattedValue.ToString();
+                returnForm.itemCode = dataGridTransaction.Rows[e.RowIndex].Cells["ITEM_CODE"].FormattedValue.ToString();
+                returnForm.warranty = dataGridTransaction.Rows[e.RowIndex].Cells["WARRANTY"].FormattedValue.ToString();
+                returnForm.quantity = dataGridTransaction.Rows[e.RowIndex].Cells["QUANTITY"].FormattedValue.ToString();
+                returnForm.transactionType = dataGridTransaction.Rows[e.RowIndex].Cells["TRANSACTION_TYPE"].FormattedValue.ToString();
+                returnForm.withdrawalDate = dataGridTransaction.Rows[e.RowIndex].Cells["WITHDRAWAL_DATE"].FormattedValue.ToString();
+                returnForm.image = dataGridTransaction.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
+                returnForm.Show();
             }
         }
 

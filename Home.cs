@@ -20,7 +20,7 @@ namespace Inventory_System_Management_Alliance28
         }
         private void Home_Load(object sender, EventArgs e)
         {
-            userControlDashboard1.BringToFront();
+            userControlTransaction1.BringToFront();
             string rootFolder = Application.StartupPath + @"\Images\";
             if(!Directory.Exists(rootFolder))
             {
@@ -49,15 +49,19 @@ namespace Inventory_System_Management_Alliance28
             //Dashboard Data Counter from public function - User Control Dashboard
             userControlDashboard1.countProducts();
             userControlDashboard1.countTransactions();
+            userControlDashboard1.countDeletedProducts();
             //DatagridView data Show
             userControlDashboard1.recent_added();
             userControlDashboard1.recent_withdraw();
+
+
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnProduct.Top;
             userControlProduct1.BringToFront();
+            userControlProduct1.loadProducts();
         }
 
         private void btnTransaction_Click(object sender, EventArgs e)
