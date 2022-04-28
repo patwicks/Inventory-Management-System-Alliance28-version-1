@@ -44,11 +44,13 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.PRODUCT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ITEM_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRANSACTION_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WARRANTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRANSACTION_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WITHDRAWAL_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PICTURE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.RETURN = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaction)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,11 +81,13 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.PRODUCT_NAME,
             this.ITEM_CODE,
             this.QUANTITY,
-            this.TRANSACTION_TYPE,
             this.WARRANTY,
+            this.TRANSACTION_TYPE,
             this.WITHDRAWAL_DATE,
             this.IMAGE,
-            this.PICTURE});
+            this.PICTURE,
+            this.DELETE,
+            this.RETURN});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,14 +212,6 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.QUANTITY.ReadOnly = true;
             this.QUANTITY.Width = 127;
             // 
-            // TRANSACTION_TYPE
-            // 
-            this.TRANSACTION_TYPE.DataPropertyName = "TRANSACTION_TYPE";
-            this.TRANSACTION_TYPE.HeaderText = "TRANSACTION TYPE";
-            this.TRANSACTION_TYPE.Name = "TRANSACTION_TYPE";
-            this.TRANSACTION_TYPE.ReadOnly = true;
-            this.TRANSACTION_TYPE.Width = 202;
-            // 
             // WARRANTY
             // 
             this.WARRANTY.DataPropertyName = "WARRANTY";
@@ -223,6 +219,14 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.WARRANTY.Name = "WARRANTY";
             this.WARRANTY.ReadOnly = true;
             this.WARRANTY.Width = 137;
+            // 
+            // TRANSACTION_TYPE
+            // 
+            this.TRANSACTION_TYPE.DataPropertyName = "TRANSACTION_TYPE";
+            this.TRANSACTION_TYPE.HeaderText = "TRANSACTION TYPE";
+            this.TRANSACTION_TYPE.Name = "TRANSACTION_TYPE";
+            this.TRANSACTION_TYPE.ReadOnly = true;
+            this.TRANSACTION_TYPE.Width = 202;
             // 
             // WITHDRAWAL_DATE
             // 
@@ -247,6 +251,20 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.PICTURE.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.PICTURE.Name = "PICTURE";
             this.PICTURE.ReadOnly = true;
+            // 
+            // DELETE
+            // 
+            this.DELETE.HeaderText = "";
+            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
+            this.DELETE.Name = "DELETE";
+            this.DELETE.ReadOnly = true;
+            // 
+            // RETURN
+            // 
+            this.RETURN.HeaderText = "";
+            this.RETURN.Image = ((System.Drawing.Image)(resources.GetObject("RETURN.Image")));
+            this.RETURN.Name = "RETURN";
+            this.RETURN.ReadOnly = true;
             // 
             // UserControlTransaction
             // 
@@ -285,10 +303,12 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCT_NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn ITEM_CODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn QUANTITY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TRANSACTION_TYPE;
         private System.Windows.Forms.DataGridViewTextBoxColumn WARRANTY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TRANSACTION_TYPE;
         private System.Windows.Forms.DataGridViewTextBoxColumn WITHDRAWAL_DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn IMAGE;
         private System.Windows.Forms.DataGridViewImageColumn PICTURE;
+        private System.Windows.Forms.DataGridViewImageColumn DELETE;
+        private System.Windows.Forms.DataGridViewImageColumn RETURN;
     }
 }

@@ -33,7 +33,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         public void loadTransactions()
         {
             string status = "Active";
-            string loadQuery = "SELECT TRANSACTION_ID, CLIENT_NAME, ITEM_CODE, PRODUCT_NAME, TRANSACTION_TYPE, WARRANTY, QUANTITY, TIMESTAMP, IMAGE  FROM table_withdrawal WHERE STATUS = '" + status + "' ORDER BY TIMESTAMP ASC";
+            string loadQuery = "SELECT TRANSACTION_ID, CLIENT_NAME, PRODUCT_NAME, ITEM_CODE, QUANTITY, WARRANTY, TRANSACTION_TYPE, TIMESTAMP, IMAGE  FROM table_withdrawal WHERE STATUS = '" + status + "' ORDER BY TIMESTAMP ASC";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
@@ -70,13 +70,14 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             dataGridTransaction.Columns[3].Width = 200; //Product Name
             dataGridTransaction.Columns[4].Width = 150; //Item code
             dataGridTransaction.Columns[5].Width = 100; //Quantity
-            dataGridTransaction.Columns[6].Width = 200; //Transaction Type
+            dataGridTransaction.Columns[6].Width = 200; //Warranty
 
-            dataGridTransaction.Columns[7].Width = 150; //Warranty
+            dataGridTransaction.Columns[7].Width = 150; //Transaction type
             dataGridTransaction.Columns[8].Width = 200; //Withdrawal Date
             dataGridTransaction.Columns[9].Width = 150; //Image
-            dataGridTransaction.Columns[10].Width = 50;
-            //dataGridTransaction.Columns[11].Width = 50;
+            dataGridTransaction.Columns[10].Width = 100; //Picture
+            dataGridTransaction.Columns[11].Width = 50; //Delete
+            dataGridTransaction.Columns[12].Width = 50; //Return
 
 
             foreach (DataGridViewColumn column in dataGridTransaction.Columns)
@@ -121,6 +122,25 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                 dataGridTransaction.CurrentRow.Selected = true;
                 System.Windows.Forms.Clipboard.SetText(dataGridTransaction.Rows[e.RowIndex].Cells["TRANSACTION_ID"].FormattedValue.ToString());
                 MessageBox.Show("Copied to clipboard " + dataGridTransaction.Rows[e.RowIndex].Cells["TRANSACTION_ID"].FormattedValue.ToString());
+            }
+            else if(dataGridTransaction.Columns[e.ColumnIndex].Name == "DELETE")
+            {
+                dataGridTransaction.CurrentRow.Selected = true;
+                DeleteTransaction delTransaction = new DeleteTransaction();
+                delTransaction.transactionId = dataGridTransaction.Rows[e.RowIndex].Cells["TRANSACTION_ID"].FormattedValue.ToString();
+                delTransaction.productName = dataGridTransaction.Rows[e.RowIndex].Cells["PRODUCT_NAME"].FormattedValue.ToString();
+                delTransaction.clientName = dataGridTransaction.Rows[e.RowIndex].Cells["CLIENT_NAME"].FormattedValue.ToString();
+                delTransaction.itemCode = dataGridTransaction.Rows[e.RowIndex].Cells["ITEM_CODE"].FormattedValue.ToString();
+                delTransaction.warranty = dataGridTransaction.Rows[e.RowIndex].Cells["WARRANTY"].FormattedValue.ToString();
+                delTransaction.quantity = dataGridTransaction.Rows[e.RowIndex].Cells["QUANTITY"].FormattedValue.ToString();
+                delTransaction.transactionType = dataGridTransaction.Rows[e.RowIndex].Cells["TRANSACTION_TYPE"].FormattedValue.ToString();
+                delTransaction.withdrawalDate = dataGridTransaction.Rows[e.RowIndex].Cells["WITHDRAWAL_DATE"].FormattedValue.ToString();
+                delTransaction.image = dataGridTransaction.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
+                delTransaction.Show();
+            }
+            else if (dataGridTransaction.Columns[e.ColumnIndex].Name == "RETURN")
+            {
+                //
             }
         }
     }
