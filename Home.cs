@@ -53,7 +53,6 @@ namespace Inventory_System_Management_Alliance28
             //DatagridView data Show
             userControlDashboard1.recent_added();
             userControlDashboard1.recent_withdraw();
-            userControlStocks1.loadStocks();
             userControlTransaction1.loadTransactions();
         }
 
