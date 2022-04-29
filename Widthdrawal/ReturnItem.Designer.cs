@@ -32,6 +32,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnItem));
             this.error = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbCurrentStock = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtTransactionType = new System.Windows.Forms.TextBox();
@@ -57,7 +58,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.txtTotalReturn = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbNewQuantity = new System.Windows.Forms.Label();
-            this.lbCurrentStock = new System.Windows.Forms.Label();
+            this.lbNewID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbItemImage)).BeginInit();
@@ -81,6 +82,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.lbNewID);
             this.panel1.Controls.Add(this.lbCurrentStock);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -89,6 +91,15 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(842, 62);
             this.panel1.TabIndex = 22;
+            // 
+            // lbCurrentStock
+            // 
+            this.lbCurrentStock.AutoSize = true;
+            this.lbCurrentStock.Location = new System.Drawing.Point(3, 41);
+            this.lbCurrentStock.Name = "lbCurrentStock";
+            this.lbCurrentStock.Size = new System.Drawing.Size(0, 21);
+            this.lbCurrentStock.TabIndex = 2;
+            this.lbCurrentStock.Visible = false;
             // 
             // label1
             // 
@@ -375,15 +386,14 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.lbNewQuantity.Size = new System.Drawing.Size(0, 17);
             this.lbNewQuantity.TabIndex = 104;
             // 
-            // lbCurrentStock
+            // lbNewID
             // 
-            this.lbCurrentStock.AutoSize = true;
-            this.lbCurrentStock.Location = new System.Drawing.Point(3, 41);
-            this.lbCurrentStock.Name = "lbCurrentStock";
-            this.lbCurrentStock.Size = new System.Drawing.Size(66, 21);
-            this.lbCurrentStock.TabIndex = 2;
-            this.lbCurrentStock.Text = "label10";
-            this.lbCurrentStock.Visible = false;
+            this.lbNewID.AutoSize = true;
+            this.lbNewID.Location = new System.Drawing.Point(72, 31);
+            this.lbNewID.Name = "lbNewID";
+            this.lbNewID.Size = new System.Drawing.Size(0, 21);
+            this.lbNewID.TabIndex = 3;
+            this.lbNewID.Visible = false;
             // 
             // ReturnItem
             // 
@@ -417,7 +427,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ReturnItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReturnItem";
@@ -463,5 +473,6 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbNewQuantity;
         private System.Windows.Forms.Label lbCurrentStock;
+        private System.Windows.Forms.Label lbNewID;
     }
 }

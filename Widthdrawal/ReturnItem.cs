@@ -57,6 +57,17 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
 
             getTheCurrentStock();
 
+            //create new ID for return TransacID + currentDateTime
+
+            string str = DateTime.Now.ToString(); ;
+            string[] charsToRemove = new string[] { "/", ":", " " };
+            foreach (var c in charsToRemove)
+            {
+                str = str.Replace(c, string.Empty);
+            }
+
+            string newTransactionID = (txtTransactionID.Text +"-"+ str);
+            lbNewID.Text = newTransactionID;
 
         }
 
@@ -225,19 +236,20 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             //Sql staffs here
             string transactionType = "Widthraw";
             string status = "Return";
-            string insertQuery = "INSERT INTO table_withdrawal(TRANSACTION_ID, ITEM_CODE, PRODUCT_NAME, QUANTITY, WARRANTY, TRANSACTION_TYPE, CLIENT_NAME, STATUS, IMAGE) VALUES('" + txtTransactionID.Text + "', '" + txtItemCode.Text + "', '" + txtProductName.Text + "', '" + txtTotalReturn.Text + "' , '" + txtWarranty.Text + "', '" + transactionType + "' , '" + txtClientName.Text + "', '" + status + "', '" + image + "' )";
+
+            string insertQuery = "INSERT INTO table_withdrawal(TRANSACTION_ID, ITEM_CODE, PRODUCT_NAME, QUANTITY, WARRANTY, TRANSACTION_TYPE, CLIENT_NAME, STATUS, IMAGE) VALUES('" + lbNewID.Text + "', '" + txtItemCode.Text + "', '" + txtProductName.Text + "', '" + txtTotalReturn.Text + "' , '" + txtWarranty.Text + "', '" + transactionType + "' , '" + txtClientName.Text + "', '" + status + "', '" + image + "' )";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
 
             connection.Open();
             try {
 
-                insertCommand.ExecuteNonQuery();
+               insertCommand.ExecuteNonQuery();
 
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                MessageBox.Show("Something Went wrong on saving Return Transaction!");
+                MessageBox.Show("Something Went wrong on saving Return Transaction! "  + ex.Message);
             }
 
             connection.Close();

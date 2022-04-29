@@ -159,5 +159,11 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         {
             loadTransactions();
         }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            ReturnHistory returnForm = new ReturnHistory();
+            returnForm.Show();
+        }
     }
 }
