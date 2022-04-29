@@ -44,6 +44,7 @@ namespace Inventory_System_Management_Alliance28
             // button tabs actions
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+
             activeTabIndicator.Top = btnDashboard.Top;
             userControlDashboard1.BringToFront();
             //Dashboard Data Counter from public function - User Control Dashboard
@@ -70,7 +71,12 @@ namespace Inventory_System_Management_Alliance28
             userControlTransaction1.BringToFront();
             userControlTransaction1.loadTransactions();
         }
-
+        private void btnStocks_Click(object sender, EventArgs e)
+        {
+            activeTabIndicator.Top = btnStocks.Top;
+            userControlStocks1.BringToFront();
+            userControlStocks1.loadStocks();
+        }
         private void btnTrash_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnTrash.Top;
