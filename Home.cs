@@ -20,7 +20,7 @@ namespace Inventory_System_Management_Alliance28
         }
         private void Home_Load(object sender, EventArgs e)
         {
-            userControlTransaction1.BringToFront();
+            userControlDashboard1.BringToFront();
             string rootFolder = Application.StartupPath + @"\Images\";
             if(!Directory.Exists(rootFolder))
             {

@@ -210,7 +210,14 @@ namespace Inventory_System_Management_Alliance28
                         xcellApp.Cells[1, 13] = null;
 
                     }
-                   
+                    else if(i==12)
+                    {
+                        // Remove the Value of headertext on column Image
+                        xcellApp.Cells[1, 12] = null;
+
+                    }
+
+
                 }
 
                 for (int i = 0; i < dataGridProduct.Rows.Count; i++)
@@ -221,9 +228,9 @@ namespace Inventory_System_Management_Alliance28
                        
                             xcellApp.Cells[i + 2, j + 1] = dataGridProduct.Rows[i].Cells[j].Value.ToString();
 
-                        //Break the loop if J value is equal to 11 (Image) Column - Picture cell Value will not be included
+                        //Break the loop if J value is equal to 10 (Image) Column - Picture and Image cell Value will not be included
 
-                        if(j == 11)
+                        if(j == 10)
                         {
                             break;
                         }

@@ -106,6 +106,12 @@
     <Compile Include="Auth\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stocks\AddStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks\AddStock.Designer.cs">
+      <DependentUpon>AddStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stocks\UserControlStocks.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </Compile>
     <EmbeddedResource Include="Auth\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocks\AddStock.resx">
+      <DependentUpon>AddStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stocks\UserControlStocks.resx">
       <DependentUpon>UserControlStocks.cs</DependentUpon>
