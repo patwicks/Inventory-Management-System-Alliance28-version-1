@@ -29,18 +29,10 @@ namespace Inventory_System_Management_Alliance28
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlProduct));
             this.dataGridProduct = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAddProduct = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnWithdraw = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
             this.CLIPBOARD = new System.Windows.Forms.DataGridViewImageColumn();
             this.ITEMCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,9 +46,19 @@ namespace Inventory_System_Management_Alliance28
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
             this.WITHDRAW = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnWithdraw = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.pbInformation = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInformation)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridProduct
@@ -69,13 +71,13 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridProduct.ColumnHeadersHeight = 50;
             this.dataGridProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CLIPBOARD,
@@ -91,15 +93,15 @@ namespace Inventory_System_Management_Alliance28
             this.EDIT,
             this.DELETE,
             this.WITHDRAW});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.dataGridProduct.Location = new System.Drawing.Point(3, 69);
             this.dataGridProduct.MultiSelect = false;
@@ -112,6 +114,105 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.Size = new System.Drawing.Size(1014, 676);
             this.dataGridProduct.TabIndex = 0;
             this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick);
+            this.dataGridProduct.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridProduct_CellFormatting);
+            // 
+            // CLIPBOARD
+            // 
+            this.CLIPBOARD.HeaderText = "";
+            this.CLIPBOARD.Image = ((System.Drawing.Image)(resources.GetObject("CLIPBOARD.Image")));
+            this.CLIPBOARD.Name = "CLIPBOARD";
+            this.CLIPBOARD.ReadOnly = true;
+            this.CLIPBOARD.Width = 50;
+            // 
+            // ITEMCODE
+            // 
+            this.ITEMCODE.DataPropertyName = "ITEMCODE";
+            this.ITEMCODE.HeaderText = "ITEM CODE";
+            this.ITEMCODE.Name = "ITEMCODE";
+            this.ITEMCODE.ReadOnly = true;
+            this.ITEMCODE.ToolTipText = "Click to Copy";
+            // 
+            // PRODUCTNAME
+            // 
+            this.PRODUCTNAME.DataPropertyName = "PRODUCTNAME";
+            this.PRODUCTNAME.HeaderText = "PRODUCT NAME";
+            this.PRODUCTNAME.Name = "PRODUCTNAME";
+            this.PRODUCTNAME.ReadOnly = true;
+            // 
+            // CATEGORY
+            // 
+            this.CATEGORY.DataPropertyName = "CATEGORY";
+            this.CATEGORY.HeaderText = "CATEGORY";
+            this.CATEGORY.Name = "CATEGORY";
+            this.CATEGORY.ReadOnly = true;
+            // 
+            // QUANTITY
+            // 
+            this.QUANTITY.DataPropertyName = "QUANTITY";
+            this.QUANTITY.HeaderText = "QUANTITY";
+            this.QUANTITY.Name = "QUANTITY";
+            this.QUANTITY.ReadOnly = true;
+            // 
+            // WARRANTY
+            // 
+            this.WARRANTY.DataPropertyName = "WARRANTY";
+            this.WARRANTY.HeaderText = "WARRANTY";
+            this.WARRANTY.Name = "WARRANTY";
+            this.WARRANTY.ReadOnly = true;
+            // 
+            // DESCRIPTION
+            // 
+            this.DESCRIPTION.DataPropertyName = "DESCRIPTION";
+            this.DESCRIPTION.HeaderText = "DESCRIPTION";
+            this.DESCRIPTION.Name = "DESCRIPTION";
+            this.DESCRIPTION.ReadOnly = true;
+            // 
+            // DATEADDED
+            // 
+            this.DATEADDED.DataPropertyName = "TIMESTAMP";
+            this.DATEADDED.HeaderText = "DATE ADDED";
+            this.DATEADDED.Name = "DATEADDED";
+            this.DATEADDED.ReadOnly = true;
+            // 
+            // IMAGE
+            // 
+            this.IMAGE.DataPropertyName = "IMAGE";
+            this.IMAGE.HeaderText = "IMAGE";
+            this.IMAGE.Name = "IMAGE";
+            this.IMAGE.ReadOnly = true;
+            this.IMAGE.Visible = false;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "PICTURE";
+            this.Column9.HeaderText = "PICTURE";
+            this.Column9.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // EDIT
+            // 
+            this.EDIT.HeaderText = "";
+            this.EDIT.Image = ((System.Drawing.Image)(resources.GetObject("EDIT.Image")));
+            this.EDIT.Name = "EDIT";
+            this.EDIT.ReadOnly = true;
+            // 
+            // DELETE
+            // 
+            this.DELETE.HeaderText = "";
+            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
+            this.DELETE.Name = "DELETE";
+            this.DELETE.ReadOnly = true;
+            // 
+            // WITHDRAW
+            // 
+            this.WITHDRAW.Description = "WITHDRAW";
+            this.WITHDRAW.HeaderText = "";
+            this.WITHDRAW.Image = ((System.Drawing.Image)(resources.GetObject("WITHDRAW.Image")));
+            this.WITHDRAW.Name = "WITHDRAW";
+            this.WITHDRAW.ReadOnly = true;
             // 
             // panel1
             // 
@@ -215,108 +316,23 @@ namespace Inventory_System_Management_Alliance28
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
-            // CLIPBOARD
+            // pbInformation
             // 
-            this.CLIPBOARD.HeaderText = "";
-            this.CLIPBOARD.Image = ((System.Drawing.Image)(resources.GetObject("CLIPBOARD.Image")));
-            this.CLIPBOARD.Name = "CLIPBOARD";
-            this.CLIPBOARD.ReadOnly = true;
-            this.CLIPBOARD.Width = 50;
-            // 
-            // ITEMCODE
-            // 
-            this.ITEMCODE.DataPropertyName = "ITEMCODE";
-            this.ITEMCODE.HeaderText = "ITEM CODE";
-            this.ITEMCODE.Name = "ITEMCODE";
-            this.ITEMCODE.ReadOnly = true;
-            this.ITEMCODE.ToolTipText = "Click to Copy";
-            // 
-            // PRODUCTNAME
-            // 
-            this.PRODUCTNAME.DataPropertyName = "PRODUCTNAME";
-            this.PRODUCTNAME.HeaderText = "PRODUCT NAME";
-            this.PRODUCTNAME.Name = "PRODUCTNAME";
-            this.PRODUCTNAME.ReadOnly = true;
-            // 
-            // CATEGORY
-            // 
-            this.CATEGORY.DataPropertyName = "CATEGORY";
-            this.CATEGORY.HeaderText = "CATEGORY";
-            this.CATEGORY.Name = "CATEGORY";
-            this.CATEGORY.ReadOnly = true;
-            // 
-            // QUANTITY
-            // 
-            this.QUANTITY.DataPropertyName = "QUANTITY";
-            this.QUANTITY.HeaderText = "QUANTITY";
-            this.QUANTITY.Name = "QUANTITY";
-            this.QUANTITY.ReadOnly = true;
-            // 
-            // WARRANTY
-            // 
-            this.WARRANTY.DataPropertyName = "WARRANTY";
-            this.WARRANTY.HeaderText = "WARRANTY";
-            this.WARRANTY.Name = "WARRANTY";
-            this.WARRANTY.ReadOnly = true;
-            // 
-            // DESCRIPTION
-            // 
-            this.DESCRIPTION.DataPropertyName = "DESCRIPTION";
-            this.DESCRIPTION.HeaderText = "DESCRIPTION";
-            this.DESCRIPTION.Name = "DESCRIPTION";
-            this.DESCRIPTION.ReadOnly = true;
-            // 
-            // DATEADDED
-            // 
-            this.DATEADDED.DataPropertyName = "TIMESTAMP";
-            this.DATEADDED.HeaderText = "DATE ADDED";
-            this.DATEADDED.Name = "DATEADDED";
-            this.DATEADDED.ReadOnly = true;
-            // 
-            // IMAGE
-            // 
-            this.IMAGE.DataPropertyName = "IMAGE";
-            this.IMAGE.HeaderText = "IMAGE";
-            this.IMAGE.Name = "IMAGE";
-            this.IMAGE.ReadOnly = true;
-            this.IMAGE.Visible = false;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "PICTURE";
-            this.Column9.HeaderText = "PICTURE";
-            this.Column9.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // EDIT
-            // 
-            this.EDIT.HeaderText = "";
-            this.EDIT.Image = ((System.Drawing.Image)(resources.GetObject("EDIT.Image")));
-            this.EDIT.Name = "EDIT";
-            this.EDIT.ReadOnly = true;
-            // 
-            // DELETE
-            // 
-            this.DELETE.HeaderText = "";
-            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
-            this.DELETE.Name = "DELETE";
-            this.DELETE.ReadOnly = true;
-            // 
-            // WITHDRAW
-            // 
-            this.WITHDRAW.Description = "WITHDRAW";
-            this.WITHDRAW.HeaderText = "";
-            this.WITHDRAW.Image = ((System.Drawing.Image)(resources.GetObject("WITHDRAW.Image")));
-            this.WITHDRAW.Name = "WITHDRAW";
-            this.WITHDRAW.ReadOnly = true;
+            this.pbInformation.Image = ((System.Drawing.Image)(resources.GetObject("pbInformation.Image")));
+            this.pbInformation.Location = new System.Drawing.Point(654, 24);
+            this.pbInformation.Name = "pbInformation";
+            this.pbInformation.Size = new System.Drawing.Size(22, 21);
+            this.pbInformation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbInformation.TabIndex = 7;
+            this.pbInformation.TabStop = false;
+            this.pbInformation.MouseLeave += new System.EventHandler(this.pbInformation_MouseLeave);
+            this.pbInformation.MouseHover += new System.EventHandler(this.pbInformation_MouseHover);
             // 
             // UserControlProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pbInformation);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnWithdraw);
             this.Controls.Add(this.label1);
@@ -336,6 +352,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInformation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,5 +382,6 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DELETE;
         private System.Windows.Forms.DataGridViewImageColumn WITHDRAW;
+        private System.Windows.Forms.PictureBox pbInformation;
     }
 }

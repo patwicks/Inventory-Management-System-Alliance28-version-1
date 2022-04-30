@@ -23,10 +23,14 @@ namespace Inventory_System_Management_Alliance28
             
         }
 
+        Product.Information Info = new Product.Information();
+
         private void UserControlProduct_Load(object sender, EventArgs e)
         {
             styleDataProductGrid();
             loadProducts();
+
+
         }
         //Styled datagridproduct
         private void styleDataProductGrid()
@@ -232,6 +236,42 @@ namespace Inventory_System_Management_Alliance28
             }
         }
 
-      
+        private void dataGridProduct_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridProduct.Columns[e.ColumnIndex].Name == "QUANTITY" & e.Value != null)
+            {
+
+                int val = int.Parse(e.Value.ToString());
+
+                if (val <= 0)
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(255, 153, 153);
+                }
+                else if(val <= 5)
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(255, 204, 204);
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(153, 255, 204);
+                }
+            }
+        }
+
+        private void pbInformation_MouseHover(object sender, EventArgs e)
+        {
+            //change the size when hovering the icon
+            pbInformation.Height = 26;
+            pbInformation.Width = 26;
+            Info.Show();
+        }
+
+        private void pbInformation_MouseLeave(object sender, EventArgs e)
+        {
+            //reset the icon size when mouse leave
+            pbInformation.Height = 24;
+            pbInformation.Width = 24;
+            Info.Hide();
+        }
     }
 }
