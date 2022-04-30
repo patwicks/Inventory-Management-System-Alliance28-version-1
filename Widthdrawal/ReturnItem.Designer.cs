@@ -32,6 +32,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnItem));
             this.error = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbNewID = new System.Windows.Forms.Label();
             this.lbCurrentStock = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,7 +59,6 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.txtTotalReturn = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbNewQuantity = new System.Windows.Forms.Label();
-            this.lbNewID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbItemImage)).BeginInit();
@@ -91,6 +91,15 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(842, 62);
             this.panel1.TabIndex = 22;
+            // 
+            // lbNewID
+            // 
+            this.lbNewID.AutoSize = true;
+            this.lbNewID.Location = new System.Drawing.Point(72, 31);
+            this.lbNewID.Name = "lbNewID";
+            this.lbNewID.Size = new System.Drawing.Size(0, 21);
+            this.lbNewID.TabIndex = 3;
+            this.lbNewID.Visible = false;
             // 
             // lbCurrentStock
             // 
@@ -330,6 +339,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.btnCancel.TabIndex = 89;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnReturn
             // 
@@ -385,15 +395,6 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.lbNewQuantity.Name = "lbNewQuantity";
             this.lbNewQuantity.Size = new System.Drawing.Size(0, 17);
             this.lbNewQuantity.TabIndex = 104;
-            // 
-            // lbNewID
-            // 
-            this.lbNewID.AutoSize = true;
-            this.lbNewID.Location = new System.Drawing.Point(72, 31);
-            this.lbNewID.Name = "lbNewID";
-            this.lbNewID.Size = new System.Drawing.Size(0, 21);
-            this.lbNewID.TabIndex = 3;
-            this.lbNewID.Visible = false;
             // 
             // ReturnItem
             // 

@@ -35,7 +35,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
 
         private void btnCloseForm_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void DeleteTransaction_Load(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                 {
                     reader = deleteCommand.ExecuteReader();
                     MessageBox.Show("Transaction with ID of / " + txtTransactionID.Text + " / was succesfully Deleted!");
-                    Hide();
+                    Close();
                 }
                 else
                 {
@@ -96,9 +96,9 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to cancel deleting?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to cancel deleting?", "Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Hide();
+                Close();
             }
         }
     }

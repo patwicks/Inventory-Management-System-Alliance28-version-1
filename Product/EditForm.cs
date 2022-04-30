@@ -95,7 +95,7 @@ namespace Inventory_System_Management_Alliance28
                         //execute update command
                         reader = updateCommand.ExecuteReader();
                         MessageBox.Show("Updated Successfully!");
-                        Hide();
+                        Close();
                         error.Visible = false;
                     }
                     
@@ -169,14 +169,15 @@ namespace Inventory_System_Management_Alliance28
             //ask for confirmation before updating the product
             if (MessageBox.Show("Are you sure you want to cancel?", "Cancel Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Hide();
+                Close();
             }
                 
         }
         //Close form Button
         private void btnCloseForm_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Close();
         }
+
     }
 }

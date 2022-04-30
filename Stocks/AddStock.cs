@@ -40,14 +40,14 @@ namespace Inventory_System_Management_Alliance28.Stocks
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to cancel adding Stock?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Hide();
+                Close();
             }
         }
 
@@ -102,7 +102,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
                     {
                         reader = addCommand.ExecuteReader();
                         MessageBox.Show("Stocks successfully added!");
-                        Hide();
+                        Close();
                     }
 
                 }

@@ -33,7 +33,7 @@ namespace Inventory_System_Management_Alliance28
 
         private void btnCloseForm_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Close();
         }
 
         private void DeleteForm_Load(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace Inventory_System_Management_Alliance28
                 {
                     reader = deleteCommand.ExecuteReader();
                     MessageBox.Show("Product with item code / " + txtItemCode.Text + " / was succesfully Deleted!");
-                    Hide();
+                    Close();
                 }
                 else
                 {
@@ -95,7 +95,7 @@ namespace Inventory_System_Management_Alliance28
         {
             if(MessageBox.Show("Do you want to cancel deleting?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==DialogResult.Yes)
             {
-                Hide();
+                Close();
             }
         }
     }

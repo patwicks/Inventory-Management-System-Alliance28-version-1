@@ -29,9 +29,8 @@ namespace Inventory_System_Management_Alliance28
         {
             styleDataProductGrid();
             loadProducts();
-
-
         }
+       
         //Styled datagridproduct
         private void styleDataProductGrid()
         {

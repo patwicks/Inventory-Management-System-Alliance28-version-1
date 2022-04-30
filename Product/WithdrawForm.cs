@@ -27,7 +27,7 @@ namespace Inventory_System_Management_Alliance28
 
         private void btnCloseForm_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void txtItemCode_TextChanged(object sender, EventArgs e)
@@ -145,7 +145,7 @@ namespace Inventory_System_Management_Alliance28
                         MessageBox.Show("Successfully Withdraw Item!");
                         error.Visible = false;
                         error.Text = "";
-                        Hide();
+                        Close();
                     }
                     else
                     {

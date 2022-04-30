@@ -32,7 +32,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private void ReturnItem_Load(object sender, EventArgs e)
@@ -160,7 +160,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                     reader = removeCommand.ExecuteReader();
                     updateQuantityProduct();
                     MessageBox.Show("Returned succesfully!");
-                    Hide();
+                    Close();
                 } 
               
             }
@@ -217,7 +217,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                     updateQuantityProduct();
                     saveReturnItemTransaction();
                     MessageBox.Show("Returned succesfully!");
-                    Hide();
+                    Close();
                 }
 
             }
@@ -255,6 +255,12 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             connection.Close();
         }
 
-
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to cancel returning item process?", "Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 }

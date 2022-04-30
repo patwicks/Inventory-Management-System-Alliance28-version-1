@@ -27,6 +27,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             styleDataGrid();
             //load data transaction - withdrawal
             loadTransactions();
+
         }
 
         //load the data on gridView function

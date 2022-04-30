@@ -26,7 +26,7 @@ namespace Inventory_System_Management_Alliance28
         //close icon in picturebox
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           Close();
         }
 
         //save button
@@ -145,7 +145,7 @@ namespace Inventory_System_Management_Alliance28
                 if (returnValue == 1)
                 {
                     MessageBox.Show("Product successfully added!");
-                    this.Hide();
+                    Close();
                 }
                 else
                 {
@@ -168,7 +168,7 @@ namespace Inventory_System_Management_Alliance28
             //ask for confirmation before updating the product
             if (MessageBox.Show("Are you sure you want to cancel?", "Cancel Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Hide();
+                Close();
             }
         }
     }
