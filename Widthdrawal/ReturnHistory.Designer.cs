@@ -81,6 +81,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.dataGridReturnList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridReturnList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.dataGridReturnList.Location = new System.Drawing.Point(0, 0);
+            this.dataGridReturnList.MaximumSize = new System.Drawing.Size(1105, 800);
             this.dataGridReturnList.MultiSelect = false;
             this.dataGridReturnList.Name = "dataGridReturnList";
             this.dataGridReturnList.ReadOnly = true;

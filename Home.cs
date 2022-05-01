@@ -99,5 +99,12 @@ namespace Inventory_System_Management_Alliance28
             }
             
         }
+
+        private void Home_Activated(object sender, EventArgs e)
+        {
+            userControlProduct1.loadProducts();
+            userControlTransaction1.loadTransactions();
+            userControlStocks1.loadStocks();
+        }
     }
 }

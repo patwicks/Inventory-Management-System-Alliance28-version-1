@@ -55,6 +55,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnWithdraw = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
             this.pbInformation = new System.Windows.Forms.PictureBox();
+            this.btnAddStock = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -267,7 +268,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(382, 21);
+            this.btnRefresh.Location = new System.Drawing.Point(503, 21);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(115, 30);
             this.btnRefresh.TabIndex = 3;
@@ -308,7 +309,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExport.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(261, 21);
+            this.btnExport.Location = new System.Drawing.Point(382, 21);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(115, 30);
             this.btnExport.TabIndex = 6;
@@ -328,10 +329,25 @@ namespace Inventory_System_Management_Alliance28
             this.pbInformation.MouseLeave += new System.EventHandler(this.pbInformation_MouseLeave);
             this.pbInformation.MouseHover += new System.EventHandler(this.pbInformation_MouseHover);
             // 
+            // btnAddStock
+            // 
+            this.btnAddStock.BackColor = System.Drawing.Color.Tomato;
+            this.btnAddStock.FlatAppearance.BorderSize = 0;
+            this.btnAddStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStock.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStock.ForeColor = System.Drawing.Color.White;
+            this.btnAddStock.Location = new System.Drawing.Point(261, 21);
+            this.btnAddStock.Name = "btnAddStock";
+            this.btnAddStock.Size = new System.Drawing.Size(115, 30);
+            this.btnAddStock.TabIndex = 8;
+            this.btnAddStock.Text = "Add Stock";
+            this.btnAddStock.UseVisualStyleBackColor = false;
+            // 
             // UserControlProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAddStock);
             this.Controls.Add(this.pbInformation);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnWithdraw);
@@ -383,5 +399,6 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.DataGridViewImageColumn DELETE;
         private System.Windows.Forms.DataGridViewImageColumn WITHDRAW;
         private System.Windows.Forms.PictureBox pbInformation;
+        private System.Windows.Forms.Button btnAddStock;
     }
 }

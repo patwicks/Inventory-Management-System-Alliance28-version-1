@@ -278,6 +278,7 @@ namespace Inventory_System_Management_Alliance28
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "INVENTORY MANAGEMENT SYSTEM";
+            this.Activated += new System.EventHandler(this.Home_Activated);
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelSideMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnStocks)).EndInit();

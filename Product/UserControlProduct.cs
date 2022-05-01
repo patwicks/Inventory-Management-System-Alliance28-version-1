@@ -16,6 +16,7 @@ namespace Inventory_System_Management_Alliance28
     {
         //Global variable
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+        
 
         public UserControlProduct()
         {
@@ -29,6 +30,7 @@ namespace Inventory_System_Management_Alliance28
         {
             styleDataProductGrid();
             loadProducts();
+            
         }
        
         //Styled datagridproduct
@@ -74,7 +76,7 @@ namespace Inventory_System_Management_Alliance28
         public void loadProducts()
         {
             string status = "Active";
-            string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP, IMAGE FROM table_products WHERE STATUS = '"+ status +"' ORDER BY PRODUCTNAME ASC";
+            string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP, IMAGE FROM table_products WHERE STATUS = '" + status + "' ORDER BY PRODUCTNAME DESC";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
