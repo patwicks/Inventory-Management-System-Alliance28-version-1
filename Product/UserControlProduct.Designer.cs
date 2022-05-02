@@ -342,6 +342,7 @@ namespace Inventory_System_Management_Alliance28
             this.btnAddStock.TabIndex = 8;
             this.btnAddStock.Text = "Add Stock";
             this.btnAddStock.UseVisualStyleBackColor = false;
+            this.btnAddStock.Click += new System.EventHandler(this.btnAddStock_Click);
             // 
             // UserControlProduct
             // 

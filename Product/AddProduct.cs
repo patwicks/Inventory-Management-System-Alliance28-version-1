@@ -138,7 +138,7 @@ namespace Inventory_System_Management_Alliance28
 
             connection.Open();
             int returnValue = insertCommand.ExecuteNonQuery();
-
+            File.Copy(lbImageFileName.Text, Directory.GetCurrentDirectory() + @"\Images\" + Path.GetFileName(pbItemImage.ImageLocation));
             try
             {
 
@@ -160,7 +160,7 @@ namespace Inventory_System_Management_Alliance28
                 error.Text = ex.Message;
             }
             connection.Close();
-            File.Copy(lbImageFileName.Text, Directory.GetCurrentDirectory() + @"\Images\" + Path.GetFileName(pbItemImage.ImageLocation));
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

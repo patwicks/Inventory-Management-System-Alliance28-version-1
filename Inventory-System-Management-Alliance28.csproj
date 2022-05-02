@@ -74,6 +74,12 @@
     <Compile Include="Product\EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product\GridAddStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\GridAddStockForm.Designer.cs">
+      <DependentUpon>GridAddStockForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product\GridWithdrawForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Product\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\GridAddStockForm.resx">
+      <DependentUpon>GridAddStockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product\GridWithdrawForm.resx">
       <DependentUpon>GridWithdrawForm.cs</DependentUpon>

@@ -193,6 +193,11 @@ namespace Inventory_System_Management_Alliance28
 
             wForm.Show();
         }
+        private void btnAddStock_Click(object sender, EventArgs e)
+        {
+            Product.GridAddStockForm GASForm = new Product.GridAddStockForm();
+            GASForm.Show();
+        }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
@@ -281,5 +286,7 @@ namespace Inventory_System_Management_Alliance28
             pbInformation.Width = 24;
             Info.Hide();
         }
+
+  
     }
 }
