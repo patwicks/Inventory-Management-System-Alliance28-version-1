@@ -46,6 +46,7 @@ namespace Inventory_System_Management_Alliance28.Product
             this.panel4 = new System.Windows.Forms.Panel();
             this.pbItemImage = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbImage = new System.Windows.Forms.Label();
             this.txtItemCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,7 +55,6 @@ namespace Inventory_System_Management_Alliance28.Product
             this.lbTotal = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbImage = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -242,6 +242,15 @@ namespace Inventory_System_Management_Alliance28.Product
             this.panel3.Size = new System.Drawing.Size(160, 150);
             this.panel3.TabIndex = 44;
             // 
+            // lbImage
+            // 
+            this.lbImage.AutoSize = true;
+            this.lbImage.Location = new System.Drawing.Point(20, 19);
+            this.lbImage.Name = "lbImage";
+            this.lbImage.Size = new System.Drawing.Size(0, 21);
+            this.lbImage.TabIndex = 56;
+            this.lbImage.Visible = false;
+            // 
             // txtItemCode
             // 
             this.txtItemCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -293,15 +302,15 @@ namespace Inventory_System_Management_Alliance28.Product
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lbTotal
             // 
             this.lbTotal.AutoSize = true;
             this.lbTotal.Location = new System.Drawing.Point(57, 282);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(49, 21);
+            this.lbTotal.Size = new System.Drawing.Size(0, 21);
             this.lbTotal.TabIndex = 54;
-            this.lbTotal.Text = "Total";
             this.lbTotal.Visible = false;
             // 
             // error
@@ -329,16 +338,6 @@ namespace Inventory_System_Management_Alliance28.Product
             this.panel1.Size = new System.Drawing.Size(589, 62);
             this.panel1.TabIndex = 40;
             // 
-            // lbImage
-            // 
-            this.lbImage.AutoSize = true;
-            this.lbImage.Location = new System.Drawing.Point(20, 19);
-            this.lbImage.Name = "lbImage";
-            this.lbImage.Size = new System.Drawing.Size(76, 21);
-            this.lbImage.TabIndex = 56;
-            this.lbImage.Text = "lbImage";
-            this.lbImage.Visible = false;
-            // 
             // GridAddStockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -363,7 +362,7 @@ namespace Inventory_System_Management_Alliance28.Product
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "GridAddStockForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GridAddStockForm";

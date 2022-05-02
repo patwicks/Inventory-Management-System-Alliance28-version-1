@@ -238,7 +238,7 @@ namespace Inventory_System_Management_Alliance28
                 ViewForm.productDescription = dataGridProduct.Rows[e.RowIndex].Cells["DESCRIPTION"].FormattedValue.ToString();
                 ViewForm.productImageName = dataGridProduct.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
                 ViewForm.productTimestamp = dataGridProduct.Rows[e.RowIndex].Cells["TIMESTAMP"].FormattedValue.ToString();
-                ViewForm.Show();
+                ViewForm.ShowDialog();
 
 
             }
@@ -260,7 +260,7 @@ namespace Inventory_System_Management_Alliance28
                 Withdrawform.Wtimestamp = dataGridrecentW.Rows[e.RowIndex].Cells["PTIMESTAMP"].FormattedValue.ToString();
                 Withdrawform.Wimage = dataGridrecentW.Rows[e.RowIndex].Cells["PIMAGE"].FormattedValue.ToString();
                 Withdrawform.Wwarranty = dataGridrecentW.Rows[e.RowIndex].Cells["WARRANTY"].FormattedValue.ToString();
-                Withdrawform.Show();
+                Withdrawform.ShowDialog();
             }
         }
 

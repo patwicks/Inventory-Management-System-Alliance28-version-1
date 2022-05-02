@@ -137,7 +137,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                 delTransaction.transactionType = dataGridTransaction.Rows[e.RowIndex].Cells["TRANSACTION_TYPE"].FormattedValue.ToString();
                 delTransaction.withdrawalDate = dataGridTransaction.Rows[e.RowIndex].Cells["WITHDRAWAL_DATE"].FormattedValue.ToString();
                 delTransaction.image = dataGridTransaction.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
-                delTransaction.Show();
+                delTransaction.ShowDialog();
             }
             else if (dataGridTransaction.Columns[e.ColumnIndex].Name == "RETURN")
             {
@@ -152,7 +152,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                 returnForm.transactionType = dataGridTransaction.Rows[e.RowIndex].Cells["TRANSACTION_TYPE"].FormattedValue.ToString();
                 returnForm.withdrawalDate = dataGridTransaction.Rows[e.RowIndex].Cells["WITHDRAWAL_DATE"].FormattedValue.ToString();
                 returnForm.image = dataGridTransaction.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
-                returnForm.Show();
+                returnForm.ShowDialog();
             }
         }
 
@@ -164,7 +164,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         private void btnHistory_Click(object sender, EventArgs e)
         {
             ReturnHistory returnForm = new ReturnHistory();
-            returnForm.Show();
+            returnForm.ShowDialog();
         }
     }
 }

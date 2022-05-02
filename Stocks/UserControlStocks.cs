@@ -34,7 +34,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
         public void loadStocks()
         {
             string status = "Active";
-            string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, IMAGE FROM table_products WHERE ( QUANTITY <= 0 ) AND STATUS = '" + status + "'";
+            string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, IMAGE FROM table_products WHERE ( QUANTITY <= 5) AND STATUS = '" + status + "'";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
@@ -92,11 +92,15 @@ namespace Inventory_System_Management_Alliance28.Stocks
             {
 
                 int val = int.Parse(e.Value.ToString());
-
-                if(val <= 0)
+                if (val == 0)
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(255, 153, 153);
+                }
+                else if( val <=5 )
                 {
                     e.CellStyle.BackColor = Color.FromArgb(255, 204, 204);
                 }
+
             }
         }
 
@@ -114,7 +118,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
                 addStockForm.productCategory = dataGridStocks.Rows[e.RowIndex].Cells["CATEGORY"].FormattedValue.ToString();
                 addStockForm.productQuantity = dataGridStocks.Rows[e.RowIndex].Cells["QUANTITY"].FormattedValue.ToString();
                 addStockForm.productImageName = dataGridStocks.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
-                addStockForm.Show();
+                addStockForm.ShowDialog();
             }
             //
         }

@@ -20,8 +20,8 @@ namespace Inventory_System_Management_Alliance28
         private void lbButtonRegister_Click(object sender, EventArgs e)
         {
             Register registerForm = new Register();
-            this.Hide();
-            registerForm.Show();
+            Close();
+            registerForm.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace Inventory_System_Management_Alliance28
                         {
                             error.Visible = true;
                             Home homeForm = new Home();
-                            this.Hide();
+                            Hide();
                             homeForm.Show();
                         }
                     }

@@ -125,7 +125,11 @@ namespace Inventory_System_Management_Alliance28.Product
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //ask for confirmation before updating the product
+            if (MessageBox.Show("Are you sure you want to cancel?", "Cancel Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Close();
+            }
         }
         //Add stock in product items
         public void AddStock()
@@ -144,6 +148,11 @@ namespace Inventory_System_Management_Alliance28.Product
             connection.Open();
             reader = updateCommand.ExecuteReader();
             connection.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -67,7 +67,7 @@ namespace Inventory_System_Management_Alliance28
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             AddProduct addForm = new AddProduct();
-            addForm.Show();
+            addForm.ShowDialog();
         }
 
         //load products
@@ -150,8 +150,7 @@ namespace Inventory_System_Management_Alliance28
                 deleteForm.productDescription = dataGridProduct.Rows[e.RowIndex].Cells["DESCRIPTION"].FormattedValue.ToString();
                 deleteForm.productDateAdded = dataGridProduct.Rows[e.RowIndex].Cells["DATEADDED"].FormattedValue.ToString();
                 deleteForm.productImageName = dataGridProduct.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
-                deleteForm.Show();
-
+                deleteForm.ShowDialog();
             }
             else if(dataGridProduct.Columns[e.ColumnIndex].Name == "EDIT")
             {
@@ -165,7 +164,7 @@ namespace Inventory_System_Management_Alliance28
                 editForm.productDescription = dataGridProduct.Rows[e.RowIndex].Cells["DESCRIPTION"].FormattedValue.ToString();
                 editForm.productImageName = dataGridProduct.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
 
-                editForm.Show();
+                editForm.ShowDialog();
             }
             else if (dataGridProduct.Columns[e.ColumnIndex].Name == "WITHDRAW")
             {
@@ -176,7 +175,7 @@ namespace Inventory_System_Management_Alliance28
                 GWForm.productQuantity = dataGridProduct.Rows[e.RowIndex].Cells["QUANTITY"].FormattedValue.ToString();
                 GWForm.productImage = dataGridProduct.Rows[e.RowIndex].Cells["IMAGE"].FormattedValue.ToString();
                 GWForm.productWarranty = dataGridProduct.Rows[e.RowIndex].Cells["WARRANTY"].FormattedValue.ToString();
-                GWForm.Show();
+                GWForm.ShowDialog();
             }
             else if (dataGridProduct.Columns[e.ColumnIndex].Name == "CLIPBOARD")
             {
@@ -191,12 +190,12 @@ namespace Inventory_System_Management_Alliance28
             WithdrawForm wForm = new WithdrawForm();
 
 
-            wForm.Show();
+            wForm.ShowDialog();
         }
         private void btnAddStock_Click(object sender, EventArgs e)
         {
             Product.GridAddStockForm GASForm = new Product.GridAddStockForm();
-            GASForm.Show();
+            GASForm.ShowDialog();
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -286,7 +285,5 @@ namespace Inventory_System_Management_Alliance28
             pbInformation.Width = 24;
             Info.Hide();
         }
-
-  
     }
 }

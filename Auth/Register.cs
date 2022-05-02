@@ -22,8 +22,8 @@ namespace Inventory_System_Management_Alliance28
         private void lnButtonLogin_Click(object sender, EventArgs e)
         {
             Login loginForm = new Login();
-            this.Hide();
-            loginForm.Show();
+            Close();
+            loginForm.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -121,9 +121,9 @@ namespace Inventory_System_Management_Alliance28
                 {
                     error.Visible = false;
                     MessageBox.Show("Successfully registered!");
-                    this.Hide();
+                    Close();
                     Login loginForm = new Login();
-                    loginForm.Show();
+                    loginForm.ShowDialog();
                 }
             } catch(Exception)
             {
