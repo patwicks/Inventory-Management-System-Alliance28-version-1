@@ -32,7 +32,8 @@ namespace Inventory_System_Management_Alliance28
 
         private void txtItemCode_TextChanged(object sender, EventArgs e)
         {
-            string searchQuery = "SELECT PRODUCTNAME, QUANTITY,IMAGE,WARRANTY FROM table_products WHERE ITEMCODE = '" + txtItemCode.Text +"'";
+            string status = "Active";
+            string searchQuery = "SELECT PRODUCTNAME, QUANTITY,IMAGE,WARRANTY FROM table_products WHERE ITEMCODE = '" + txtItemCode.Text +"' AND STATUS='"+status+"'";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
             MySqlDataReader reader;
@@ -41,8 +42,8 @@ namespace Inventory_System_Management_Alliance28
 
             reader = searchCommand.ExecuteReader();
             try {
-            
-            if(txtItemCode.Text.Length >= 8)
+
+                if (txtItemCode.Text.Length >= 8 || txtItemCode.Text.Length < 13)
                 {
                     if(reader.HasRows)
                     {
@@ -58,6 +59,8 @@ namespace Inventory_System_Management_Alliance28
 
                             Image image = Image.FromFile(Application.StartupPath + @"\Images\" + lbImage.Text);
                             pbItemImage.Image = image;
+
+                            error.Visible = false;
                         }
                     }
                     else
@@ -94,67 +97,79 @@ namespace Inventory_System_Management_Alliance28
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
 
-            connection.Open();
-            //Validation
            
-            if(txtItemCode.Text == "")
-            {
-                error.Visible = true;
-                error.Text = "ITEM CODE is required!";
 
-            }
-            else if(txtItemCode.Text.Length < 8) {
-                error.Visible = true;
-                error.Text = "Invalid ITEM CODE!";
-            }
-            else if (txtClientName.Text == "")
-            {
-                error.Visible = true;
-                error.Text = "CLIENT NAME is required!";
-            }
-            else if (txtQuantity.Text == "")
-            {
-                error.Visible = true;
-                error.Text = "Withdrawal QUANTITY is required!";
-            }
-            else if(!int.TryParse(txtQuantity.Text, out int n))
-            {
-                error.Visible = true;
-                error.Text = "Please input numerical value on QUANTITY!";
-            }
-            else if (Int32.Parse(txtQuantity.Text) <= 0)
-            {
-                error.Visible = true;
-                error.Text = "Invalid QUANTITY!";
-            }
-            else if (Int32.Parse(txtQuantity.Text) > Int32.Parse(txtCurrentStock.Text))
-            {
-                error.Visible = true;
-                error.Text = "Out of STOCK!";
-            }
-            else
-            {
 
-                if (MessageBox.Show("Withdraw the Product?", "Widthrawal Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //Validation
+
+            try {
+                connection.Open();
+
+                if (txtItemCode.Text == "")
                 {
-                    int returnValue = insertCommand.ExecuteNonQuery();
+                    error.Visible = true;
+                    error.Text = "ITEM CODE is required!";
 
-                    if (returnValue == 1)
+                }
+                else if (txtItemCode.Text.Length < 8)
+                {
+                    error.Visible = true;
+                    error.Text = "Invalid ITEM CODE!";
+                }
+                else if (txtClientName.Text == "")
+                {
+                    error.Visible = true;
+                    error.Text = "CLIENT NAME is required!";
+                }
+                else if (txtQuantity.Text == "")
+                {
+                    error.Visible = true;
+                    error.Text = "Withdrawal QUANTITY is required!";
+                }
+                else if (!int.TryParse(txtQuantity.Text, out int n))
+                {
+                    error.Visible = true;
+                    error.Text = "Please input numerical value on QUANTITY!";
+                }
+                else if (Int32.Parse(txtQuantity.Text) <= 0)
+                {
+                    error.Visible = true;
+                    error.Text = "Invalid QUANTITY!";
+                }
+                else if (Int32.Parse(txtQuantity.Text) > Int32.Parse(txtCurrentStock.Text))
+                {
+                    error.Visible = true;
+                    error.Text = "Out of STOCK!";
+                }
+                else
+                {
+
+                    if (MessageBox.Show("Withdraw the Product?", "Widthrawal Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        subtractStock();
-                        MessageBox.Show("Successfully Withdraw Item!");
-                        error.Visible = false;
-                        error.Text = "";
-                        Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to Withdraw Item!");
+                        int returnValue = insertCommand.ExecuteNonQuery();
+
+                        if (returnValue == 1)
+                        {
+                            subtractStock();
+                            MessageBox.Show("Successfully Withdraw Item!");
+                            error.Visible = false;
+                            error.Text = "";
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to Withdraw Item!");
+                        }
                     }
                 }
-            }
 
-            connection.Close();
+                connection.Close();
+            } catch(Exception)
+            {
+                MessageBox.Show("Somthing went wrong, try again!");
+            }
+           
+            
 
         }
 

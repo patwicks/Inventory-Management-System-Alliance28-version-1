@@ -21,7 +21,8 @@ namespace Inventory_System_Management_Alliance28.Product
 
         private void txtItemCode_TextChanged(object sender, EventArgs e)
         {
-            string searchQuery = "SELECT PRODUCTNAME, QUANTITY,IMAGE,WARRANTY FROM table_products WHERE ITEMCODE = '" + txtItemCode.Text + "'";
+            string status = "Active";
+            string searchQuery = "SELECT PRODUCTNAME, QUANTITY,IMAGE,WARRANTY FROM table_products WHERE ITEMCODE = '" + txtItemCode.Text + "' AND STATUS='"+status+"'";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
             MySqlDataReader reader;
@@ -88,7 +89,7 @@ namespace Inventory_System_Management_Alliance28.Product
                 error.Text = "ITEM CODE is required!";
 
             }
-            else if (txtItemCode.Text.Length < 8)
+            else if (txtItemCode.Text.Length < 8 || txtItemCode.Text.Length > 12)
             {
                 error.Visible = true;
                 error.Text = "Invalid ITEM CODE!";
@@ -111,14 +112,7 @@ namespace Inventory_System_Management_Alliance28.Product
             else
             {
 
-                if (MessageBox.Show("Add Stock the Product?", "Add Stock Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                       AddStock();
-                       MessageBox.Show("Successfully Added Stock!");
-                       error.Visible = false;
-                       error.Text = "";
-                       Close();
-                }
+                AddStock();
             }
 
 
@@ -134,20 +128,46 @@ namespace Inventory_System_Management_Alliance28.Product
         //Add stock in product items
         public void AddStock()
         {
-            int val1 = Convert.ToInt32(txtCurrentStock.Text);
-            int val2 = Convert.ToInt32(txtAdditional.Text);
-            int total = val1 + val2;
+           
 
-            txtAdditional.Text = total.ToString();
+            try {
+                int val1 = Convert.ToInt32(txtCurrentStock.Text);
+                int val2 = Convert.ToInt32(txtAdditional.Text);
+                int total = val1 + val2;
 
-            string updateQuery = "UPDATE table_products SET QUANTITY = '" + txtAdditional.Text + "' WHERE ITEMCODE='" + txtItemCode.Text + "'";
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            MySqlCommand updateCommand = new MySqlCommand(updateQuery, connection);
-            MySqlDataReader reader;
-            //execute update command
-            connection.Open();
-            reader = updateCommand.ExecuteReader();
-            connection.Close();
+                txtAdditional.Text = total.ToString();
+
+                string updateQuery = "UPDATE table_products SET QUANTITY = '" + txtAdditional.Text + "' WHERE ITEMCODE='" + txtItemCode.Text + "'";
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                MySqlCommand updateCommand = new MySqlCommand(updateQuery, connection);
+                MySqlDataReader reader;
+                //execute update command
+                connection.Open();
+
+                if (txtProductName.Text == "")
+                {
+                    error.Visible = true;
+                    error.Text = "Please select a product";
+                }
+                else
+                {
+                    
+                    if (MessageBox.Show("Add Stock the Product?", "Add Stock Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        reader = updateCommand.ExecuteReader();
+                        MessageBox.Show("Successfully Added Stock!");
+                        error.Visible = false;
+                        error.Text = "";
+                        Close();
+                    }
+                }
+                connection.Close();
+            } catch(Exception)
+            {
+                MessageBox.Show("Something went wrong on addting Stock");
+            }
+           
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

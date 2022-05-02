@@ -50,7 +50,7 @@ namespace Inventory_System_Management_Alliance28
                     error.Text = "Please fill out the form correctly!";
                 }
                 //check if Item code character lenght is correct
-                else if (txtItemCode.Text.Length != 8 || txtItemCode.Text.Length > 12)
+                else if (txtItemCode.Text.Length < 8 || txtItemCode.Text.Length > 12)
                 {
                     error.Visible = true;
                     error.Text = "ITEM CODE must be 8 or less than 12 characters!";
@@ -85,6 +85,8 @@ namespace Inventory_System_Management_Alliance28
                         //ask for confirmation before updating the product
                         if (MessageBox.Show("Save the product?", "Save Product", MessageBoxButtons.OKCancel) == DialogResult.OK)
                         {
+                            error.Visible = false;
+                            error.Text = "";
                             saveNewProduct();
                         }
                         
@@ -125,6 +127,24 @@ namespace Inventory_System_Management_Alliance28
                 pbItemImage.Image = new Bitmap(openFile.FileName);
                 pbItemImage.ImageLocation = openFile.FileName;
                 pbItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                //Check if Image already existed
+
+                string path = Application.StartupPath + @"\Images\" + Path.GetFileName(pbItemImage.ImageLocation);
+                bool fileExist = File.Exists(path);
+
+                if (fileExist)
+                {
+
+                    if (MessageBox.Show("Image already Existed!", "WARNING", MessageBoxButtons.OK) == DialogResult.OK)
+                    {
+                        //Reset the value if the Image file is already existing in the folder
+                        pbItemImage.Image = null;
+                        lbImageFileName.Text = "";
+                        
+                    }
+
+                }
             }
         }
 
