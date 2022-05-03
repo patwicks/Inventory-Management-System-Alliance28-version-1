@@ -42,6 +42,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Dashboard = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStocks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,10 +177,26 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Location = new System.Drawing.Point(742, 18);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(115, 30);
+            this.btnExport.TabIndex = 10;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // UserControlStocks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.dataGridStocks);
@@ -206,5 +223,6 @@ namespace Inventory_System_Management_Alliance28.Stocks
         private System.Windows.Forms.DataGridViewTextBoxColumn IMAGE;
         private System.Windows.Forms.DataGridViewImageColumn Column9;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnExport;
     }
 }

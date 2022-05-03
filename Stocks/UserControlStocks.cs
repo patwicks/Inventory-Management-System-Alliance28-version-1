@@ -127,5 +127,54 @@ namespace Inventory_System_Management_Alliance28.Stocks
         {
             loadStocks();
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            //Print Excell
+            if (dataGridStocks.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application xcellApp = new Microsoft.Office.Interop.Excel.Application();
+                xcellApp.Application.Workbooks.Add(Type.Missing);
+                for (int i = 1; i < dataGridStocks.Columns.Count + 1; i++)
+                {
+                    xcellApp.Cells[1, i] = dataGridStocks.Columns[i - 1].HeaderText;
+                    // Remove the Value of headertext on last column - PICTURE headertext
+                    if (i == 7)
+                    {
+                        xcellApp.Cells[1, 7] = null;
+
+                    }
+                    else if (i == 6)
+                    {
+                        // Remove the Value of headertext on column Image
+                        xcellApp.Cells[1, 6] = null;
+
+                    }
+
+
+                }
+
+                for (int i = 0; i < dataGridStocks.Rows.Count; i++)
+                {
+                    //Start printing Value on Column 4 or to Item Code Column
+                    for (int j = 1; j < dataGridStocks.Columns.Count; j++)
+                    {
+
+                        xcellApp.Cells[i + 2, j + 1] = dataGridStocks.Rows[i].Cells[j].Value.ToString();
+
+                        //Break the loop if J value is equal to 10 (Image) Column - Picture and Image cell Value will not be included
+
+                        if (j == 4)
+                        {
+                            break;
+                        }
+
+
+                    }
+                }
+                xcellApp.Columns.AutoFit();
+                xcellApp.Visible = true;
+            }
+        }
     }
 }
