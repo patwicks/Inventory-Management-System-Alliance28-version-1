@@ -140,6 +140,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(343, 20);
             this.txtProductName.TabIndex = 1;
+            this.txtProductName.Text = "Sample";
             // 
             // panel4
             // 
@@ -186,6 +187,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(343, 20);
             this.txtQuantity.TabIndex = 6;
+            this.txtQuantity.Text = "10";
             // 
             // panel6
             // 
@@ -206,6 +208,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(347, 131);
             this.txtDescription.TabIndex = 7;
+            this.txtDescription.Text = "sample";
             // 
             // panel7
             // 

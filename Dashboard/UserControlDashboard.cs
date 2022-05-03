@@ -88,8 +88,9 @@ namespace Inventory_System_Management_Alliance28
         //count transactions
         public void countTransactions()
         {
+            string status = "Active";
             string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
-            string searchQuery = "SELECT TRANSACTION_ID FROM table_withdrawal";
+            string searchQuery = "SELECT TRANSACTION_ID FROM table_withdrawal WHERE STATUS = '" + status + "'";
 
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);

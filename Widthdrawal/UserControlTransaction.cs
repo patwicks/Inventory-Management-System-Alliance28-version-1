@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.IO;
+using Microsoft.VisualBasic;
 
 namespace Inventory_System_Management_Alliance28.Widthdrawal
 {
@@ -20,6 +21,15 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         }
         //Global variable
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+        MySqlDataAdapter dataAdapter;
+        DataSet ds;
+
+        //limit
+        int maxCount = 10;
+        int pageVal;
+        int totalRow;
+
+  
 
         private void UserControlTransaction_Load(object sender, EventArgs e)
         {
@@ -27,7 +37,29 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             styleDataGrid();
             //load data transaction - withdrawal
             loadTransactions();
+            pageVal = 0;
 
+            //row counter
+            countTransactions();
+        }
+
+        //count the total transaction
+
+        public void countTransactions()
+        {
+            string status = "Active";
+            string searchQuery = "SELECT TRANSACTION_ID FROM table_withdrawal WHERE STATUS = '" + status + "'";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            DataTable dt = new DataTable();
+
+            adapter.SelectCommand = searchCommand;
+            dt.Clear();
+            adapter.Fill(dt);
+            totalRow = dt.Rows.Count;
         }
 
         //load the data on gridView function
@@ -37,24 +69,21 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             string loadQuery = "SELECT TRANSACTION_ID, CLIENT_NAME, PRODUCT_NAME, ITEM_CODE, QUANTITY, WARRANTY, TRANSACTION_TYPE, TIMESTAMP, IMAGE  FROM table_withdrawal WHERE STATUS = '" + status + "' ORDER BY TIMESTAMP DESC";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
-            MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
 
             connection.Open();
 
-
+            dataAdapter = new MySqlDataAdapter();
             dataAdapter.SelectCommand = loadCommand;
-            DataTable dt = new DataTable();
-            dataAdapter.Fill(dt);
+            ds = new DataSet();
+            dataAdapter.Fill(ds, pageVal, maxCount, "table_widthdrawal");
 
-            dt.Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
+            ds.Tables[0].Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
 
-            foreach (DataRow row in dt.Rows)
+            foreach (DataRow row in ds.Tables[0].Rows)
             {
                 row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
             }
-            dataGridTransaction.DataSource = dt;
-
-
+            dataGridTransaction.DataSource = ds.Tables[0];
 
             connection.Close();
 
@@ -63,10 +92,10 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         //Styled datagridproduct
         public void styleDataGrid()
         {
-            dataGridTransaction.RowTemplate.Height = 50;
+            dataGridTransaction.RowTemplate.Height = 59;
 
             dataGridTransaction.Columns[0].Width = 50; //Copy
-            dataGridTransaction.Columns[1].Width = 250; //Transaction ID
+            dataGridTransaction.Columns[1].Width = 318; //Transaction ID
             dataGridTransaction.Columns[2].Width = 200; //Client Name
             dataGridTransaction.Columns[3].Width = 200; //Product Name
             dataGridTransaction.Columns[4].Width = 150; //Item code
@@ -94,25 +123,37 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlDataAdapter adapter;
-            DataTable dt;
+            DataSet ds;
             string status = "Active";
 
             connection.Open();
 
-            adapter = new MySqlDataAdapter("SELECT TRANSACTION_ID, CLIENT_NAME, PRODUCT_NAME, ITEM_CODE, QUANTITY, WARRANTY, TRANSACTION_TYPE, TIMESTAMP, IMAGE  FROM table_withdrawal WHERE (TRANSACTION_ID LIKE '" + txtSearch.Text + "%' || CLIENT_NAME LIKE '" + txtSearch.Text + "%') AND (STATUS='" + status + "') ", connection);
-            dt = new DataTable();
 
-            adapter.Fill(dt);
+            if (txtSearch.Text != "") {
+
+                adapter = new MySqlDataAdapter("SELECT TRANSACTION_ID, CLIENT_NAME, PRODUCT_NAME, ITEM_CODE, QUANTITY, WARRANTY, TRANSACTION_TYPE, TIMESTAMP, IMAGE  FROM table_withdrawal WHERE (TRANSACTION_ID LIKE '" + txtSearch.Text + "%' || CLIENT_NAME LIKE '" + txtSearch.Text + "%') AND (STATUS='" + status + "') ", connection);
+                ds = new DataSet();
+
+                adapter.Fill(ds);
 
 
-            dt.Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
+                ds.Tables[0].Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
 
-            foreach (DataRow row in dt.Rows)
-            {
-                row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"/Images/" + Path.GetFileName(row["IMAGE"].ToString()));
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"/Images/" + Path.GetFileName(row["IMAGE"].ToString()));
+                }
+                dataGridTransaction.DataSource = ds.Tables[0];
+
+                btnNext.Enabled = false;
+                btnPrevious.Enabled = false;
             }
-            dataGridTransaction.DataSource = dt;
-
+            else
+            {
+                loadTransactions();
+                btnNext.Enabled = true;
+                btnPrevious.Enabled = true;
+            }
             connection.Close();
         }
 
@@ -165,6 +206,38 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         {
             ReturnHistory returnForm = new ReturnHistory();
             returnForm.ShowDialog();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            pageVal = pageVal + 10;
+            if (pageVal > totalRow)
+            {
+                pageVal = 0;
+            }
+            ds.Clear();
+            dataAdapter.Fill(ds, pageVal, maxCount, "table_widthdrawal");
+
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            pageVal = pageVal - 10;
+            if(pageVal <= 0)
+            {
+                pageVal = 0;
+            }
+            ds.Clear();
+            dataAdapter.Fill(ds, pageVal, maxCount, "table_widthdrawal");
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
+            }
+
         }
     }
 }

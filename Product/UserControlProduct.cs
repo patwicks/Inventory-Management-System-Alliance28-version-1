@@ -16,14 +16,44 @@ namespace Inventory_System_Management_Alliance28
     {
         //Global variable
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
-        
+        MySqlDataAdapter dataAdapter;
+        DataSet ds;
+
+        //limit
+        int maxCount = 10;
+        int pageVal;
+        int totalRow;
 
         public UserControlProduct()
         {
             InitializeComponent();
+
+            countProducts();
             
+
+            if(totalRow <= 10)
+            {
+                lbNext.ForeColor = Color.FromArgb(204, 204, 204);
+                lbPrev.ForeColor = Color.FromArgb(204, 204, 204);
+            }
         }
 
+        public void countProducts()
+        {
+            string status = "Active";
+            string searchQuery = "SELECT ITEMCODE FROM table_products WHERE STATUS ='" + status + "'";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            DataTable dt = new DataTable();
+
+            adapter.SelectCommand = searchCommand;
+            dt.Clear();
+            adapter.Fill(dt);
+            totalRow = dt.Rows.Count;
+        }
         Product.Information Info = new Product.Information();
 
         private void UserControlProduct_Load(object sender, EventArgs e)
@@ -36,7 +66,8 @@ namespace Inventory_System_Management_Alliance28
         //Styled datagridproduct
         private void styleDataProductGrid()
         {
-            dataGridProduct.RowTemplate.Height = 50;
+            dataGridProduct.RowTemplate.Height = 58;
+
             dataGridProduct.Columns[1].Width = 50;
             dataGridProduct.Columns[1].Width = 150;
             dataGridProduct.Columns[2].Width = 200;
@@ -79,25 +110,23 @@ namespace Inventory_System_Management_Alliance28
             string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP, IMAGE FROM table_products WHERE STATUS = '" + status + "' ORDER BY PRODUCTNAME DESC";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
-            MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+            
+            dataAdapter = new MySqlDataAdapter();
+            ds = new DataSet();
 
             connection.Open();
 
 
                 dataAdapter.SelectCommand = loadCommand;
-                DataTable dt = new DataTable();
-                dataAdapter.Fill(dt);
+                dataAdapter.Fill(ds, pageVal, maxCount, "table_products");
 
-                dt.Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
+                ds.Tables[0].Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
 
-                foreach (DataRow row in dt.Rows)
+                foreach (DataRow row in ds.Tables[0].Rows)
                 {
                     row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
                 }
-                dataGridProduct.DataSource = dt;
-
-           
-
+                dataGridProduct.DataSource = ds.Tables[0];
             connection.Close();
 
         }
@@ -111,24 +140,35 @@ namespace Inventory_System_Management_Alliance28
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlDataAdapter adapter;
-            DataTable dt;
+            DataSet ds;
             string status = "Active";
 
             connection.Open();
 
-            adapter = new MySqlDataAdapter("SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP , IMAGE  FROM table_products WHERE (PRODUCTNAME LIKE '" + txtSearch.Text + "%' || ITEMCODE LIKE '" + txtSearch.Text + "%') AND (STATUS='"+ status +"') ", connection);
-            dt = new DataTable();
-            
-            adapter.Fill(dt);
-
-
-            dt.Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
-
-            foreach (DataRow row in dt.Rows)
+            if(txtSearch.Text != "")
             {
-                row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"/Images/" + Path.GetFileName(row["IMAGE"].ToString()));
+                adapter = new MySqlDataAdapter("SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP , IMAGE  FROM table_products WHERE (PRODUCTNAME LIKE '" + txtSearch.Text + "%' || ITEMCODE LIKE '" + txtSearch.Text + "%') AND (STATUS='" + status + "') ", connection);
+                ds = new DataSet();
+
+                adapter.Fill(ds, pageVal, maxCount, "table_products");
+
+
+                ds.Tables[0].Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
+
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
+                }
+                dataGridProduct.DataSource = ds.Tables[0];
+                btnNext.Enabled = false;
+                btnPrevious.Enabled = false;
             }
-            dataGridProduct.DataSource = dt;
+            else
+            {
+                loadProducts();
+                btnNext.Enabled = true;
+                btnPrevious.Enabled = true;
+            }
 
             connection.Close();
         }
@@ -284,6 +324,37 @@ namespace Inventory_System_Management_Alliance28
             pbInformation.Height = 24;
             pbInformation.Width = 24;
             Info.Hide();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            pageVal = pageVal + 10;
+            if (pageVal > totalRow)
+            {
+                pageVal = 0;
+            }
+            ds.Clear();
+            dataAdapter.Fill(ds, pageVal, maxCount, "table_products");
+
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            pageVal = pageVal - 10;
+            if (pageVal <= 0)
+            {
+                pageVal = 0;
+            }
+            ds.Clear();
+            dataAdapter.Fill(ds, pageVal, maxCount, "table_products");
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
+            }
         }
     }
 }
