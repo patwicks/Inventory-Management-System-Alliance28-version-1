@@ -31,10 +31,10 @@ namespace Inventory_System_Management_Alliance28
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbProduct = new System.Windows.Forms.Label();
@@ -87,6 +87,12 @@ namespace Inventory_System_Management_Alliance28
             this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.pbIconProd = new System.Windows.Forms.PictureBox();
+            this.pbIconWithdraw = new System.Windows.Forms.PictureBox();
+            this.panelBgProd = new System.Windows.Forms.Panel();
+            this.panelBgWithdraw = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -100,6 +106,10 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.dataGridrecentW)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconProd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconWithdraw)).BeginInit();
+            this.panelBgProd.SuspendLayout();
+            this.panelBgWithdraw.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -400,6 +410,7 @@ namespace Inventory_System_Management_Alliance28
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel7.Controls.Add(this.panelBgWithdraw);
             this.panel7.Controls.Add(this.dataGridrecentW);
             this.panel7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.Location = new System.Drawing.Point(517, 338);
@@ -418,13 +429,13 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridrecentW.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridrecentW.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridrecentW.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridrecentW.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridrecentW.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridrecentW.ColumnHeadersHeight = 30;
             this.dataGridrecentW.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.wVIEW,
@@ -437,17 +448,17 @@ namespace Inventory_System_Management_Alliance28
             this.CLIENT_NAME,
             this.PTIMESTAMP,
             this.PIMAGE});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridrecentW.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridrecentW.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridrecentW.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dataGridrecentW.Location = new System.Drawing.Point(0, 0);
+            this.dataGridrecentW.Location = new System.Drawing.Point(-6, 0);
             this.dataGridrecentW.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridrecentW.MultiSelect = false;
             this.dataGridrecentW.Name = "dataGridrecentW";
@@ -545,6 +556,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel6.Controls.Add(this.dataGridProduct);
+            this.panel6.Controls.Add(this.panelBgProd);
             this.panel6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(5, 338);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -562,13 +574,13 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridProduct.ColumnHeadersHeight = 30;
             this.dataGridProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.VIEW,
@@ -581,15 +593,15 @@ namespace Inventory_System_Management_Alliance28
             this.PRODUCTNAME,
             this.QUANTITY,
             this.IMAGE});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle16.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.dataGridProduct.Location = new System.Drawing.Point(0, 0);
             this.dataGridProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -694,6 +706,66 @@ namespace Inventory_System_Management_Alliance28
             this.panel8.Size = new System.Drawing.Size(994, 52);
             this.panel8.TabIndex = 12;
             // 
+            // pbIconProd
+            // 
+            this.pbIconProd.Image = ((System.Drawing.Image)(resources.GetObject("pbIconProd.Image")));
+            this.pbIconProd.Location = new System.Drawing.Point(215, 90);
+            this.pbIconProd.Name = "pbIconProd";
+            this.pbIconProd.Size = new System.Drawing.Size(53, 51);
+            this.pbIconProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbIconProd.TabIndex = 2;
+            this.pbIconProd.TabStop = false;
+            // 
+            // pbIconWithdraw
+            // 
+            this.pbIconWithdraw.Image = ((System.Drawing.Image)(resources.GetObject("pbIconWithdraw.Image")));
+            this.pbIconWithdraw.Location = new System.Drawing.Point(224, 90);
+            this.pbIconWithdraw.Name = "pbIconWithdraw";
+            this.pbIconWithdraw.Size = new System.Drawing.Size(53, 51);
+            this.pbIconWithdraw.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbIconWithdraw.TabIndex = 3;
+            this.pbIconWithdraw.TabStop = false;
+            // 
+            // panelBgProd
+            // 
+            this.panelBgProd.Controls.Add(this.label11);
+            this.panelBgProd.Controls.Add(this.pbIconProd);
+            this.panelBgProd.Location = new System.Drawing.Point(0, 31);
+            this.panelBgProd.Name = "panelBgProd";
+            this.panelBgProd.Size = new System.Drawing.Size(500, 271);
+            this.panelBgProd.TabIndex = 2;
+            // 
+            // panelBgWithdraw
+            // 
+            this.panelBgWithdraw.Controls.Add(this.label12);
+            this.panelBgWithdraw.Controls.Add(this.pbIconWithdraw);
+            this.panelBgWithdraw.Location = new System.Drawing.Point(0, 31);
+            this.panelBgWithdraw.Name = "panelBgWithdraw";
+            this.panelBgWithdraw.Size = new System.Drawing.Size(500, 271);
+            this.panelBgWithdraw.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.label11.Location = new System.Drawing.Point(164, 148);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(151, 19);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "No available data";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.label12.Location = new System.Drawing.Point(175, 148);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(151, 19);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "No available data";
+            // 
             // UserControlDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
@@ -735,6 +807,12 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.dataGridrecentW)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconProd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconWithdraw)).EndInit();
+            this.panelBgProd.ResumeLayout(false);
+            this.panelBgProd.PerformLayout();
+            this.panelBgWithdraw.ResumeLayout(false);
+            this.panelBgWithdraw.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -794,5 +872,11 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.DataGridViewTextBoxColumn PTIMESTAMP;
         private System.Windows.Forms.DataGridViewTextBoxColumn PIMAGE;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pbIconWithdraw;
+        private System.Windows.Forms.PictureBox pbIconProd;
+        private System.Windows.Forms.Panel panelBgWithdraw;
+        private System.Windows.Forms.Panel panelBgProd;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

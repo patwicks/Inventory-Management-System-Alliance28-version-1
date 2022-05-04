@@ -28,19 +28,25 @@ namespace Inventory_System_Management_Alliance28
         {
             InitializeComponent();
 
-            countProducts();
-            
+           
 
-            if(totalRow <= 10)
-            {
-                lbNext.ForeColor = Color.FromArgb(204, 204, 204);
-                lbPrev.ForeColor = Color.FromArgb(204, 204, 204);
-            }
+        }
+        Product.Information Info = new Product.Information();
+
+        private void UserControlProduct_Load(object sender, EventArgs e)
+        {
+            styleDataProductGrid();
+            loadProducts();
+
+            //counter
+            countProducts();
         }
 
+        //count products
         public void countProducts()
         {
             string status = "Active";
+            string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
             string searchQuery = "SELECT ITEMCODE FROM table_products WHERE STATUS ='" + status + "'";
 
             MySqlConnection connection = new MySqlConnection(connectionString);
@@ -54,15 +60,7 @@ namespace Inventory_System_Management_Alliance28
             adapter.Fill(dt);
             totalRow = dt.Rows.Count;
         }
-        Product.Information Info = new Product.Information();
 
-        private void UserControlProduct_Load(object sender, EventArgs e)
-        {
-            styleDataProductGrid();
-            loadProducts();
-            
-        }
-       
         //Styled datagridproduct
         private void styleDataProductGrid()
         {
@@ -127,8 +125,20 @@ namespace Inventory_System_Management_Alliance28
                     row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
                 }
                 dataGridProduct.DataSource = ds.Tables[0];
+
             connection.Close();
 
+
+            if (totalRow > 0)
+            {
+                panelBg.Visible = false;
+                panelBg.SendToBack();
+            }
+            else
+            {
+                panelBg.Visible = true;
+                panelBg.BringToFront();
+            }
             txtSearch.Text = null;
 
         }

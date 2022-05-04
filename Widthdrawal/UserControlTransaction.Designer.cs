@@ -29,10 +29,23 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTransaction));
             this.dataGridTransaction = new System.Windows.Forms.DataGridView();
+            this.COPY = new System.Windows.Forms.DataGridViewImageColumn();
+            this.TRANSACTION_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLIENT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRODUCT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITEM_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WARRANTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRANSACTION_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WITHDRAWAL_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PICTURE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.RETURN = new System.Windows.Forms.DataGridViewImageColumn();
             this.Dashboard = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,24 +54,14 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbPrev = new System.Windows.Forms.Label();
             this.lbNext = new System.Windows.Forms.Label();
             this.btnPrevious = new System.Windows.Forms.PictureBox();
             this.btnNext = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lbPrev = new System.Windows.Forms.Label();
-            this.RETURN = new System.Windows.Forms.DataGridViewImageColumn();
-            this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
-            this.PICTURE = new System.Windows.Forms.DataGridViewImageColumn();
-            this.IMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WITHDRAWAL_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRANSACTION_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WARRANTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ITEM_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRODUCT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CLIENT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRANSACTION_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COPY = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panelBg = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaction)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +69,8 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panelBg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridTransaction
@@ -78,13 +83,13 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.dataGridTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridTransaction.ColumnHeadersHeight = 50;
             this.dataGridTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COPY,
@@ -100,15 +105,15 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.PICTURE,
             this.DELETE,
             this.RETURN});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridTransaction.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridTransaction.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.dataGridTransaction.Location = new System.Drawing.Point(0, 81);
             this.dataGridTransaction.MultiSelect = false;
@@ -122,6 +127,109 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.dataGridTransaction.Size = new System.Drawing.Size(1020, 660);
             this.dataGridTransaction.TabIndex = 1;
             this.dataGridTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTransaction_CellContentClick);
+            // 
+            // COPY
+            // 
+            this.COPY.HeaderText = "";
+            this.COPY.Image = ((System.Drawing.Image)(resources.GetObject("COPY.Image")));
+            this.COPY.Name = "COPY";
+            this.COPY.ReadOnly = true;
+            this.COPY.Width = 13;
+            // 
+            // TRANSACTION_ID
+            // 
+            this.TRANSACTION_ID.DataPropertyName = "TRANSACTION_ID";
+            this.TRANSACTION_ID.HeaderText = "TRANSACTION ID";
+            this.TRANSACTION_ID.Name = "TRANSACTION_ID";
+            this.TRANSACTION_ID.ReadOnly = true;
+            this.TRANSACTION_ID.Width = 182;
+            // 
+            // CLIENT_NAME
+            // 
+            this.CLIENT_NAME.DataPropertyName = "CLIENT_NAME";
+            this.CLIENT_NAME.HeaderText = "CLIENT NAME";
+            this.CLIENT_NAME.Name = "CLIENT_NAME";
+            this.CLIENT_NAME.ReadOnly = true;
+            this.CLIENT_NAME.Width = 152;
+            // 
+            // PRODUCT_NAME
+            // 
+            this.PRODUCT_NAME.DataPropertyName = "PRODUCT_NAME";
+            this.PRODUCT_NAME.HeaderText = "PRODUCT NAME";
+            this.PRODUCT_NAME.Name = "PRODUCT_NAME";
+            this.PRODUCT_NAME.ReadOnly = true;
+            this.PRODUCT_NAME.Width = 175;
+            // 
+            // ITEM_CODE
+            // 
+            this.ITEM_CODE.DataPropertyName = "ITEM_CODE";
+            this.ITEM_CODE.HeaderText = "ITEM CODE";
+            this.ITEM_CODE.Name = "ITEM_CODE";
+            this.ITEM_CODE.ReadOnly = true;
+            this.ITEM_CODE.Width = 134;
+            // 
+            // QUANTITY
+            // 
+            this.QUANTITY.DataPropertyName = "QUANTITY";
+            this.QUANTITY.HeaderText = "QUANTITY";
+            this.QUANTITY.Name = "QUANTITY";
+            this.QUANTITY.ReadOnly = true;
+            this.QUANTITY.Width = 127;
+            // 
+            // WARRANTY
+            // 
+            this.WARRANTY.DataPropertyName = "WARRANTY";
+            this.WARRANTY.HeaderText = "WARRANTY";
+            this.WARRANTY.Name = "WARRANTY";
+            this.WARRANTY.ReadOnly = true;
+            this.WARRANTY.Width = 137;
+            // 
+            // TRANSACTION_TYPE
+            // 
+            this.TRANSACTION_TYPE.DataPropertyName = "TRANSACTION_TYPE";
+            this.TRANSACTION_TYPE.HeaderText = "TRANSACTION TYPE";
+            this.TRANSACTION_TYPE.Name = "TRANSACTION_TYPE";
+            this.TRANSACTION_TYPE.ReadOnly = true;
+            this.TRANSACTION_TYPE.Width = 202;
+            // 
+            // WITHDRAWAL_DATE
+            // 
+            this.WITHDRAWAL_DATE.DataPropertyName = "TIMESTAMP";
+            this.WITHDRAWAL_DATE.HeaderText = "WITHDRAWAL DATE";
+            this.WITHDRAWAL_DATE.Name = "WITHDRAWAL_DATE";
+            this.WITHDRAWAL_DATE.ReadOnly = true;
+            this.WITHDRAWAL_DATE.Width = 200;
+            // 
+            // IMAGE
+            // 
+            this.IMAGE.DataPropertyName = "IMAGE";
+            this.IMAGE.HeaderText = "IMAGE";
+            this.IMAGE.Name = "IMAGE";
+            this.IMAGE.ReadOnly = true;
+            this.IMAGE.Visible = false;
+            this.IMAGE.Width = 101;
+            // 
+            // PICTURE
+            // 
+            this.PICTURE.DataPropertyName = "PICTURE";
+            this.PICTURE.HeaderText = "PICTURE";
+            this.PICTURE.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.PICTURE.Name = "PICTURE";
+            this.PICTURE.ReadOnly = true;
+            // 
+            // DELETE
+            // 
+            this.DELETE.HeaderText = "";
+            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
+            this.DELETE.Name = "DELETE";
+            this.DELETE.ReadOnly = true;
+            // 
+            // RETURN
+            // 
+            this.RETURN.HeaderText = "";
+            this.RETURN.Image = ((System.Drawing.Image)(resources.GetObject("RETURN.Image")));
+            this.RETURN.Name = "RETURN";
+            this.RETURN.ReadOnly = true;
             // 
             // Dashboard
             // 
@@ -219,6 +327,16 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.panel2.Size = new System.Drawing.Size(1020, 38);
             this.panel2.TabIndex = 14;
             // 
+            // lbPrev
+            // 
+            this.lbPrev.AutoSize = true;
+            this.lbPrev.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrev.Location = new System.Drawing.Point(403, 16);
+            this.lbPrev.Name = "lbPrev";
+            this.lbPrev.Size = new System.Drawing.Size(59, 15);
+            this.lbPrev.TabIndex = 4;
+            this.lbPrev.Text = "PREVIOUS";
+            // 
             // lbNext
             // 
             this.lbNext.AutoSize = true;
@@ -260,118 +378,36 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.panel3.Size = new System.Drawing.Size(1020, 79);
             this.panel3.TabIndex = 15;
             // 
-            // lbPrev
+            // panelBg
             // 
-            this.lbPrev.AutoSize = true;
-            this.lbPrev.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrev.Location = new System.Drawing.Point(403, 16);
-            this.lbPrev.Name = "lbPrev";
-            this.lbPrev.Size = new System.Drawing.Size(59, 15);
-            this.lbPrev.TabIndex = 4;
-            this.lbPrev.Text = "PREVIOUS";
+            this.panelBg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panelBg.Controls.Add(this.pictureBox2);
+            this.panelBg.Controls.Add(this.label2);
+            this.panelBg.Location = new System.Drawing.Point(0, 131);
+            this.panelBg.Name = "panelBg";
+            this.panelBg.Size = new System.Drawing.Size(1020, 610);
+            this.panelBg.TabIndex = 17;
             // 
-            // RETURN
+            // pictureBox2
             // 
-            this.RETURN.HeaderText = "";
-            this.RETURN.Image = ((System.Drawing.Image)(resources.GetObject("RETURN.Image")));
-            this.RETURN.Name = "RETURN";
-            this.RETURN.ReadOnly = true;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(443, 238);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(118, 95);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
-            // DELETE
+            // label2
             // 
-            this.DELETE.HeaderText = "";
-            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
-            this.DELETE.Name = "DELETE";
-            this.DELETE.ReadOnly = true;
-            // 
-            // PICTURE
-            // 
-            this.PICTURE.DataPropertyName = "PICTURE";
-            this.PICTURE.HeaderText = "PICTURE";
-            this.PICTURE.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.PICTURE.Name = "PICTURE";
-            this.PICTURE.ReadOnly = true;
-            // 
-            // IMAGE
-            // 
-            this.IMAGE.DataPropertyName = "IMAGE";
-            this.IMAGE.HeaderText = "IMAGE";
-            this.IMAGE.Name = "IMAGE";
-            this.IMAGE.ReadOnly = true;
-            this.IMAGE.Visible = false;
-            this.IMAGE.Width = 101;
-            // 
-            // WITHDRAWAL_DATE
-            // 
-            this.WITHDRAWAL_DATE.DataPropertyName = "TIMESTAMP";
-            this.WITHDRAWAL_DATE.HeaderText = "WITHDRAWAL DATE";
-            this.WITHDRAWAL_DATE.Name = "WITHDRAWAL_DATE";
-            this.WITHDRAWAL_DATE.ReadOnly = true;
-            this.WITHDRAWAL_DATE.Width = 200;
-            // 
-            // TRANSACTION_TYPE
-            // 
-            this.TRANSACTION_TYPE.DataPropertyName = "TRANSACTION_TYPE";
-            this.TRANSACTION_TYPE.HeaderText = "TRANSACTION TYPE";
-            this.TRANSACTION_TYPE.Name = "TRANSACTION_TYPE";
-            this.TRANSACTION_TYPE.ReadOnly = true;
-            this.TRANSACTION_TYPE.Width = 202;
-            // 
-            // WARRANTY
-            // 
-            this.WARRANTY.DataPropertyName = "WARRANTY";
-            this.WARRANTY.HeaderText = "WARRANTY";
-            this.WARRANTY.Name = "WARRANTY";
-            this.WARRANTY.ReadOnly = true;
-            this.WARRANTY.Width = 137;
-            // 
-            // QUANTITY
-            // 
-            this.QUANTITY.DataPropertyName = "QUANTITY";
-            this.QUANTITY.HeaderText = "QUANTITY";
-            this.QUANTITY.Name = "QUANTITY";
-            this.QUANTITY.ReadOnly = true;
-            this.QUANTITY.Width = 127;
-            // 
-            // ITEM_CODE
-            // 
-            this.ITEM_CODE.DataPropertyName = "ITEM_CODE";
-            this.ITEM_CODE.HeaderText = "ITEM CODE";
-            this.ITEM_CODE.Name = "ITEM_CODE";
-            this.ITEM_CODE.ReadOnly = true;
-            this.ITEM_CODE.Width = 134;
-            // 
-            // PRODUCT_NAME
-            // 
-            this.PRODUCT_NAME.DataPropertyName = "PRODUCT_NAME";
-            this.PRODUCT_NAME.HeaderText = "PRODUCT NAME";
-            this.PRODUCT_NAME.Name = "PRODUCT_NAME";
-            this.PRODUCT_NAME.ReadOnly = true;
-            this.PRODUCT_NAME.Width = 175;
-            // 
-            // CLIENT_NAME
-            // 
-            this.CLIENT_NAME.DataPropertyName = "CLIENT_NAME";
-            this.CLIENT_NAME.HeaderText = "CLIENT NAME";
-            this.CLIENT_NAME.Name = "CLIENT_NAME";
-            this.CLIENT_NAME.ReadOnly = true;
-            this.CLIENT_NAME.Width = 152;
-            // 
-            // TRANSACTION_ID
-            // 
-            this.TRANSACTION_ID.DataPropertyName = "TRANSACTION_ID";
-            this.TRANSACTION_ID.HeaderText = "TRANSACTION ID";
-            this.TRANSACTION_ID.Name = "TRANSACTION_ID";
-            this.TRANSACTION_ID.ReadOnly = true;
-            this.TRANSACTION_ID.Width = 182;
-            // 
-            // COPY
-            // 
-            this.COPY.HeaderText = "";
-            this.COPY.Image = ((System.Drawing.Image)(resources.GetObject("COPY.Image")));
-            this.COPY.Name = "COPY";
-            this.COPY.ReadOnly = true;
-            this.COPY.Width = 13;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.label2.Location = new System.Drawing.Point(314, 336);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(376, 36);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "No available Transactions";
             // 
             // UserControlTransaction
             // 
@@ -384,6 +420,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelBg);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -399,6 +436,9 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panelBg.ResumeLayout(false);
+            this.panelBg.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,5 +473,8 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         private System.Windows.Forms.DataGridViewImageColumn PICTURE;
         private System.Windows.Forms.DataGridViewImageColumn DELETE;
         private System.Windows.Forms.DataGridViewImageColumn RETURN;
+        private System.Windows.Forms.Panel panelBg;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
     }
 }

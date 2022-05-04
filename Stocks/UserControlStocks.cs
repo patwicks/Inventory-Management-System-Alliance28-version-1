@@ -16,6 +16,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
     {
         //Global variable
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+        int rowCounter;
         public UserControlStocks()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
         {
             datagridtyle();
             loadStocks();
+            
         }
 
         //load out of stock products
@@ -50,7 +52,20 @@ namespace Inventory_System_Management_Alliance28.Stocks
                 row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
             }
             dataGridStocks.DataSource = dt;
-            
+            rowCounter = dt.Rows.Count;
+
+           
+            if (rowCounter > 0)
+            {
+                panelBg.Visible = false;
+                panelBg.SendToBack();
+            }
+            else
+            {
+                panelBg.Visible = true;
+                panelBg.BringToFront();
+            }
+
             connection.Close();
 
             
@@ -171,6 +186,10 @@ namespace Inventory_System_Management_Alliance28.Stocks
                 }
                 xcellApp.Columns.AutoFit();
                 xcellApp.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("No out of stock Products!");
             }
         }
     }

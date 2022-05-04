@@ -111,7 +111,7 @@ namespace Inventory_System_Management_Alliance28.Product
             }
             else
             {
-               if (MessageBox.Show("Add Stock the Product?", "Add Stock Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+               if (MessageBox.Show("Add "+ txtAdditional.Text +" Stock to this Product?", "Add Stock Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     AddStock();
                 }

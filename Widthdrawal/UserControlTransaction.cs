@@ -15,10 +15,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
 {
     public partial class UserControlTransaction : UserControl
     {
-        public UserControlTransaction()
-        {
-            InitializeComponent();
-        }
+
         //Global variable
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
         MySqlDataAdapter dataAdapter;
@@ -29,8 +26,12 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         int pageVal;
         int totalRow;
 
-  
+        public UserControlTransaction()
+        {
+            InitializeComponent();
 
+        }
+       
         private void UserControlTransaction_Load(object sender, EventArgs e)
         {
             //style grid
@@ -39,15 +40,15 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             loadTransactions();
             pageVal = 0;
 
-            //row counter
+            //counter
             countTransactions();
         }
 
-        //count the total transaction
-
+        //count transactions
         public void countTransactions()
         {
             string status = "Active";
+            string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
             string searchQuery = "SELECT TRANSACTION_ID FROM table_withdrawal WHERE STATUS = '" + status + "'";
 
             MySqlConnection connection = new MySqlConnection(connectionString);
@@ -61,7 +62,6 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             adapter.Fill(dt);
             totalRow = dt.Rows.Count;
         }
-
         //load the data on gridView function
         public void loadTransactions()
         {
@@ -84,6 +84,18 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                 row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
             }
             dataGridTransaction.DataSource = ds.Tables[0];
+
+
+            if (totalRow > 0)
+            {
+                panelBg.Visible = false;
+                panelBg.SendToBack();
+            }
+            else
+            {
+                panelBg.Visible = true;
+                panelBg.BringToFront();
+            }
 
             connection.Close();
             txtSearch.Text = null;

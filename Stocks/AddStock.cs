@@ -98,7 +98,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
                 else
                 {
                     //execute update command
-                    if (MessageBox.Show("Add " + lbTotal.Text + " stock to product " + txtItemCode.Text + " ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Add " + lbTotal.Text + " stock to this product " + txtItemCode.Text + " ?", "Adding Stock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         reader = addCommand.ExecuteReader();
                         MessageBox.Show("Stocks successfully added!");

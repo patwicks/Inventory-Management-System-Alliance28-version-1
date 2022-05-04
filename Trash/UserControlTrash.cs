@@ -17,6 +17,8 @@ namespace Inventory_System_Management_Alliance28.Trash
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
         MySqlDataAdapter dataAdapter, dataAdapter2;
         DataSet ds, ds2;
+
+        int counter, _counter;
         public UserControlTrash()
         {
             InitializeComponent();
@@ -56,6 +58,7 @@ namespace Inventory_System_Management_Alliance28.Trash
                 row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
             }
             dataGridDeletedProduct.DataSource = ds.Tables[0];
+            counter = ds.Tables[0].Rows.Count;
             connection.Close();
 
         }
@@ -86,6 +89,12 @@ namespace Inventory_System_Management_Alliance28.Trash
             dataGridDeletedProduct.EnableHeadersVisualStyles = false;
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            loadDeletedProducts();
+            loadDeletedTransactions();
+        }
+
         private void cbMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbMenu.SelectedIndex == 0)
@@ -93,12 +102,33 @@ namespace Inventory_System_Management_Alliance28.Trash
                 dataGridDeletedProduct.Visible = true;
                 dataGridDeletedTransaction.Visible = false;
                 lbHeaderText.Text = "Deleted Products";
+                if(counter > 0)
+                {
+                    panelBgProd.Visible = false;
+                }
+                else
+                {
+                    panelBgProd.Visible = true;
+                }
+
+                panelBgTrans.Visible = false;
             }
             else if (cbMenu.SelectedIndex == 1)
             {
                 dataGridDeletedProduct.Visible = false;
                 dataGridDeletedTransaction.Visible = true;
                 lbHeaderText.Text = "Deleted Transactions";
+
+                if (_counter > 0)
+                {
+                    panelBgTrans.Visible = false;
+                }
+                else
+                {
+                    panelBgTrans.Visible = true;
+                }
+
+                panelBgProd.Visible = false;
             }
         }
 
@@ -128,6 +158,7 @@ namespace Inventory_System_Management_Alliance28.Trash
             }
             dataGridDeletedTransaction.DataSource = ds2.Tables[0];
 
+            _counter = ds2.Tables[0].Rows.Count;
             connection.Close();
 
         }

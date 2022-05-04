@@ -15,6 +15,7 @@ namespace Inventory_System_Management_Alliance28
     {
         //Global variable
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+        int counter, _counter;
         public UserControlDashboard()
         {
             InitializeComponent();
@@ -175,9 +176,21 @@ namespace Inventory_System_Management_Alliance28
             {
                 row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
             }
+            _counter = dt.Rows.Count;
             dataGridrecentW.DataSource = dt;
 
             connection.Close();
+
+            if (_counter > 0)
+            {
+                panelBgWithdraw.Visible = false;
+                panelBgWithdraw.SendToBack();
+            }
+            else
+            {
+                panelBgWithdraw.Visible = true;
+                panelBgWithdraw.BringToFront();
+            }
         }
         //load recent added items
         public void recent_added()
@@ -202,8 +215,21 @@ namespace Inventory_System_Management_Alliance28
                 row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
             }
             dataGridProduct.DataSource = dt;
+            counter = dt.Rows.Count;
 
             connection.Close();
+
+
+            if (counter > 0)
+            {
+                panelBgProd.Visible = false;
+                panelBgProd.SendToBack();
+            }
+            else
+            {
+                panelBgProd.Visible = true;
+                panelBgProd.BringToFront();
+            }
         }
        
 

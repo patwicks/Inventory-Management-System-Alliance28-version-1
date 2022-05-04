@@ -43,7 +43,12 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.Dashboard = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
+            this.panelBg = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStocks)).BeginInit();
+            this.panelBg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridStocks
@@ -192,6 +197,37 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
+            // panelBg
+            // 
+            this.panelBg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panelBg.Controls.Add(this.pictureBox1);
+            this.panelBg.Controls.Add(this.label1);
+            this.panelBg.Location = new System.Drawing.Point(3, 118);
+            this.panelBg.Name = "panelBg";
+            this.panelBg.Size = new System.Drawing.Size(1014, 632);
+            this.panelBg.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(388, 215);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(190, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.label1.Location = new System.Drawing.Point(368, 338);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(228, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "No out of stock";
+            // 
             // UserControlStocks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -200,6 +236,7 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.dataGridStocks);
+            this.Controls.Add(this.panelBg);
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximumSize = new System.Drawing.Size(1020, 750);
@@ -207,6 +244,9 @@ namespace Inventory_System_Management_Alliance28.Stocks
             this.Size = new System.Drawing.Size(1020, 750);
             this.Load += new System.EventHandler(this.UserControlStocks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStocks)).EndInit();
+            this.panelBg.ResumeLayout(false);
+            this.panelBg.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +264,8 @@ namespace Inventory_System_Management_Alliance28.Stocks
         private System.Windows.Forms.DataGridViewImageColumn Column9;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Panel panelBg;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
