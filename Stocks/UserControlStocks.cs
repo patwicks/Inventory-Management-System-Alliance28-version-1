@@ -23,11 +23,8 @@ namespace Inventory_System_Management_Alliance28.Stocks
 
         private void UserControlStocks_Load(object sender, EventArgs e)
         {
-
-            loadStocks();
-
             datagridtyle();
-            
+            loadStocks();
         }
 
         //load out of stock products
@@ -53,10 +50,10 @@ namespace Inventory_System_Management_Alliance28.Stocks
                 row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
             }
             dataGridStocks.DataSource = dt;
-
-
-
+            
             connection.Close();
+
+            
         }
 
         //style datagridview

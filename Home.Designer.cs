@@ -48,6 +48,7 @@ namespace Inventory_System_Management_Alliance28
             this.userControlProduct1 = new Inventory_System_Management_Alliance28.UserControlProduct();
             this.userControlDashboard1 = new Inventory_System_Management_Alliance28.UserControlDashboard();
             this.userControlStocks1 = new Inventory_System_Management_Alliance28.Stocks.UserControlStocks();
+            this.userControlTrash1 = new Inventory_System_Management_Alliance28.Trash.UserControlTrash();
             this.panelSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnStocks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
@@ -256,12 +257,25 @@ namespace Inventory_System_Management_Alliance28
             this.userControlStocks1.Size = new System.Drawing.Size(1020, 750);
             this.userControlStocks1.TabIndex = 6;
             // 
+            // userControlTrash1
+            // 
+            this.userControlTrash1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlTrash1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.userControlTrash1.Location = new System.Drawing.Point(255, 44);
+            this.userControlTrash1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlTrash1.MaximumSize = new System.Drawing.Size(1020, 750);
+            this.userControlTrash1.MinimumSize = new System.Drawing.Size(1020, 750);
+            this.userControlTrash1.Name = "userControlTrash1";
+            this.userControlTrash1.Size = new System.Drawing.Size(1020, 750);
+            this.userControlTrash1.TabIndex = 7;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.Controls.Add(this.userControlTrash1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelSideMenu);
@@ -317,5 +331,6 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.PictureBox btnDashboard;
         private System.Windows.Forms.PictureBox btnStocks;
         private Stocks.UserControlStocks userControlStocks1;
+        private Trash.UserControlTrash userControlTrash1;
     }
 }

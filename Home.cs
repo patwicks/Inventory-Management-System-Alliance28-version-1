@@ -80,6 +80,7 @@ namespace Inventory_System_Management_Alliance28
         private void btnTrash_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnTrash.Top;
+            userControlTrash1.BringToFront();
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
@@ -105,6 +106,8 @@ namespace Inventory_System_Management_Alliance28
             userControlProduct1.loadProducts();
             userControlTransaction1.loadTransactions();
             userControlStocks1.loadStocks();
+            userControlTrash1.loadDeletedProducts();
+            userControlTrash1.loadDeletedTransactions();
         }
     }
 }

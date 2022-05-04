@@ -86,10 +86,11 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             dataGridTransaction.DataSource = ds.Tables[0];
 
             connection.Close();
+            txtSearch.Text = null;
 
         }
 
-        //Styled datagridproduct
+        //Styled datagridTransaction
         public void styleDataGrid()
         {
             dataGridTransaction.RowTemplate.Height = 59;

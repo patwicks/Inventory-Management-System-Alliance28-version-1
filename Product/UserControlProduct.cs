@@ -129,6 +129,8 @@ namespace Inventory_System_Management_Alliance28
                 dataGridProduct.DataSource = ds.Tables[0];
             connection.Close();
 
+            txtSearch.Text = null;
+
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
