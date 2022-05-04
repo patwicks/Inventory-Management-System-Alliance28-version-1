@@ -111,8 +111,11 @@ namespace Inventory_System_Management_Alliance28.Product
             }
             else
             {
-
-                AddStock();
+               if (MessageBox.Show("Add Stock the Product?", "Add Stock Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    AddStock();
+                }
+                
             }
 
 
@@ -136,8 +139,8 @@ namespace Inventory_System_Management_Alliance28.Product
                 int total = val1 + val2;
 
                 txtAdditional.Text = total.ToString();
-
-                string updateQuery = "UPDATE table_products SET QUANTITY = '" + txtAdditional.Text + "' WHERE ITEMCODE='" + txtItemCode.Text + "'";
+                txtCurrentStock.Text = total.ToString();
+               string updateQuery = "UPDATE table_products SET QUANTITY = '" + txtAdditional.Text + "' WHERE ITEMCODE='" + txtItemCode.Text + "'";
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 MySqlCommand updateCommand = new MySqlCommand(updateQuery, connection);
                 MySqlDataReader reader;
@@ -151,15 +154,12 @@ namespace Inventory_System_Management_Alliance28.Product
                 }
                 else
                 {
-                    
-                    if (MessageBox.Show("Add Stock the Product?", "Add Stock Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        reader = updateCommand.ExecuteReader();
-                        MessageBox.Show("Successfully Added Stock!");
-                        error.Visible = false;
-                        error.Text = "";
-                        Close();
-                    }
+                    reader = updateCommand.ExecuteReader();
+                    txtAdditional.Text = "";
+                    MessageBox.Show("Successfully Added Stock!");
+                    error.Visible = false;
+                    error.Text = "";
+                    Close();
                 }
                 connection.Close();
             } catch(Exception)
