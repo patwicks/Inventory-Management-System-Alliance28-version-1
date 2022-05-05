@@ -103,9 +103,15 @@ namespace Inventory_System_Management_Alliance28
 
         private void Home_Activated(object sender, EventArgs e)
         {
+            //products
             userControlProduct1.loadProducts();
+            userControlProduct1.exportProducts();
+            //Transactions
             userControlTransaction1.loadTransactions();
+            userControlTransaction1.countTransactions();
+            //Stocks
             userControlStocks1.loadStocks();
+            //Trash
             userControlTrash1.loadDeletedProducts();
             userControlTrash1.loadDeletedTransactions();
         }

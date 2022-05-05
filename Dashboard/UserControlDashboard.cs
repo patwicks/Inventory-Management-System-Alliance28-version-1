@@ -165,7 +165,6 @@ namespace Inventory_System_Management_Alliance28
 
             connection.Open();
 
-
             dataAdapter.SelectCommand = loadCommand;
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);

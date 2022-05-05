@@ -79,10 +79,9 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             {
                 dataGridReturnList.CurrentRow.Selected = true;
                 string idToBeDeleted = dataGridReturnList.Rows[e.RowIndex].Cells["TRANSACTION_ID"].FormattedValue.ToString();
-                string timeRef = dataGridReturnList.Rows[e.RowIndex].Cells["RETURNED_DATE"].FormattedValue.ToString();
 
                 string deletQuery = "DELETE FROM table_withdrawal WHERE TRANSACTION_ID='" + idToBeDeleted + "'";
-                //AND TIMESTAMP='" + timeRef + "'
+
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 MySqlCommand deleteCommand = new MySqlCommand(deletQuery, connection);
                 MySqlDataReader reader;
@@ -102,6 +101,70 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                 connection.Close();
                 
             }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            try {
+
+                //Print Excell
+                if (dataGridReturnList.Rows.Count > 0 )
+                {
+                    Microsoft.Office.Interop.Excel.Application xcellApp = new Microsoft.Office.Interop.Excel.Application();
+                    xcellApp.Application.Workbooks.Add(Type.Missing);
+
+                    for (int i = 1; i < dataGridReturnList.Columns.Count + 1; i++)
+                    {
+                        xcellApp.Cells[1, i] = dataGridReturnList.Columns[i - 1].HeaderText;
+                    }
+
+                    for (int i = 0; i < dataGridReturnList.Rows.Count; i++)
+                    {
+                        for (int j = 1; j < dataGridReturnList.Columns.Count; j++)
+                        {
+
+                            xcellApp.Cells[i + 2, j + 1] = dataGridReturnList.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+                    xcellApp.Columns.AutoFit();
+                    xcellApp.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("No Data available on product table!");
+                }
+
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Something went wrong while creating backup, try again!");
+            }
+        }
+
+        private void btnDeleteAll_Click(object sender, EventArgs e)
+        {
+            string status="Return";
+            string deletQuery = "DELETE FROM table_withdrawal WHERE STATUS='" + status + "'";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand deleteCommand = new MySqlCommand(deletQuery, connection);
+            MySqlDataReader reader;
+
+            connection.Open();
+            try {
+                if (MessageBox.Show("These data cannot be recover after deleting. DELETE ALL?", "Reminder", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    reader = deleteCommand.ExecuteReader();
+                    MessageBox.Show("All data deleted successfully!");
+                    loadData();
+                }
+
+            } catch (Exception)
+            {
+                MessageBox.Show("Something went wrong on deleting data, try again!");
+            }
+            connection.Close();
+
         }
     }
 }

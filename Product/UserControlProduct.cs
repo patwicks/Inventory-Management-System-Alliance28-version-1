@@ -37,6 +37,7 @@ namespace Inventory_System_Management_Alliance28
         {
             styleDataProductGrid();
             loadProducts();
+            exportProducts();
 
             //counter
             countProducts();
@@ -142,10 +143,38 @@ namespace Inventory_System_Management_Alliance28
             txtSearch.Text = null;
 
         }
+        //Export products base on another data table
+
+        public void exportProducts()
+        {
+            string status = "Active";
+            string loadQuery = "SELECT ITEMCODE, PRODUCTNAME, CATEGORY, QUANTITY, WARRANTY, DESCRIPTION, TIMESTAMP FROM table_products WHERE STATUS = '" + status + "' ORDER BY PRODUCTNAME DESC";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
+
+            MySqlDataAdapter adapterExport = new MySqlDataAdapter();
+            DataSet dataSetExport = new DataSet();
+
+            connection.Open();
+
+            try
+            {
+                adapterExport.SelectCommand = loadCommand;
+                adapterExport.Fill(dataSetExport);
+                dtExport.DataSource = dataSetExport.Tables[0];
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong while Exporting data!");
+            }
+
+            connection.Close();
+        }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             loadProducts();
+            exportProducts();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -253,50 +282,30 @@ namespace Inventory_System_Management_Alliance28
         private void btnExport_Click(object sender, EventArgs e)
         {
             //Print Excell
-            if (dataGridProduct.Rows.Count > 0)
+            if (dtExport.Rows.Count > 0)
             {
                 Microsoft.Office.Interop.Excel.Application xcellApp = new Microsoft.Office.Interop.Excel.Application();
                 xcellApp.Application.Workbooks.Add(Type.Missing);
 
-                for (int i = 1; i < dataGridProduct.Columns.Count + 1; i++)
+                for (int i = 1; i < dtExport.Columns.Count + 1; i++)
                 {
-                    xcellApp.Cells[1, i] = dataGridProduct.Columns[i - 1].HeaderText;
-                    // Remove the Value of headertext on last column - PICTURE headertext
-                    if (i == 13)
-                    {
-                        xcellApp.Cells[1, 13] = null;
-
-                    }
-                    else if(i==12)
-                    {
-                        // Remove the Value of headertext on column Image
-                        xcellApp.Cells[1, 12] = null;
-
-                    }
-
-
+                    xcellApp.Cells[1, i] = dtExport.Columns[i - 1].HeaderText;
                 }
 
-                for (int i = 0; i < dataGridProduct.Rows.Count; i++)
+                for (int i = 0; i < dtExport.Rows.Count; i++)
                 {
-                    //Start printing Value on Column 4 or to Item Code Column
-                    for (int j = 4; j < dataGridProduct.Columns.Count; j++)
+                    for (int j = 0; j < dtExport.Columns.Count; j++)
                     {
                        
-                            xcellApp.Cells[i + 2, j + 1] = dataGridProduct.Rows[i].Cells[j].Value.ToString();
-
-                        //Break the loop if J value is equal to 10 (Image) Column - Picture and Image cell Value will not be included
-
-                        if(j == 10)
-                        {
-                            break;
-                        }
-                        
-                       
+                       xcellApp.Cells[i + 2, j + 1] = dtExport.Rows[i].Cells[j].Value.ToString();
                     }
                 }
                 xcellApp.Columns.AutoFit();
                 xcellApp.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("No Data available on product table!");
             }
         }
 

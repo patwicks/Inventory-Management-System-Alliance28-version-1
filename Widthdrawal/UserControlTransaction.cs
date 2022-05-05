@@ -18,8 +18,8 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
 
         //Global variable
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
-        MySqlDataAdapter dataAdapter;
-        DataSet ds;
+        MySqlDataAdapter dataAdapter, adapterExport;
+        DataSet ds, dataSet;
 
         //limit
         int maxCount = 10;
@@ -101,9 +101,27 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             txtSearch.Text = null;
 
         }
+        //export transactions
+        public void exportTransactions(int val, int exportNum, string table)
+        {
+            string status = "Active";
+            string loadQuery = "SELECT TRANSACTION_ID, CLIENT_NAME, PRODUCT_NAME, ITEM_CODE, QUANTITY, WARRANTY, TRANSACTION_TYPE, TIMESTAMP  FROM table_withdrawal WHERE STATUS = '" + status + "' ORDER BY TIMESTAMP DESC";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
 
-        //Styled datagridTransaction
-        public void styleDataGrid()
+            connection.Open();
+
+            adapterExport = new MySqlDataAdapter();
+            adapterExport.SelectCommand = loadCommand;
+            dataSet = new DataSet();
+            adapterExport.Fill(dataSet, val, exportNum, table);
+
+            dtExport.DataSource = dataSet.Tables[0];
+
+        }
+
+            //Styled datagridTransaction
+            public void styleDataGrid()
         {
             dataGridTransaction.RowTemplate.Height = 59;
 
@@ -251,6 +269,69 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                 row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
             }
 
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            string message, title;
+            int defaultValue;
+            object value;
+
+            message = "How many do you want to export?";
+            title = "Exporting Data";
+            defaultValue = totalRow;
+            value = Interaction.InputBox(message, title, defaultValue.ToString());
+
+
+            try {
+            
+            if(value.ToString() == "" || value == null || !int.TryParse(value.ToString(), out int n) || Convert.ToInt32(value.ToString()) <= 0)
+                {
+                    MessageBox.Show("Invalid input!");
+                }
+            else if(Convert.ToInt32(value.ToString()) > totalRow)
+                {
+                    MessageBox.Show("Max data is " + totalRow +" !");
+                }
+            else
+                {
+                    int page = 0;
+                    int desiredValue = Convert.ToInt32(value.ToString());
+                    string stringTable = "table_withdrawal";
+                    exportTransactions(page, desiredValue, stringTable);
+                    //Print Excell
+                    if (dtExport.Rows.Count > 0 && value != null)
+                    {
+                        Microsoft.Office.Interop.Excel.Application xcellApp = new Microsoft.Office.Interop.Excel.Application();
+                        xcellApp.Application.Workbooks.Add(Type.Missing);
+
+                        for (int i = 1; i < dtExport.Columns.Count + 1; i++)
+                        {
+                            xcellApp.Cells[1, i] = dtExport.Columns[i - 1].HeaderText;
+                        }
+
+                        for (int i = 0; i < dtExport.Rows.Count; i++)
+                        {
+                            for (int j = 0; j < dtExport.Columns.Count; j++)
+                            {
+
+                                xcellApp.Cells[i + 2, j + 1] = dtExport.Rows[i].Cells[j].Value.ToString();
+                            }
+                        }
+                        xcellApp.Columns.AutoFit();
+                        xcellApp.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Data available on product table!");
+                    }
+
+                }
+            
+            }catch(Exception)
+            {
+                MessageBox.Show("Something went wrong on exporting transactions data!");
+            }
         }
     }
 }
