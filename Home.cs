@@ -9,14 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace Inventory_System_Management_Alliance28
 {
     public partial class Home : Form
     {
+        public string Username { get; set; }
+        public string Id { get; set; }
+        public string AccountType { get; set; }
         public Home()
         {
             InitializeComponent();
-           
+            
         }
         private void Home_Load(object sender, EventArgs e)
         {
@@ -26,7 +30,11 @@ namespace Inventory_System_Management_Alliance28
             {
                 Directory.CreateDirectory(rootFolder);
             }
+            lbAccountType.Text = AccountType;
+            lbUsername.Text = Username;
         }
+
+ 
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -83,12 +91,6 @@ namespace Inventory_System_Management_Alliance28
             userControlTrash2.BringToFront();
         }
 
-        private void btnAccount_Click(object sender, EventArgs e)
-        {
-            activeTabIndicator.Top = btnAccount.Top;
-            userControlAccount1.BringToFront();
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnLogout.Top;
@@ -115,7 +117,22 @@ namespace Inventory_System_Management_Alliance28
             //Trash
             userControlTrash2.loadDeletedProducts();
             userControlTrash2.loadDeletedTransactions();
-           
+
+            //
+
         }
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            AccountSetting setting = new AccountSetting();
+            setting.id = Id;
+            setting.ShowDialog();
+        }
+
+        private void btnSetting_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tooltip = new ToolTip();
+            tooltip.SetToolTip(btnSetting, "Account settings");
+        }
+
     }
 }

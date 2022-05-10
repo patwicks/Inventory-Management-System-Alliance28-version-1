@@ -33,7 +33,6 @@ namespace Inventory_System_Management_Alliance28
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnStocks = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.PictureBox();
-            this.btnAccount = new System.Windows.Forms.PictureBox();
             this.btnTrash = new System.Windows.Forms.PictureBox();
             this.btnTransaction = new System.Windows.Forms.PictureBox();
             this.btnProduct = new System.Windows.Forms.PictureBox();
@@ -44,16 +43,19 @@ namespace Inventory_System_Management_Alliance28
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbAccountType = new System.Windows.Forms.Label();
+            this.lbUsername = new System.Windows.Forms.Label();
+            this.btnSetting = new System.Windows.Forms.PictureBox();
+            this.userControlTrash2 = new Inventory_System_Management_Alliance28.Trash.UserControlTrash();
             this.userControlDashboard1 = new Inventory_System_Management_Alliance28.UserControlDashboard();
             this.userControlStocks1 = new Inventory_System_Management_Alliance28.Stocks.UserControlStocks();
             this.userControlTransaction1 = new Inventory_System_Management_Alliance28.Widthdrawal.UserControlTransaction();
             this.userControlProduct1 = new Inventory_System_Management_Alliance28.UserControlProduct();
-            this.userControlAccount1 = new Inventory_System_Management_Alliance28.Account.UserControlAccount();
-            this.userControlTrash2 = new Inventory_System_Management_Alliance28.Trash.UserControlTrash();
             this.panelSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnStocks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTrash)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTransaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProduct)).BeginInit();
@@ -62,6 +64,9 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -69,9 +74,9 @@ namespace Inventory_System_Management_Alliance28
             this.panelSideMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panelSideMenu.Controls.Add(this.panel2);
             this.panelSideMenu.Controls.Add(this.btnStocks);
             this.panelSideMenu.Controls.Add(this.btnLogout);
-            this.panelSideMenu.Controls.Add(this.btnAccount);
             this.panelSideMenu.Controls.Add(this.btnTrash);
             this.panelSideMenu.Controls.Add(this.btnTransaction);
             this.panelSideMenu.Controls.Add(this.btnProduct);
@@ -96,22 +101,12 @@ namespace Inventory_System_Management_Alliance28
             // btnLogout
             // 
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(7, 443);
+            this.btnLogout.Location = new System.Drawing.Point(7, 388);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(243, 54);
             this.btnLogout.TabIndex = 11;
             this.btnLogout.TabStop = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
-            this.btnAccount.Location = new System.Drawing.Point(7, 388);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(243, 54);
-            this.btnAccount.TabIndex = 10;
-            this.btnAccount.TabStop = false;
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnTrash
             // 
@@ -214,6 +209,72 @@ namespace Inventory_System_Management_Alliance28
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel2.Controls.Add(this.btnSetting);
+            this.panel2.Controls.Add(this.lbUsername);
+            this.panel2.Controls.Add(this.lbAccountType);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 741);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 59);
+            this.panel2.TabIndex = 13;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(9, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // lbAccountType
+            // 
+            this.lbAccountType.AutoSize = true;
+            this.lbAccountType.Location = new System.Drawing.Point(71, 8);
+            this.lbAccountType.Name = "lbAccountType";
+            this.lbAccountType.Size = new System.Drawing.Size(116, 21);
+            this.lbAccountType.TabIndex = 1;
+            this.lbAccountType.Text = "Administrator";
+            // 
+            // lbUsername
+            // 
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.Location = new System.Drawing.Point(100, 34);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(51, 16);
+            this.lbUsername.TabIndex = 2;
+            this.lbUsername.Text = "Admin";
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.Location = new System.Drawing.Point(218, 7);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(25, 45);
+            this.btnSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSetting.TabIndex = 4;
+            this.btnSetting.TabStop = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            this.btnSetting.MouseHover += new System.EventHandler(this.btnSetting_MouseHover);
+            // 
+            // userControlTrash2
+            // 
+            this.userControlTrash2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlTrash2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.userControlTrash2.Location = new System.Drawing.Point(255, 47);
+            this.userControlTrash2.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlTrash2.MaximumSize = new System.Drawing.Size(1020, 750);
+            this.userControlTrash2.MinimumSize = new System.Drawing.Size(1020, 750);
+            this.userControlTrash2.Name = "userControlTrash2";
+            this.userControlTrash2.Size = new System.Drawing.Size(1020, 750);
+            this.userControlTrash2.TabIndex = 8;
+            // 
             // userControlDashboard1
             // 
             this.userControlDashboard1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,29 +319,6 @@ namespace Inventory_System_Management_Alliance28
             this.userControlProduct1.Size = new System.Drawing.Size(1020, 750);
             this.userControlProduct1.TabIndex = 4;
             // 
-            // userControlAccount1
-            // 
-            this.userControlAccount1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlAccount1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.userControlAccount1.Location = new System.Drawing.Point(255, 33);
-            this.userControlAccount1.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlAccount1.name = null;
-            this.userControlAccount1.Name = "userControlAccount1";
-            this.userControlAccount1.Size = new System.Drawing.Size(1020, 750);
-            this.userControlAccount1.TabIndex = 7;
-            // 
-            // userControlTrash2
-            // 
-            this.userControlTrash2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlTrash2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.userControlTrash2.Location = new System.Drawing.Point(255, 47);
-            this.userControlTrash2.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlTrash2.MaximumSize = new System.Drawing.Size(1020, 750);
-            this.userControlTrash2.MinimumSize = new System.Drawing.Size(1020, 750);
-            this.userControlTrash2.Name = "userControlTrash2";
-            this.userControlTrash2.Size = new System.Drawing.Size(1020, 750);
-            this.userControlTrash2.TabIndex = 8;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -290,7 +328,6 @@ namespace Inventory_System_Management_Alliance28
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelSideMenu);
-            this.Controls.Add(this.userControlAccount1);
             this.Controls.Add(this.userControlTrash2);
             this.Controls.Add(this.userControlDashboard1);
             this.Controls.Add(this.userControlStocks1);
@@ -310,7 +347,6 @@ namespace Inventory_System_Management_Alliance28
             this.panelSideMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnStocks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAccount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTrash)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTransaction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProduct)).EndInit();
@@ -320,6 +356,10 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,15 +377,17 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.Panel activeTabIndicator;
         private Widthdrawal.UserControlTransaction userControlTransaction1;
         private System.Windows.Forms.PictureBox btnLogout;
-        private System.Windows.Forms.PictureBox btnAccount;
         private System.Windows.Forms.PictureBox btnTrash;
         private System.Windows.Forms.PictureBox btnTransaction;
         private System.Windows.Forms.PictureBox btnProduct;
         private System.Windows.Forms.PictureBox btnDashboard;
         private System.Windows.Forms.PictureBox btnStocks;
         private Stocks.UserControlStocks userControlStocks1;
-        private Trash.UserControlTrash userControlTrash1;
-        private Account.UserControlAccount userControlAccount1;
         private Trash.UserControlTrash userControlTrash2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbAccountType;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lbUsername;
+        private System.Windows.Forms.PictureBox btnSetting;
     }
 }
