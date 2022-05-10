@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\UserControlAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Account\UserControlAccount.Designer.cs">
+      <DependentUpon>UserControlAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     <Compile Include="Widthdrawal\UserControlTransaction.Designer.cs">
       <DependentUpon>UserControlTransaction.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Account\UserControlAccount.resx">
+      <DependentUpon>UserControlAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
