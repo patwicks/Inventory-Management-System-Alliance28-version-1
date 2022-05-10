@@ -65,7 +65,7 @@ namespace Inventory_System_Management_Alliance28.Account
             panel1.Controls.Add(this.pictureBox1);
             panel1.Controls.Add(this.label1);
             panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            panel1.Location = new System.Drawing.Point(0, 67);
+            panel1.Location = new System.Drawing.Point(0, 80);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(1020, 55);
             panel1.TabIndex = 9;
@@ -94,7 +94,7 @@ namespace Inventory_System_Management_Alliance28.Account
             this.Dashboard.AutoSize = true;
             this.Dashboard.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Dashboard.Location = new System.Drawing.Point(15, 23);
+            this.Dashboard.Location = new System.Drawing.Point(15, 36);
             this.Dashboard.Name = "Dashboard";
             this.Dashboard.Size = new System.Drawing.Size(110, 28);
             this.Dashboard.TabIndex = 8;
@@ -112,7 +112,7 @@ namespace Inventory_System_Management_Alliance28.Account
             this.panelInfo.Controls.Add(this.label3);
             this.panelInfo.Controls.Add(this.label2);
             this.panelInfo.Controls.Add(this.pictureBox2);
-            this.panelInfo.Location = new System.Drawing.Point(20, 161);
+            this.panelInfo.Location = new System.Drawing.Point(24, 143);
             this.panelInfo.Name = "panelInfo";
             this.panelInfo.Size = new System.Drawing.Size(977, 560);
             this.panelInfo.TabIndex = 10;

@@ -80,22 +80,23 @@ namespace Inventory_System_Management_Alliance28
         private void btnTrash_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnTrash.Top;
-            userControlTrash1.BringToFront();
+            userControlTrash2.BringToFront();
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnAccount.Top;
+            userControlAccount1.BringToFront();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnLogout.Top;
-            if (MessageBox.Show("Are you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 
                 Login loginForm = new Login();
-                this.Hide();
+                Close();
                 loginForm.Show();
             }
             
@@ -112,8 +113,9 @@ namespace Inventory_System_Management_Alliance28
             //Stocks
             userControlStocks1.loadStocks();
             //Trash
-            userControlTrash1.loadDeletedProducts();
-            userControlTrash1.loadDeletedTransactions();
+            userControlTrash2.loadDeletedProducts();
+            userControlTrash2.loadDeletedTransactions();
+           
         }
     }
 }
