@@ -95,6 +95,70 @@ namespace Inventory_System_Management_Alliance28.Trash
             loadDeletedTransactions();
         }
 
+        private void dataGridDeletedTransaction_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridDeletedTransaction.Columns[e.ColumnIndex].Name == "_DELETE")
+            {
+                dataGridDeletedTransaction.CurrentRow.Selected = true;
+                string idToBeDeleted = dataGridDeletedTransaction.Rows[e.RowIndex].Cells["TRANSACTION_ID"].FormattedValue.ToString();
+
+                string deletQuery = "DELETE FROM table_withdrawal WHERE TRANSACTION_ID='" + idToBeDeleted + "'";
+
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                MySqlCommand deleteCommand = new MySqlCommand(deletQuery, connection);
+                MySqlDataReader reader;
+                connection.Open();
+                try
+                {
+                    if (MessageBox.Show("After deleting this transaction data with the ID of [ " + idToBeDeleted + " ] data will not be recover anymore, Do you want to continue?", "Reminder", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        reader = deleteCommand.ExecuteReader();
+                        MessageBox.Show("Deleted Successfully!");
+                        loadDeletedTransactions();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Something went wrong try again! " + ex.Message);
+                }
+                connection.Close();
+
+            }
+        }
+
+        private void dataGridDeletedProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridDeletedProduct.Columns[e.ColumnIndex].Name == "DELETE")
+            {
+                dataGridDeletedProduct.CurrentRow.Selected = true;
+                string idToBeDeleted = dataGridDeletedProduct.Rows[e.RowIndex].Cells["ITEMCODE"].FormattedValue.ToString();
+
+                string deletQuery = "DELETE FROM table_products WHERE ITEMCODE='" + idToBeDeleted + "'";
+
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                MySqlCommand deleteCommand = new MySqlCommand(deletQuery, connection);
+                MySqlDataReader reader;
+                connection.Open();
+                try
+                {
+                    if (MessageBox.Show("After deleting this transaction data with the ID of [ " + idToBeDeleted + " ] data will not be recover anymore, Do you want to continue?", "Reminder", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        reader = deleteCommand.ExecuteReader();
+                        MessageBox.Show("Deleted Successfully!");
+                        loadDeletedProducts();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Something went wrong try again! " + ex.Message);
+                }
+                connection.Close();
+
+            }
+        }
+
         private void cbMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbMenu.SelectedIndex == 0)

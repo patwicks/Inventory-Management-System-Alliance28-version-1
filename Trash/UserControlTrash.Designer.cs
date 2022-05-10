@@ -49,14 +49,6 @@ namespace Inventory_System_Management_Alliance28.Trash
             this.IMAGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PICTURE = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridDeletedProduct = new System.Windows.Forms.DataGridView();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.cbMenu = new System.Windows.Forms.ComboBox();
-            this.panelBgProd = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelBgTrans = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
             this.ITEMCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +59,14 @@ namespace Inventory_System_Management_Alliance28.Trash
             this.DATEADDED = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.cbMenu = new System.Windows.Forms.ComboBox();
+            this.panelBgProd = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelBgTrans = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDeletedTransaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDeletedProduct)).BeginInit();
             this.panel8.SuspendLayout();
@@ -135,7 +135,7 @@ namespace Inventory_System_Management_Alliance28.Trash
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -153,6 +153,7 @@ namespace Inventory_System_Management_Alliance28.Trash
             this.dataGridDeletedTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridDeletedTransaction.Size = new System.Drawing.Size(1020, 682);
             this.dataGridDeletedTransaction.TabIndex = 15;
+            this.dataGridDeletedTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDeletedTransaction_CellContentClick);
             // 
             // _DELETE
             // 
@@ -275,7 +276,7 @@ namespace Inventory_System_Management_Alliance28.Trash
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -292,6 +293,83 @@ namespace Inventory_System_Management_Alliance28.Trash
             this.dataGridDeletedProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridDeletedProduct.Size = new System.Drawing.Size(1020, 679);
             this.dataGridDeletedProduct.TabIndex = 16;
+            this.dataGridDeletedProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDeletedProduct_CellContentClick);
+            // 
+            // DELETE
+            // 
+            this.DELETE.HeaderText = "";
+            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
+            this.DELETE.Name = "DELETE";
+            this.DELETE.ReadOnly = true;
+            this.DELETE.Width = 50;
+            // 
+            // ITEMCODE
+            // 
+            this.ITEMCODE.DataPropertyName = "ITEMCODE";
+            this.ITEMCODE.HeaderText = "ITEM CODE";
+            this.ITEMCODE.Name = "ITEMCODE";
+            this.ITEMCODE.ReadOnly = true;
+            this.ITEMCODE.ToolTipText = "Click to Copy";
+            // 
+            // PRODUCTNAME
+            // 
+            this.PRODUCTNAME.DataPropertyName = "PRODUCTNAME";
+            this.PRODUCTNAME.HeaderText = "PRODUCT NAME";
+            this.PRODUCTNAME.Name = "PRODUCTNAME";
+            this.PRODUCTNAME.ReadOnly = true;
+            // 
+            // CATEGORY
+            // 
+            this.CATEGORY.DataPropertyName = "CATEGORY";
+            this.CATEGORY.HeaderText = "CATEGORY";
+            this.CATEGORY.Name = "CATEGORY";
+            this.CATEGORY.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "QUANTITY";
+            this.dataGridViewTextBoxColumn1.HeaderText = "QUANTITY";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "WARRANTY";
+            this.dataGridViewTextBoxColumn2.HeaderText = "WARRANTY";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // DESCRIPTION
+            // 
+            this.DESCRIPTION.DataPropertyName = "DESCRIPTION";
+            this.DESCRIPTION.HeaderText = "DESCRIPTION";
+            this.DESCRIPTION.Name = "DESCRIPTION";
+            this.DESCRIPTION.ReadOnly = true;
+            // 
+            // DATEADDED
+            // 
+            this.DATEADDED.DataPropertyName = "TIMESTAMP";
+            this.DATEADDED.HeaderText = "DATE ADDED";
+            this.DATEADDED.Name = "DATEADDED";
+            this.DATEADDED.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "IMAGE";
+            this.dataGridViewTextBoxColumn3.HeaderText = "IMAGE";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "PICTURE";
+            this.Column9.HeaderText = "PICTURE";
+            this.Column9.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // panel8
             // 
@@ -379,82 +457,6 @@ namespace Inventory_System_Management_Alliance28.Trash
             this.label2.Size = new System.Drawing.Size(355, 36);
             this.label2.TabIndex = 0;
             this.label2.Text = "No deleted Transactions";
-            // 
-            // DELETE
-            // 
-            this.DELETE.HeaderText = "";
-            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
-            this.DELETE.Name = "DELETE";
-            this.DELETE.ReadOnly = true;
-            this.DELETE.Width = 50;
-            // 
-            // ITEMCODE
-            // 
-            this.ITEMCODE.DataPropertyName = "ITEMCODE";
-            this.ITEMCODE.HeaderText = "ITEM CODE";
-            this.ITEMCODE.Name = "ITEMCODE";
-            this.ITEMCODE.ReadOnly = true;
-            this.ITEMCODE.ToolTipText = "Click to Copy";
-            // 
-            // PRODUCTNAME
-            // 
-            this.PRODUCTNAME.DataPropertyName = "PRODUCTNAME";
-            this.PRODUCTNAME.HeaderText = "PRODUCT NAME";
-            this.PRODUCTNAME.Name = "PRODUCTNAME";
-            this.PRODUCTNAME.ReadOnly = true;
-            // 
-            // CATEGORY
-            // 
-            this.CATEGORY.DataPropertyName = "CATEGORY";
-            this.CATEGORY.HeaderText = "CATEGORY";
-            this.CATEGORY.Name = "CATEGORY";
-            this.CATEGORY.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "QUANTITY";
-            this.dataGridViewTextBoxColumn1.HeaderText = "QUANTITY";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "WARRANTY";
-            this.dataGridViewTextBoxColumn2.HeaderText = "WARRANTY";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // DESCRIPTION
-            // 
-            this.DESCRIPTION.DataPropertyName = "DESCRIPTION";
-            this.DESCRIPTION.HeaderText = "DESCRIPTION";
-            this.DESCRIPTION.Name = "DESCRIPTION";
-            this.DESCRIPTION.ReadOnly = true;
-            // 
-            // DATEADDED
-            // 
-            this.DATEADDED.DataPropertyName = "TIMESTAMP";
-            this.DATEADDED.HeaderText = "DATE ADDED";
-            this.DATEADDED.Name = "DATEADDED";
-            this.DATEADDED.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "IMAGE";
-            this.dataGridViewTextBoxColumn3.HeaderText = "IMAGE";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "PICTURE";
-            this.Column9.HeaderText = "PICTURE";
-            this.Column9.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // UserControlTrash
             // 
