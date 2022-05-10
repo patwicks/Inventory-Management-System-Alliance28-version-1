@@ -39,8 +39,8 @@ namespace Inventory_System_Management_Alliance28
             this.label3 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.panelPassword = new System.Windows.Forms.Panel();
-            this.btnshowp = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnshowp = new System.Windows.Forms.PictureBox();
             this.btnhidep = new System.Windows.Forms.PictureBox();
             this.panelUsername = new System.Windows.Forms.Panel();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -167,17 +167,6 @@ namespace Inventory_System_Management_Alliance28
             this.panelPassword.Size = new System.Drawing.Size(350, 45);
             this.panelPassword.TabIndex = 12;
             // 
-            // btnshowp
-            // 
-            this.btnshowp.Image = ((System.Drawing.Image)(resources.GetObject("btnshowp.Image")));
-            this.btnshowp.Location = new System.Drawing.Point(320, 9);
-            this.btnshowp.Name = "btnshowp";
-            this.btnshowp.Size = new System.Drawing.Size(24, 24);
-            this.btnshowp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnshowp.TabIndex = 22;
-            this.btnshowp.TabStop = false;
-            this.btnshowp.Click += new System.EventHandler(this.btnshowp_Click);
-            // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
@@ -188,6 +177,17 @@ namespace Inventory_System_Management_Alliance28
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(308, 20);
             this.txtPassword.TabIndex = 0;
+            // 
+            // btnshowp
+            // 
+            this.btnshowp.Image = ((System.Drawing.Image)(resources.GetObject("btnshowp.Image")));
+            this.btnshowp.Location = new System.Drawing.Point(320, 9);
+            this.btnshowp.Name = "btnshowp";
+            this.btnshowp.Size = new System.Drawing.Size(24, 24);
+            this.btnshowp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnshowp.TabIndex = 22;
+            this.btnshowp.TabStop = false;
+            this.btnshowp.Click += new System.EventHandler(this.btnshowp_Click);
             // 
             // btnhidep
             // 
@@ -263,7 +263,7 @@ namespace Inventory_System_Management_Alliance28
             this.txtAccountType.ReadOnly = true;
             this.txtAccountType.Size = new System.Drawing.Size(336, 20);
             this.txtAccountType.TabIndex = 0;
-            this.txtAccountType.Text = "administrator";
+            this.txtAccountType.Text = "Administrator";
             // 
             // label8
             // 

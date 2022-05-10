@@ -31,6 +31,11 @@ namespace Inventory_System_Management_Alliance28
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSetting = new System.Windows.Forms.PictureBox();
+            this.lbUsername = new System.Windows.Forms.Label();
+            this.lbAccountType = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnStocks = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.PictureBox();
             this.btnTrash = new System.Windows.Forms.PictureBox();
@@ -43,17 +48,15 @@ namespace Inventory_System_Management_Alliance28
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbAccountType = new System.Windows.Forms.Label();
-            this.lbUsername = new System.Windows.Forms.Label();
-            this.btnSetting = new System.Windows.Forms.PictureBox();
             this.userControlTrash2 = new Inventory_System_Management_Alliance28.Trash.UserControlTrash();
             this.userControlDashboard1 = new Inventory_System_Management_Alliance28.UserControlDashboard();
             this.userControlStocks1 = new Inventory_System_Management_Alliance28.Stocks.UserControlStocks();
             this.userControlTransaction1 = new Inventory_System_Management_Alliance28.Widthdrawal.UserControlTransaction();
             this.userControlProduct1 = new Inventory_System_Management_Alliance28.UserControlProduct();
             this.panelSideMenu.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnStocks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTrash)).BeginInit();
@@ -64,9 +67,6 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -87,6 +87,60 @@ namespace Inventory_System_Management_Alliance28
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(250, 800);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel2.Controls.Add(this.btnSetting);
+            this.panel2.Controls.Add(this.lbUsername);
+            this.panel2.Controls.Add(this.lbAccountType);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 741);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 59);
+            this.panel2.TabIndex = 13;
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.Location = new System.Drawing.Point(218, 7);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(25, 45);
+            this.btnSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSetting.TabIndex = 4;
+            this.btnSetting.TabStop = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            this.btnSetting.MouseHover += new System.EventHandler(this.btnSetting_MouseHover);
+            // 
+            // lbUsername
+            // 
+            this.lbUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.Location = new System.Drawing.Point(65, 34);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(147, 16);
+            this.lbUsername.TabIndex = 2;
+            this.lbUsername.Text = "Admin";
+            this.lbUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbAccountType
+            // 
+            this.lbAccountType.Location = new System.Drawing.Point(65, 8);
+            this.lbAccountType.Name = "lbAccountType";
+            this.lbAccountType.Size = new System.Drawing.Size(147, 21);
+            this.lbAccountType.TabIndex = 1;
+            this.lbAccountType.Text = "user";
+            this.lbAccountType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(9, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // btnStocks
             // 
@@ -209,60 +263,6 @@ namespace Inventory_System_Management_Alliance28
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel2.Controls.Add(this.btnSetting);
-            this.panel2.Controls.Add(this.lbUsername);
-            this.panel2.Controls.Add(this.lbAccountType);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 741);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 59);
-            this.panel2.TabIndex = 13;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(9, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // lbAccountType
-            // 
-            this.lbAccountType.AutoSize = true;
-            this.lbAccountType.Location = new System.Drawing.Point(71, 8);
-            this.lbAccountType.Name = "lbAccountType";
-            this.lbAccountType.Size = new System.Drawing.Size(116, 21);
-            this.lbAccountType.TabIndex = 1;
-            this.lbAccountType.Text = "Administrator";
-            // 
-            // lbUsername
-            // 
-            this.lbUsername.AutoSize = true;
-            this.lbUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsername.Location = new System.Drawing.Point(100, 34);
-            this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(51, 16);
-            this.lbUsername.TabIndex = 2;
-            this.lbUsername.Text = "Admin";
-            // 
-            // btnSetting
-            // 
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.Location = new System.Drawing.Point(218, 7);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(25, 45);
-            this.btnSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSetting.TabIndex = 4;
-            this.btnSetting.TabStop = false;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
-            this.btnSetting.MouseHover += new System.EventHandler(this.btnSetting_MouseHover);
-            // 
             // userControlTrash2
             // 
             this.userControlTrash2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -345,6 +345,9 @@ namespace Inventory_System_Management_Alliance28
             this.Activated += new System.EventHandler(this.Home_Activated);
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelSideMenu.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnStocks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTrash)).EndInit();
@@ -356,10 +359,6 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
             this.ResumeLayout(false);
 
         }

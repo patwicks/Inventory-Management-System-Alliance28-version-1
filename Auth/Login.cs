@@ -62,9 +62,9 @@ namespace Inventory_System_Management_Alliance28
                         {
                             error.Visible = true;
                             Home homeForm = new Home();
-                            homeForm.Username = reader["username"].ToString();
+                           
                             homeForm.Id = reader["id"].ToString();
-                            homeForm.AccountType = reader["accountType"].ToString();
+                            
                             Hide();
                             homeForm.Show();
                         }

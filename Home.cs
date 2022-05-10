@@ -8,15 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using MySql.Data.MySqlClient;
 
 namespace Inventory_System_Management_Alliance28
 {
     public partial class Home : Form
     {
-        public string Username { get; set; }
+        string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+       
         public string Id { get; set; }
-        public string AccountType { get; set; }
+    
         public Home()
         {
             InitializeComponent();
@@ -30,8 +31,7 @@ namespace Inventory_System_Management_Alliance28
             {
                 Directory.CreateDirectory(rootFolder);
             }
-            lbAccountType.Text = AccountType;
-            lbUsername.Text = Username;
+            
         }
 
  
@@ -119,6 +119,7 @@ namespace Inventory_System_Management_Alliance28
             userControlTrash2.loadDeletedTransactions();
 
             //
+            searchDetails();
 
         }
         private void btnSetting_Click(object sender, EventArgs e)
@@ -132,6 +133,41 @@ namespace Inventory_System_Management_Alliance28
         {
             ToolTip tooltip = new ToolTip();
             tooltip.SetToolTip(btnSetting, "Account settings");
+        }
+
+        //search
+        private void searchDetails()
+        {
+            string searchQuery = "SELECT * FROM table_account WHERE id='" + Id + "' ";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
+            MySqlDataReader reader;
+
+            connection.Open();
+
+            reader = searchCommand.ExecuteReader();
+
+            try
+            {
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        lbUsername.Text = reader["username"].ToString();
+                        lbAccountType.Text = reader["accountType"].ToString();
+
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong, try again!");
+            }
+
+            reader.Close();
+            connection.Close();
         }
 
     }
