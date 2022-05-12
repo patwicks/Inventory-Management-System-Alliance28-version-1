@@ -92,7 +92,7 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.AllowUserToDeleteRows = false;
             this.dataGridProduct.AllowUserToResizeColumns = false;
             this.dataGridProduct.AllowUserToResizeRows = false;
-            this.dataGridProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.dataGridProduct.BackgroundColor = System.Drawing.Color.White;
             this.dataGridProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -127,7 +127,7 @@ namespace Inventory_System_Management_Alliance28
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dataGridProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.dataGridProduct.Location = new System.Drawing.Point(3, 69);
             this.dataGridProduct.MultiSelect = false;
             this.dataGridProduct.Name = "dataGridProduct";
@@ -135,8 +135,9 @@ namespace Inventory_System_Management_Alliance28
             this.dataGridProduct.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridProduct.RowHeadersVisible = false;
             this.dataGridProduct.RowHeadersWidth = 50;
+            this.dataGridProduct.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dataGridProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridProduct.Size = new System.Drawing.Size(1014, 655);
+            this.dataGridProduct.Size = new System.Drawing.Size(1014, 647);
             this.dataGridProduct.TabIndex = 0;
             this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick);
             this.dataGridProduct.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridProduct_CellFormatting);
@@ -376,16 +377,16 @@ namespace Inventory_System_Management_Alliance28
             this.panel2.Controls.Add(this.btnPrevious);
             this.panel2.Controls.Add(this.btnNext);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 726);
+            this.panel2.Location = new System.Drawing.Point(0, 720);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1020, 24);
+            this.panel2.Size = new System.Drawing.Size(1020, 30);
             this.panel2.TabIndex = 15;
             // 
             // lbPrev
             // 
             this.lbPrev.AutoSize = true;
             this.lbPrev.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrev.Location = new System.Drawing.Point(403, 6);
+            this.lbPrev.Location = new System.Drawing.Point(403, 7);
             this.lbPrev.Name = "lbPrev";
             this.lbPrev.Size = new System.Drawing.Size(59, 15);
             this.lbPrev.TabIndex = 4;
@@ -395,7 +396,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             this.lbNext.AutoSize = true;
             this.lbNext.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNext.Location = new System.Drawing.Point(581, 6);
+            this.lbNext.Location = new System.Drawing.Point(581, 7);
             this.lbNext.Name = "lbNext";
             this.lbNext.Size = new System.Drawing.Size(34, 15);
             this.lbNext.TabIndex = 3;
@@ -404,7 +405,7 @@ namespace Inventory_System_Management_Alliance28
             // btnPrevious
             // 
             this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
-            this.btnPrevious.Location = new System.Drawing.Point(463, 4);
+            this.btnPrevious.Location = new System.Drawing.Point(463, 5);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(20, 20);
             this.btnPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -415,7 +416,7 @@ namespace Inventory_System_Management_Alliance28
             // btnNext
             // 
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.Location = new System.Drawing.Point(561, 4);
+            this.btnNext.Location = new System.Drawing.Point(561, 5);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(20, 20);
             this.btnNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -430,7 +431,7 @@ namespace Inventory_System_Management_Alliance28
             this.panelBg.Controls.Add(this.label2);
             this.panelBg.Location = new System.Drawing.Point(3, 126);
             this.panelBg.Name = "panelBg";
-            this.panelBg.Size = new System.Drawing.Size(1014, 598);
+            this.panelBg.Size = new System.Drawing.Size(1014, 593);
             this.panelBg.TabIndex = 16;
             // 
             // pictureBox2
@@ -565,9 +566,9 @@ namespace Inventory_System_Management_Alliance28
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dtExport);
             this.Controls.Add(this.dataGridProduct);
             this.Controls.Add(this.panelBg);
-            this.Controls.Add(this.dtExport);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Margin = new System.Windows.Forms.Padding(5);

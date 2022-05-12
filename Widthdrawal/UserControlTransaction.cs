@@ -123,7 +123,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             //Styled datagridTransaction
             public void styleDataGrid()
         {
-            dataGridTransaction.RowTemplate.Height = 59;
+            dataGridTransaction.RowTemplate.Height = 58;
 
             dataGridTransaction.Columns[0].Width = 50; //Copy
             dataGridTransaction.Columns[1].Width = 318; //Transaction ID

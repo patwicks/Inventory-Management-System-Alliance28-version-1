@@ -118,7 +118,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel1.Controls.Add(this.lbProduct);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(4, 61);
+            this.panel1.Location = new System.Drawing.Point(4, 67);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 140);
@@ -175,7 +175,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lbTransaction);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(260, 61);
+            this.panel2.Location = new System.Drawing.Point(260, 67);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 140);
@@ -232,7 +232,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.lbDeletedItem);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(772, 61);
+            this.panel3.Location = new System.Drawing.Point(772, 67);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(240, 140);
@@ -289,7 +289,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.lbAccount);
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(515, 61);
+            this.panel4.Location = new System.Drawing.Point(515, 67);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(240, 140);

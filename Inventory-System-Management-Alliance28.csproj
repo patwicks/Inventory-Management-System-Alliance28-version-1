@@ -160,12 +160,6 @@
     <Compile Include="Product\WithdrawForm.Designer.cs">
       <DependentUpon>WithdrawForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Trash\UserControlTrash.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Trash\UserControlTrash.Designer.cs">
-      <DependentUpon>UserControlTrash.cs</DependentUpon>
-    </Compile>
     <Compile Include="Widthdrawal\DeleteTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,9 +243,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Product\WithdrawForm.resx">
       <DependentUpon>WithdrawForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Trash\UserControlTrash.resx">
-      <DependentUpon>UserControlTrash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widthdrawal\DeleteTransaction.resx">
       <DependentUpon>DeleteTransaction.cs</DependentUpon>

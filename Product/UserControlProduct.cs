@@ -60,12 +60,23 @@ namespace Inventory_System_Management_Alliance28
             dt.Clear();
             adapter.Fill(dt);
             totalRow = dt.Rows.Count;
+
+            if (totalRow > 0)
+            {
+                panelBg.Visible = false;
+                panelBg.SendToBack();
+            }
+            else
+            {
+                panelBg.Visible = true;
+                panelBg.BringToFront();
+            }
         }
 
         //Styled datagridproduct
         private void styleDataProductGrid()
         {
-            dataGridProduct.RowTemplate.Height = 58;
+            dataGridProduct.RowTemplate.Height = 57;
 
             dataGridProduct.Columns[1].Width = 50;
             dataGridProduct.Columns[1].Width = 150;
@@ -128,18 +139,6 @@ namespace Inventory_System_Management_Alliance28
                 dataGridProduct.DataSource = ds.Tables[0];
 
             connection.Close();
-
-
-            if (totalRow > 0)
-            {
-                panelBg.Visible = false;
-                panelBg.SendToBack();
-            }
-            else
-            {
-                panelBg.Visible = true;
-                panelBg.BringToFront();
-            }
             txtSearch.Text = null;
 
         }
@@ -174,6 +173,7 @@ namespace Inventory_System_Management_Alliance28
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             loadProducts();
+            countProducts();
             exportProducts();
         }
 
@@ -281,31 +281,38 @@ namespace Inventory_System_Management_Alliance28
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            //Print Excell
-            if (dtExport.Rows.Count > 0)
+            try
             {
-                Microsoft.Office.Interop.Excel.Application xcellApp = new Microsoft.Office.Interop.Excel.Application();
-                xcellApp.Application.Workbooks.Add(Type.Missing);
-
-                for (int i = 1; i < dtExport.Columns.Count + 1; i++)
+                //Print Excell
+                if (dtExport.Rows.Count > 0)
                 {
-                    xcellApp.Cells[1, i] = dtExport.Columns[i - 1].HeaderText;
-                }
+                    Microsoft.Office.Interop.Excel.Application xcellApp = new Microsoft.Office.Interop.Excel.Application();
+                    xcellApp.Application.Workbooks.Add(Type.Missing);
 
-                for (int i = 0; i < dtExport.Rows.Count; i++)
-                {
-                    for (int j = 0; j < dtExport.Columns.Count; j++)
+                    for (int i = 1; i < dtExport.Columns.Count + 1; i++)
                     {
-                       
-                       xcellApp.Cells[i + 2, j + 1] = dtExport.Rows[i].Cells[j].Value.ToString();
+                        xcellApp.Cells[1, i] = dtExport.Columns[i - 1].HeaderText;
                     }
+
+                    for (int i = 0; i < dtExport.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dtExport.Columns.Count; j++)
+                        {
+
+                            xcellApp.Cells[i + 2, j + 1] = dtExport.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+                    xcellApp.Columns.AutoFit();
+                    xcellApp.Visible = true;
                 }
-                xcellApp.Columns.AutoFit();
-                xcellApp.Visible = true;
+                else
+                {
+                    MessageBox.Show("No Data available on product table!");
+                }
             }
-            else
+            catch(Exception)
             {
-                MessageBox.Show("No Data available on product table!");
+                MessageBox.Show("Something went wrong while exporting product data, try again!");
             }
         }
 

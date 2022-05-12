@@ -25,7 +25,7 @@ namespace Inventory_System_Management_Alliance28
         }
         private void Home_Load(object sender, EventArgs e)
         {
-            userControlDashboard1.BringToFront();
+            //userControlDashboard1.BringToFront();
             string rootFolder = Application.StartupPath + @"\Images\";
             if(!Directory.Exists(rootFolder))
             {
@@ -88,7 +88,6 @@ namespace Inventory_System_Management_Alliance28
         private void btnTrash_Click(object sender, EventArgs e)
         {
             activeTabIndicator.Top = btnTrash.Top;
-            userControlTrash2.BringToFront();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -108,16 +107,13 @@ namespace Inventory_System_Management_Alliance28
         {
             //products
             userControlProduct1.loadProducts();
+            userControlProduct1.countProducts();
             userControlProduct1.exportProducts();
             //Transactions
             userControlTransaction1.loadTransactions();
             userControlTransaction1.countTransactions();
             //Stocks
             userControlStocks1.loadStocks();
-            //Trash
-            userControlTrash2.loadDeletedProducts();
-            userControlTrash2.loadDeletedTransactions();
-
             //
             searchDetails();
 

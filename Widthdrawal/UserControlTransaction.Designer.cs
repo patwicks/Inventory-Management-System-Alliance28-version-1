@@ -61,9 +61,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.btnPrevious = new System.Windows.Forms.PictureBox();
             this.btnNext = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panelBg = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnExport = new System.Windows.Forms.Button();
             this.dtExport = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +71,9 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExport = new System.Windows.Forms.Button();
+            this.panelBg = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaction)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,9 +81,9 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtExport)).BeginInit();
             this.panelBg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtExport)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridTransaction
@@ -92,14 +92,14 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.dataGridTransaction.AllowUserToDeleteRows = false;
             this.dataGridTransaction.AllowUserToResizeColumns = false;
             this.dataGridTransaction.AllowUserToResizeRows = false;
-            this.dataGridTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.dataGridTransaction.BackgroundColor = System.Drawing.Color.White;
             this.dataGridTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -119,16 +119,16 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.DELETE,
             this.RETURN});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridTransaction.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dataGridTransaction.Location = new System.Drawing.Point(0, 81);
+            this.dataGridTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.dataGridTransaction.Location = new System.Drawing.Point(0, 66);
             this.dataGridTransaction.MultiSelect = false;
             this.dataGridTransaction.Name = "dataGridTransaction";
             this.dataGridTransaction.ReadOnly = true;
@@ -136,8 +136,9 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.dataGridTransaction.RowHeadersVisible = false;
             this.dataGridTransaction.RowHeadersWidth = 50;
             this.dataGridTransaction.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridTransaction.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dataGridTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridTransaction.Size = new System.Drawing.Size(1020, 660);
+            this.dataGridTransaction.Size = new System.Drawing.Size(1020, 653);
             this.dataGridTransaction.TabIndex = 1;
             this.dataGridTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTransaction_CellContentClick);
             // 
@@ -249,7 +250,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.Dashboard.AutoSize = true;
             this.Dashboard.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Dashboard.Location = new System.Drawing.Point(18, 34);
+            this.Dashboard.Location = new System.Drawing.Point(18, 17);
             this.Dashboard.Name = "Dashboard";
             this.Dashboard.Size = new System.Drawing.Size(144, 28);
             this.Dashboard.TabIndex = 8;
@@ -260,7 +261,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(686, 20);
+            this.label1.Location = new System.Drawing.Point(686, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 17);
             this.label1.TabIndex = 10;
@@ -272,7 +273,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(690, 38);
+            this.panel1.Location = new System.Drawing.Point(690, 21);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 30);
             this.panel1.TabIndex = 9;
@@ -304,7 +305,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(551, 38);
+            this.btnRefresh.Location = new System.Drawing.Point(551, 21);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(115, 30);
             this.btnRefresh.TabIndex = 11;
@@ -319,7 +320,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistory.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistory.ForeColor = System.Drawing.Color.White;
-            this.btnHistory.Location = new System.Drawing.Point(309, 37);
+            this.btnHistory.Location = new System.Drawing.Point(309, 20);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(115, 30);
             this.btnHistory.TabIndex = 12;
@@ -334,17 +335,16 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.panel2.Controls.Add(this.lbNext);
             this.panel2.Controls.Add(this.btnPrevious);
             this.panel2.Controls.Add(this.btnNext);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 762);
+            this.panel2.Location = new System.Drawing.Point(1, 720);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1020, 38);
+            this.panel2.Size = new System.Drawing.Size(1020, 30);
             this.panel2.TabIndex = 14;
             // 
             // lbPrev
             // 
             this.lbPrev.AutoSize = true;
             this.lbPrev.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrev.Location = new System.Drawing.Point(403, 16);
+            this.lbPrev.Location = new System.Drawing.Point(403, 7);
             this.lbPrev.Name = "lbPrev";
             this.lbPrev.Size = new System.Drawing.Size(59, 15);
             this.lbPrev.TabIndex = 4;
@@ -354,7 +354,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             // 
             this.lbNext.AutoSize = true;
             this.lbNext.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNext.Location = new System.Drawing.Point(581, 16);
+            this.lbNext.Location = new System.Drawing.Point(581, 7);
             this.lbNext.Name = "lbNext";
             this.lbNext.Size = new System.Drawing.Size(34, 15);
             this.lbNext.TabIndex = 3;
@@ -363,7 +363,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             // btnPrevious
             // 
             this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
-            this.btnPrevious.Location = new System.Drawing.Point(463, 14);
+            this.btnPrevious.Location = new System.Drawing.Point(463, 5);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(20, 20);
             this.btnPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -374,7 +374,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             // btnNext
             // 
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.Location = new System.Drawing.Point(561, 14);
+            this.btnNext.Location = new System.Drawing.Point(561, 5);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(20, 20);
             this.btnNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -390,39 +390,23 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1020, 79);
+            this.panel3.Size = new System.Drawing.Size(1020, 60);
             this.panel3.TabIndex = 15;
             // 
-            // panelBg
+            // btnExport
             // 
-            this.panelBg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.panelBg.Controls.Add(this.pictureBox2);
-            this.panelBg.Controls.Add(this.label2);
-            this.panelBg.Location = new System.Drawing.Point(0, 131);
-            this.panelBg.Name = "panelBg";
-            this.panelBg.Size = new System.Drawing.Size(1020, 610);
-            this.panelBg.TabIndex = 17;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(443, 238);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(118, 95);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.label2.Location = new System.Drawing.Point(314, 336);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(376, 36);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "No available Transactions";
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Location = new System.Drawing.Point(430, 20);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(115, 30);
+            this.btnExport.TabIndex = 19;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // dtExport
             // 
@@ -538,26 +522,41 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Width = 200;
             // 
-            // btnExport
+            // panelBg
             // 
-            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(430, 37);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(115, 30);
-            this.btnExport.TabIndex = 19;
-            this.btnExport.Text = "Export";
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.panelBg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panelBg.Controls.Add(this.pictureBox2);
+            this.panelBg.Controls.Add(this.label2);
+            this.panelBg.Location = new System.Drawing.Point(0, 118);
+            this.panelBg.Name = "panelBg";
+            this.panelBg.Size = new System.Drawing.Size(1020, 603);
+            this.panelBg.TabIndex = 17;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(443, 238);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(118, 95);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.label2.Location = new System.Drawing.Point(314, 336);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(376, 36);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "No available Transactions";
             // 
             // UserControlTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridTransaction);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label1);
@@ -565,11 +564,12 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelBg);
+            this.Controls.Add(this.dataGridTransaction);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UserControlTransaction";
-            this.Size = new System.Drawing.Size(1020, 800);
+            this.Size = new System.Drawing.Size(1020, 750);
             this.Load += new System.EventHandler(this.UserControlTransaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaction)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -580,10 +580,10 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtExport)).EndInit();
             this.panelBg.ResumeLayout(false);
             this.panelBg.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtExport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
