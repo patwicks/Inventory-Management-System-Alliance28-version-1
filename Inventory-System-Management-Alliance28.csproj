@@ -62,6 +62,12 @@
     <Compile Include="AccountSetting.Designer.cs">
       <DependentUpon>AccountSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delete\UserControlDelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Delete\UserControlDelete.Designer.cs">
+      <DependentUpon>UserControlDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </Compile>
     <EmbeddedResource Include="AccountSetting.resx">
       <DependentUpon>AccountSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete\UserControlDelete.resx">
+      <DependentUpon>UserControlDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>

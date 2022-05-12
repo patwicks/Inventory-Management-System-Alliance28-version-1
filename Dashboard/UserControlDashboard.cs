@@ -52,57 +52,88 @@ namespace Inventory_System_Management_Alliance28
         //count products
         public void countProducts()
         {
-            string status = "Active";
-            string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
-            string searchQuery = "SELECT ITEMCODE FROM table_products WHERE STATUS ='" + status + "'";
+           
+            try {
+                string status = "Active";
+                string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+                string searchQuery = "SELECT ITEMCODE FROM table_products WHERE STATUS ='" + status + "'";
 
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
+                connection.Open();
+                adapter.SelectCommand = searchCommand;
+                dt.Clear();
+                adapter.Fill(dt);
+                lbProduct.Text = dt.Rows.Count.ToString();
+                connection.Close();
 
-            adapter.SelectCommand = searchCommand;
-            dt.Clear();
-            adapter.Fill(dt);
-            lbProduct.Text = dt.Rows.Count.ToString();
+            } catch(Exception)
+            {
+                MessageBox.Show("Something went wrong while fetching data from database!");
+            }
         }
 
         //count Deleted products
         public void countDeletedProducts()
         {
-            string status = "Deleted";
-            string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
-            string searchQuery = "SELECT ITEMCODE FROM table_products WHERE STATUS ='"+ status +"'";
+            try
+            {
+                string status = "Deleted";
+                string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+                string searchQuery = "SELECT ITEMCODE FROM table_products WHERE STATUS ='" + status + "'";
 
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
+                connection.Open();
 
-            adapter.SelectCommand = searchCommand;
-            dt.Clear();
-            adapter.Fill(dt);
-            lbDeletedItem.Text = dt.Rows.Count.ToString();
+                adapter.SelectCommand = searchCommand;
+                dt.Clear();
+                adapter.Fill(dt);
+                lbDeletedItem.Text = dt.Rows.Count.ToString();
+
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong while fetching data from database!");
+            }
+          
         }
         //count transactions
         public void countTransactions()
         {
-            string status = "Active";
-            string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
-            string searchQuery = "SELECT TRANSACTION_ID FROM table_withdrawal WHERE STATUS = '" + status + "'";
+           
 
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            try
+            {
+                
+                string status = "Active";
+                string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+                string searchQuery = "SELECT TRANSACTION_ID FROM table_withdrawal WHERE STATUS = '" + status + "'";
 
-            DataTable dt = new DataTable();
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                connection.Open();
+                DataTable dt = new DataTable();
 
-            adapter.SelectCommand = searchCommand;
-            dt.Clear();
-            adapter.Fill(dt);
-            lbTransaction.Text = dt.Rows.Count.ToString();
+                adapter.SelectCommand = searchCommand;
+                dt.Clear();
+                adapter.Fill(dt);
+                lbTransaction.Text = dt.Rows.Count.ToString();
+                connection.Close();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong while fetching data from database!");
+            }
         }
 
         //count account registered
@@ -110,19 +141,34 @@ namespace Inventory_System_Management_Alliance28
         //count transactions
         public void countAccounts()
         {
-            string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
-            string searchQuery = "SELECT * FROM table_account";
 
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            try
+            {
+                string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
+                string searchQuery = "SELECT * FROM table_account";
 
-            DataTable dt = new DataTable();
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                connection.Open();
 
-            adapter.SelectCommand = searchCommand;
-            dt.Clear();
-            adapter.Fill(dt);
-            lbAccount.Text = dt.Rows.Count.ToString();
+                DataTable dt = new DataTable();
+
+                adapter.SelectCommand = searchCommand;
+                dt.Clear();
+                adapter.Fill(dt);
+                lbAccount.Text = dt.Rows.Count.ToString();
+
+                connection.Close();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong while fetching data from database!");
+            }
+          
+
+           
         }
         //datagrid design
         public void datagrid_design()
@@ -163,32 +209,38 @@ namespace Inventory_System_Management_Alliance28
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
 
-            connection.Open();
-
-            dataAdapter.SelectCommand = loadCommand;
-            DataTable dt = new DataTable();
-            dataAdapter.Fill(dt);
-
-            dt.Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
-
-            foreach (DataRow row in dt.Rows)
+            try
             {
-                row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
+                connection.Open();
+                dataAdapter.SelectCommand = loadCommand;
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+
+                dt.Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
+                }
+                _counter = dt.Rows.Count;
+                dataGridrecentW.DataSource = dt;
+
+                if (_counter > 0)
+                {
+                    panelBgWithdraw.Visible = false;
+                    panelBgWithdraw.SendToBack();
+                }
+                else
+                {
+                    panelBgWithdraw.Visible = true;
+                    panelBgWithdraw.BringToFront();
+                }
+                connection.Close();
+
             }
-            _counter = dt.Rows.Count;
-            dataGridrecentW.DataSource = dt;
-
-            connection.Close();
-
-            if (_counter > 0)
+            catch (Exception)
             {
-                panelBgWithdraw.Visible = false;
-                panelBgWithdraw.SendToBack();
-            }
-            else
-            {
-                panelBgWithdraw.Visible = true;
-                panelBgWithdraw.BringToFront();
+                MessageBox.Show("Something went wrong while fetching data from database!");
             }
         }
         //load recent added items
@@ -200,35 +252,49 @@ namespace Inventory_System_Management_Alliance28
             MySqlCommand loadCommand = new MySqlCommand(loadQuery, connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
 
-            connection.Open();
 
 
-            dataAdapter.SelectCommand = loadCommand;
-            DataTable dt = new DataTable();
-            dataAdapter.Fill(dt);
 
-            dt.Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
-
-            foreach (DataRow row in dt.Rows)
+            try
             {
-                row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
+                connection.Open();
+
+
+                dataAdapter.SelectCommand = loadCommand;
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+
+                dt.Columns.Add("PICTURE", Type.GetType("System.Byte[]"));
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    row["PICTURE"] = File.ReadAllBytes(Application.StartupPath + @"\Images\" + Path.GetFileName(row["IMAGE"].ToString()));
+                }
+                dataGridProduct.DataSource = dt;
+                counter = dt.Rows.Count;
+
+               
+
+
+                if (counter > 0)
+                {
+                    panelBgProd.Visible = false;
+                    panelBgProd.SendToBack();
+                }
+                else
+                {
+                    panelBgProd.Visible = true;
+                    panelBgProd.BringToFront();
+                }
+
+                connection.Close();
+
             }
-            dataGridProduct.DataSource = dt;
-            counter = dt.Rows.Count;
-
-            connection.Close();
-
-
-            if (counter > 0)
+            catch (Exception)
             {
-                panelBgProd.Visible = false;
-                panelBgProd.SendToBack();
+                MessageBox.Show("Something went wrong while fetching data from database!");
             }
-            else
-            {
-                panelBgProd.Visible = true;
-                panelBgProd.BringToFront();
-            }
+          
         }
        
 

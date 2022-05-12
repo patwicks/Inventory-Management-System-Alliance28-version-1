@@ -13,9 +13,12 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
 {
     public partial class ReturnHistory : Form
     {
+
+        int counter;
         public ReturnHistory()
         {
             InitializeComponent();
+            counter = 0;
         }
         //Global variable
         string connectionString = "server=localhost;username=root;password=admin;database=inventory_system";
@@ -44,6 +47,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                 dataAdapter.SelectCommand = loadCommand;
                 DataTable dt = new DataTable();
                 dataAdapter.Fill(dt);
+                counter = dt.Rows.Count;
                 dataGridReturnList.DataSource = dt;
             } catch(Exception)
             {
@@ -51,6 +55,15 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             }
 
             connection.Close();
+
+            if(counter == 0)
+            {
+                btnDeleteAll.Enabled = false;
+            }
+            else
+            {
+                btnDeleteAll.Enabled = true;
+            }
         }
 
         private void dataGridStyle()

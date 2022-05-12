@@ -52,6 +52,7 @@ namespace Inventory_System_Management_Alliance28
             this.userControlProduct1 = new Inventory_System_Management_Alliance28.UserControlProduct();
             this.userControlTransaction1 = new Inventory_System_Management_Alliance28.Widthdrawal.UserControlTransaction();
             this.userControlStocks1 = new Inventory_System_Management_Alliance28.Stocks.UserControlStocks();
+            this.userControlDelete1 = new Inventory_System_Management_Alliance28.Delete.UserControlDelete();
             this.panelSideMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
@@ -306,12 +307,25 @@ namespace Inventory_System_Management_Alliance28
             this.userControlStocks1.Size = new System.Drawing.Size(1020, 750);
             this.userControlStocks1.TabIndex = 3;
             // 
+            // userControlDelete1
+            // 
+            this.userControlDelete1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlDelete1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.userControlDelete1.Location = new System.Drawing.Point(255, 48);
+            this.userControlDelete1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlDelete1.MaximumSize = new System.Drawing.Size(1020, 750);
+            this.userControlDelete1.MinimumSize = new System.Drawing.Size(1020, 750);
+            this.userControlDelete1.Name = "userControlDelete1";
+            this.userControlDelete1.Size = new System.Drawing.Size(1020, 750);
+            this.userControlDelete1.TabIndex = 7;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.Controls.Add(this.userControlDelete1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelSideMenu);
@@ -373,5 +387,6 @@ namespace Inventory_System_Management_Alliance28
         private Widthdrawal.UserControlTransaction userControlTransaction1;
         private UserControlProduct userControlProduct1;
         private UserControlDashboard userControlDashboard1;
+        private Delete.UserControlDelete userControlDelete1;
     }
 }
