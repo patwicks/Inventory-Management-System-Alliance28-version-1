@@ -215,9 +215,9 @@ namespace Inventory_System_Management_Alliance28
             this.label4.ForeColor = System.Drawing.Color.Gray;
             this.label4.Location = new System.Drawing.Point(29, 396);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 16);
+            this.label4.Size = new System.Drawing.Size(136, 16);
             this.label4.TabIndex = 65;
-            this.label4.Text = "WITHRAWAL QUANTITY";
+            this.label4.Text = "WITHDRAWAL QUANTITY";
             // 
             // txtCurrentStock
             // 
@@ -325,9 +325,9 @@ namespace Inventory_System_Management_Alliance28
             this.label6.ForeColor = System.Drawing.Color.Gray;
             this.label6.Location = new System.Drawing.Point(200, 75);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(233, 16);
+            this.label6.Size = new System.Drawing.Size(241, 16);
             this.label6.TabIndex = 74;
-            this.label6.Text = "Withraw product by typing the item code";
+            this.label6.Text = "Withdraw product by typing the item code";
             // 
             // lbImage
             // 

@@ -229,9 +229,9 @@ namespace Inventory_System_Management_Alliance28
             this.label4.ForeColor = System.Drawing.Color.Gray;
             this.label4.Location = new System.Drawing.Point(29, 390);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 16);
+            this.label4.Size = new System.Drawing.Size(136, 16);
             this.label4.TabIndex = 83;
-            this.label4.Text = "WITHRAWAL QUANTITY";
+            this.label4.Text = "WITHDRAWAL QUANTITY";
             // 
             // txtClientName
             // 

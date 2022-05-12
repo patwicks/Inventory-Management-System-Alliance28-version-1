@@ -55,6 +55,7 @@ namespace Inventory_System_Management_Alliance28.Product
             this.lbTotal = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -338,11 +339,23 @@ namespace Inventory_System_Management_Alliance28.Product
             this.panel1.Size = new System.Drawing.Size(589, 62);
             this.panel1.TabIndex = 40;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gray;
+            this.label7.Location = new System.Drawing.Point(192, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(175, 16);
+            this.label7.TabIndex = 75;
+            this.label7.Text = "Add Stock by typing item code";
+            // 
             // GridAddStockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 477);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnAddStock);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label6);
@@ -415,5 +428,6 @@ namespace Inventory_System_Management_Alliance28.Product
         private System.Windows.Forms.Label error;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbImage;
+        private System.Windows.Forms.Label label7;
     }
 }
