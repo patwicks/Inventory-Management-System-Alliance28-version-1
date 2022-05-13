@@ -39,8 +39,8 @@ namespace Inventory_System_Management_Alliance28
         private void btnRegister_Click(object sender, EventArgs e)
         {
             //search if there is already an administrator account
-
-            string searchQuery = "SELECT accountType FROM table_account";
+            string type = "Administrator";
+            string searchQuery = "SELECT * FROM table_account WHERE accountType='"+type+"'";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand searchCommand = new MySqlCommand(searchQuery, connection);
             MySqlDataReader reader;
@@ -130,6 +130,8 @@ namespace Inventory_System_Management_Alliance28
                 error.Visible = true;
                 error.Text = "Something went wrong, try again!";
             }
+
+            connection.Close();
         }
         //Show and Hide Password
         private void btnshowp_Click(object sender, EventArgs e)

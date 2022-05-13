@@ -129,7 +129,7 @@ namespace Inventory_System_Management_Alliance28
             this.lbAccountType.Name = "lbAccountType";
             this.lbAccountType.Size = new System.Drawing.Size(147, 21);
             this.lbAccountType.TabIndex = 1;
-            this.lbAccountType.Text = "user";
+            this.lbAccountType.Text = "Administrator";
             this.lbAccountType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
@@ -325,7 +325,6 @@ namespace Inventory_System_Management_Alliance28
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 800);
-            this.Controls.Add(this.userControlDelete1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelSideMenu);
@@ -333,6 +332,7 @@ namespace Inventory_System_Management_Alliance28
             this.Controls.Add(this.userControlProduct1);
             this.Controls.Add(this.userControlTransaction1);
             this.Controls.Add(this.userControlStocks1);
+            this.Controls.Add(this.userControlDelete1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

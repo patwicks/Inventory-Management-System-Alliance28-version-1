@@ -20,8 +20,8 @@ namespace Inventory_System_Management_Alliance28
         private void lbButtonRegister_Click(object sender, EventArgs e)
         {
             Register registerForm = new Register();
-            Close();
-            registerForm.ShowDialog();
+            Hide();
+            registerForm.Show();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

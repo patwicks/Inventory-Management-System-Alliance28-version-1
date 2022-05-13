@@ -29,6 +29,15 @@ namespace Inventory_System_Management_Alliance28
         private void AccountSetting_Activated(object sender, EventArgs e)
         {
             searchDetails();
+
+            if(txtAccountType.Text == "User")
+            {
+                pbAddUser.Visible = false;
+            }
+            else
+            {
+                pbAddUser.Visible = true;
+            }
         }
 
         //search
@@ -145,6 +154,36 @@ namespace Inventory_System_Management_Alliance28
             }
         }
 
-      
+        private void btnhide_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                btnshow.BringToFront();
+                txtPassword.PasswordChar = '•';
+            }
+        }
+
+        private void btnshow_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '•')
+            {
+                btnhide.BringToFront();
+                txtPassword.PasswordChar = '\0';
+            }
+        }
+
+        private void pbAddUser_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tooltip = new ToolTip();
+            tooltip.SetToolTip(pbAddUser, "Add user account");
+        }
+
+        private void pbAddUser_Click(object sender, EventArgs e)
+        {
+            Close();
+            AddUser addUserForm = new AddUser();
+            addUserForm.ShowDialog();
+           
+        }
     }
 }
