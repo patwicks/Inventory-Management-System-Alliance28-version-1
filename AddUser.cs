@@ -69,26 +69,6 @@ namespace Inventory_System_Management_Alliance28
             dtUserAccount.EnableHeadersVisualStyles = false;
         }
 
-        private void btnhide_Click(object sender, EventArgs e)
-        {
-            if (txtPassword.PasswordChar == '\0')
-            {
-                btnshow.BringToFront();
-                txtPassword.PasswordChar = '•';
-            }
-        }
-
-        private void btnshow_Click(object sender, EventArgs e)
-        {
-            if (txtPassword.PasswordChar == '•')
-            {
-                btnhide.BringToFront();
-                txtPassword.PasswordChar = '\0';
-            }
-        }
-
-        
-
         //fetch data
         private void fetchDataUser()
         {
@@ -275,7 +255,7 @@ namespace Inventory_System_Management_Alliance28
                 connection.Open();
                 try
                 {
-                    if (MessageBox.Show("Are you sure you want to delete this account[username= "+ dtUserAccount.Rows[e.RowIndex].Cells["username"].FormattedValue.ToString() + "]?", "Reminder", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Are you sure you want to delete this account [ username = "+ dtUserAccount.Rows[e.RowIndex].Cells["username"].FormattedValue.ToString() + " ] ?", "Reminder", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         reader = deleteCommand.ExecuteReader();
                         fetchDataUser();
@@ -404,6 +384,14 @@ namespace Inventory_System_Management_Alliance28
             catch (Exception ex)
             {
                 MessageBox.Show("Something went wrong, try gain!" + ex.Message);
+            }
+        }
+
+        private void dtUserAccount_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dtUserAccount.Columns[e.ColumnIndex].Name == "PASSWORD" && e.Value != null)
+            {
+                e.Value = new String('•', e.Value.ToString().Length);
             }
         }
     }

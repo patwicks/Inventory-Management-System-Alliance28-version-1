@@ -30,7 +30,7 @@ namespace Inventory_System_Management_Alliance28
         {
             searchDetails();
 
-            if(txtAccountType.Text == "User")
+            if(txtAccountType.Text == "User Account")
             {
                 pbAddUser.Visible = false;
             }

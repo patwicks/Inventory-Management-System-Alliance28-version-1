@@ -30,8 +30,8 @@ namespace Inventory_System_Management_Alliance28
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUser));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCloseForm = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,9 +39,7 @@ namespace Inventory_System_Management_Alliance28
             this.error = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnshow = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnhide = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -65,8 +63,6 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnshow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnhide)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -148,24 +144,11 @@ namespace Inventory_System_Management_Alliance28
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btnshow);
             this.panel3.Controls.Add(this.txtPassword);
-            this.panel3.Controls.Add(this.btnhide);
             this.panel3.Location = new System.Drawing.Point(39, 378);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(323, 35);
             this.panel3.TabIndex = 23;
-            // 
-            // btnshow
-            // 
-            this.btnshow.Image = ((System.Drawing.Image)(resources.GetObject("btnshow.Image")));
-            this.btnshow.Location = new System.Drawing.Point(292, 4);
-            this.btnshow.Name = "btnshow";
-            this.btnshow.Size = new System.Drawing.Size(24, 24);
-            this.btnshow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnshow.TabIndex = 23;
-            this.btnshow.TabStop = false;
-            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
             // 
             // txtPassword
             // 
@@ -178,17 +161,6 @@ namespace Inventory_System_Management_Alliance28
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(307, 20);
             this.txtPassword.TabIndex = 5;
-            // 
-            // btnhide
-            // 
-            this.btnhide.Image = ((System.Drawing.Image)(resources.GetObject("btnhide.Image")));
-            this.btnhide.Location = new System.Drawing.Point(292, 4);
-            this.btnhide.Name = "btnhide";
-            this.btnhide.Size = new System.Drawing.Size(24, 24);
-            this.btnhide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnhide.TabIndex = 24;
-            this.btnhide.TabStop = false;
-            this.btnhide.Click += new System.EventHandler(this.btnhide_Click);
             // 
             // panel2
             // 
@@ -298,15 +270,15 @@ namespace Inventory_System_Management_Alliance28
             this.dtUserAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtUserAccount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtUserAccount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtUserAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtUserAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtUserAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtUserAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -315,15 +287,15 @@ namespace Inventory_System_Management_Alliance28
             this.ACCOUNT_TYPE,
             this.EDIT,
             this.DELETE});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtUserAccount.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtUserAccount.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtUserAccount.Location = new System.Drawing.Point(-3, 0);
             this.dtUserAccount.Name = "dtUserAccount";
             this.dtUserAccount.ReadOnly = true;
@@ -335,6 +307,7 @@ namespace Inventory_System_Management_Alliance28
             this.dtUserAccount.Size = new System.Drawing.Size(341, 159);
             this.dtUserAccount.TabIndex = 0;
             this.dtUserAccount.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtUserAccount_CellContentClick);
+            this.dtUserAccount.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtUserAccount_CellFormatting);
             // 
             // ID
             // 
@@ -431,7 +404,7 @@ namespace Inventory_System_Management_Alliance28
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddUser";
@@ -443,8 +416,6 @@ namespace Inventory_System_Management_Alliance28
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnshow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnhide)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -465,9 +436,7 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.Label error;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox btnshow;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.PictureBox btnhide;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Panel panel1;
