@@ -50,9 +50,11 @@ namespace Inventory_System_Management_Alliance28
             this.txtItemCode = new System.Windows.Forms.TextBox();
             this.txtDateAdded = new System.Windows.Forms.TextBox();
             this.date = new System.Windows.Forms.Label();
+            this.pbCopyID = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbItemImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCopyID)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -195,6 +197,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             // txtDescription
             // 
+            this.txtDescription.BackColor = System.Drawing.Color.White;
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescription.Enabled = false;
             this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -209,6 +212,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             // txtQuantity
             // 
+            this.txtQuantity.BackColor = System.Drawing.Color.White;
             this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQuantity.Enabled = false;
             this.txtQuantity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -221,6 +225,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             // txtProductName
             // 
+            this.txtProductName.BackColor = System.Drawing.Color.White;
             this.txtProductName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtProductName.Enabled = false;
             this.txtProductName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -234,6 +239,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             // txtWarranty
             // 
+            this.txtWarranty.BackColor = System.Drawing.Color.White;
             this.txtWarranty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtWarranty.Enabled = false;
             this.txtWarranty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,6 +252,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             // txtCategory
             // 
+            this.txtCategory.BackColor = System.Drawing.Color.White;
             this.txtCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCategory.Enabled = false;
             this.txtCategory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,6 +265,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             // txtItemCode
             // 
+            this.txtItemCode.BackColor = System.Drawing.SystemColors.Control;
             this.txtItemCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtItemCode.Enabled = false;
             this.txtItemCode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,6 +278,7 @@ namespace Inventory_System_Management_Alliance28
             // 
             // txtDateAdded
             // 
+            this.txtDateAdded.BackColor = System.Drawing.Color.White;
             this.txtDateAdded.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDateAdded.Enabled = false;
             this.txtDateAdded.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,12 +300,26 @@ namespace Inventory_System_Management_Alliance28
             this.date.TabIndex = 59;
             this.date.Text = "DATE ADDED";
             // 
+            // pbCopyID
+            // 
+            this.pbCopyID.Image = ((System.Drawing.Image)(resources.GetObject("pbCopyID.Image")));
+            this.pbCopyID.Location = new System.Drawing.Point(396, 334);
+            this.pbCopyID.Name = "pbCopyID";
+            this.pbCopyID.Size = new System.Drawing.Size(25, 20);
+            this.pbCopyID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCopyID.TabIndex = 60;
+            this.pbCopyID.TabStop = false;
+            this.pbCopyID.Click += new System.EventHandler(this.pbCopyID_Click);
+            this.pbCopyID.MouseLeave += new System.EventHandler(this.pbCopyID_MouseLeave);
+            this.pbCopyID.MouseHover += new System.EventHandler(this.pbCopyID_MouseHover);
+            // 
             // DeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(846, 543);
+            this.Controls.Add(this.pbCopyID);
             this.Controls.Add(this.txtDateAdded);
             this.Controls.Add(this.date);
             this.Controls.Add(this.txtDescription);
@@ -327,6 +350,7 @@ namespace Inventory_System_Management_Alliance28
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbItemImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCopyID)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +377,6 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.TextBox txtItemCode;
         private System.Windows.Forms.TextBox txtDateAdded;
         private System.Windows.Forms.Label date;
+        private System.Windows.Forms.PictureBox pbCopyID;
     }
 }

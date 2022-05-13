@@ -52,9 +52,11 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.txtClientName = new System.Windows.Forms.TextBox();
             this.txtTransactionType = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.pbCopyID = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbItemImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseForm)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCopyID)).BeginInit();
             this.SuspendLayout();
             // 
             // txtWithdrawalDate
@@ -315,11 +317,25 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             this.label9.TabIndex = 81;
             this.label9.Text = "TRANSACTION TYPE";
             // 
+            // pbCopyID
+            // 
+            this.pbCopyID.Image = ((System.Drawing.Image)(resources.GetObject("pbCopyID.Image")));
+            this.pbCopyID.Location = new System.Drawing.Point(370, 337);
+            this.pbCopyID.Name = "pbCopyID";
+            this.pbCopyID.Size = new System.Drawing.Size(25, 20);
+            this.pbCopyID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCopyID.TabIndex = 82;
+            this.pbCopyID.TabStop = false;
+            this.pbCopyID.Click += new System.EventHandler(this.pbCopyID_Click);
+            this.pbCopyID.MouseLeave += new System.EventHandler(this.pbCopyID_MouseLeave);
+            this.pbCopyID.MouseHover += new System.EventHandler(this.pbCopyID_MouseHover);
+            // 
             // DeleteTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 556);
+            this.Controls.Add(this.pbCopyID);
             this.Controls.Add(this.txtTransactionType);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTransactionID);
@@ -352,6 +368,7 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseForm)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCopyID)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,5 +398,6 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
         private System.Windows.Forms.TextBox txtClientName;
         private System.Windows.Forms.TextBox txtTransactionType;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pbCopyID;
     }
 }

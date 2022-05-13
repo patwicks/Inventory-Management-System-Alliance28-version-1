@@ -101,5 +101,25 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
                 Close();
             }
         }
+
+        private void pbCopyID_MouseHover(object sender, EventArgs e)
+        {
+            pbCopyID.Width = 27;
+            pbCopyID.Height = 22;
+        }
+
+        private void pbCopyID_MouseLeave(object sender, EventArgs e)
+        {
+            pbCopyID.Width = 25;
+            pbCopyID.Height = 20;
+        }
+
+        private void pbCopyID_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Clipboard.SetText(txtTransactionID.Text);
+
+            ToolTip tooltip = new ToolTip();
+            tooltip.SetToolTip(pbCopyID, "Copied!");
+        }
     }
 }
