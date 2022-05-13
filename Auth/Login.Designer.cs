@@ -130,7 +130,6 @@ namespace Inventory_System_Management_Alliance28
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(336, 20);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.Text = "admin";
             // 
             // panelPassword
             // 
@@ -175,7 +174,6 @@ namespace Inventory_System_Management_Alliance28
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(336, 20);
             this.txtPassword.TabIndex = 0;
-            this.txtPassword.Text = "admin123";
             // 
             // btnLogin
             // 

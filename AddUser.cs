@@ -54,7 +54,7 @@ namespace Inventory_System_Management_Alliance28
         {
             dtUserAccount.RowTemplate.Height = 30;
             dtUserAccount.Columns[0].Width = 5;
-            dtUserAccount.Columns[1].Width = 100;
+            dtUserAccount.Columns[1].Width = 140;
             dtUserAccount.Columns[2].Width = 100;
             dtUserAccount.Columns[3].Width = 150;
             dtUserAccount.Columns[4].Width = 25;
@@ -387,12 +387,6 @@ namespace Inventory_System_Management_Alliance28
             }
         }
 
-        private void dtUserAccount_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (dtUserAccount.Columns[e.ColumnIndex].Name == "PASSWORD" && e.Value != null)
-            {
-                e.Value = new String('•', e.Value.ToString().Length);
-            }
-        }
+
     }
 }

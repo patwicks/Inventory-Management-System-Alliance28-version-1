@@ -30,8 +30,8 @@ namespace Inventory_System_Management_Alliance28
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUser));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCloseForm = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,14 +51,14 @@ namespace Inventory_System_Management_Alliance28
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dtUserAccount = new System.Windows.Forms.DataGridView();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USERNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PASSWORD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ACCOUNT_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -270,15 +270,15 @@ namespace Inventory_System_Management_Alliance28
             this.dtUserAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtUserAccount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtUserAccount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtUserAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtUserAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtUserAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtUserAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -287,70 +287,26 @@ namespace Inventory_System_Management_Alliance28
             this.ACCOUNT_TYPE,
             this.EDIT,
             this.DELETE});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtUserAccount.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtUserAccount.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtUserAccount.Location = new System.Drawing.Point(-3, 0);
             this.dtUserAccount.Name = "dtUserAccount";
             this.dtUserAccount.ReadOnly = true;
             this.dtUserAccount.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtUserAccount.RowHeadersVisible = false;
             this.dtUserAccount.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dtUserAccount.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dtUserAccount.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dtUserAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtUserAccount.Size = new System.Drawing.Size(341, 159);
             this.dtUserAccount.TabIndex = 0;
             this.dtUserAccount.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtUserAccount_CellContentClick);
-            this.dtUserAccount.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtUserAccount_CellFormatting);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "id";
-            this.ID.HeaderText = "";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // USERNAME
-            // 
-            this.USERNAME.DataPropertyName = "username";
-            this.USERNAME.HeaderText = "USERNAME";
-            this.USERNAME.Name = "USERNAME";
-            this.USERNAME.ReadOnly = true;
-            // 
-            // PASSWORD
-            // 
-            this.PASSWORD.DataPropertyName = "password";
-            this.PASSWORD.HeaderText = "PASSWORD";
-            this.PASSWORD.Name = "PASSWORD";
-            this.PASSWORD.ReadOnly = true;
-            // 
-            // ACCOUNT_TYPE
-            // 
-            this.ACCOUNT_TYPE.DataPropertyName = "accountType";
-            this.ACCOUNT_TYPE.HeaderText = "ACCOUNT TYPE";
-            this.ACCOUNT_TYPE.Name = "ACCOUNT_TYPE";
-            this.ACCOUNT_TYPE.ReadOnly = true;
-            // 
-            // EDIT
-            // 
-            this.EDIT.HeaderText = "";
-            this.EDIT.Image = ((System.Drawing.Image)(resources.GetObject("EDIT.Image")));
-            this.EDIT.Name = "EDIT";
-            this.EDIT.ReadOnly = true;
-            // 
-            // DELETE
-            // 
-            this.DELETE.HeaderText = "";
-            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
-            this.DELETE.Name = "DELETE";
-            this.DELETE.ReadOnly = true;
             // 
             // btnUpdate
             // 
@@ -381,6 +337,50 @@ namespace Inventory_System_Management_Alliance28
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "id";
+            this.ID.HeaderText = "";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // USERNAME
+            // 
+            this.USERNAME.DataPropertyName = "username";
+            this.USERNAME.HeaderText = "USERNAME";
+            this.USERNAME.Name = "USERNAME";
+            this.USERNAME.ReadOnly = true;
+            // 
+            // PASSWORD
+            // 
+            this.PASSWORD.DataPropertyName = "password";
+            this.PASSWORD.HeaderText = "PASSWORD";
+            this.PASSWORD.Name = "PASSWORD";
+            this.PASSWORD.ReadOnly = true;
+            this.PASSWORD.Visible = false;
+            // 
+            // ACCOUNT_TYPE
+            // 
+            this.ACCOUNT_TYPE.DataPropertyName = "accountType";
+            this.ACCOUNT_TYPE.HeaderText = "ACCOUNT TYPE";
+            this.ACCOUNT_TYPE.Name = "ACCOUNT_TYPE";
+            this.ACCOUNT_TYPE.ReadOnly = true;
+            // 
+            // EDIT
+            // 
+            this.EDIT.HeaderText = "";
+            this.EDIT.Image = ((System.Drawing.Image)(resources.GetObject("EDIT.Image")));
+            this.EDIT.Name = "EDIT";
+            this.EDIT.ReadOnly = true;
+            // 
+            // DELETE
+            // 
+            this.DELETE.HeaderText = "";
+            this.DELETE.Image = ((System.Drawing.Image)(resources.GetObject("DELETE.Image")));
+            this.DELETE.Name = "DELETE";
+            this.DELETE.ReadOnly = true;
             // 
             // AddUser
             // 
@@ -448,13 +448,13 @@ namespace Inventory_System_Management_Alliance28
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dtUserAccount;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn USERNAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn PASSWORD;
         private System.Windows.Forms.DataGridViewTextBoxColumn ACCOUNT_TYPE;
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DELETE;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnCancel;
     }
 }
