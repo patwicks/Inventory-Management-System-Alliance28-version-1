@@ -29,12 +29,15 @@ namespace Inventory_System_Management_Alliance28.Delete
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDelete));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbHeaderText = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbMenu = new System.Windows.Forms.ComboBox();
             this.Dashboard = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dataGridDeletedProduct = new System.Windows.Forms.DataGridView();
@@ -59,19 +62,16 @@ namespace Inventory_System_Management_Alliance28.Delete
             this.WITHDRAWAL_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PICTURE = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cbMenu = new System.Windows.Forms.ComboBox();
             this.panelBgProd = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbHeaderText = new System.Windows.Forms.Label();
             this.panelBgTrans = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDeletedProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDeletedTransaction)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panelBgProd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBgTrans.SuspendLayout();
@@ -89,6 +89,43 @@ namespace Inventory_System_Management_Alliance28.Delete
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1020, 60);
             this.panel3.TabIndex = 16;
+            // 
+            // lbHeaderText
+            // 
+            this.lbHeaderText.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeaderText.Location = new System.Drawing.Point(88, 24);
+            this.lbHeaderText.Name = "lbHeaderText";
+            this.lbHeaderText.Size = new System.Drawing.Size(231, 19);
+            this.lbHeaderText.TabIndex = 15;
+            this.lbHeaderText.Text = "Header Text";
+            this.lbHeaderText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbMenu);
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(534, 14);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(347, 29);
+            this.panel1.TabIndex = 14;
+            // 
+            // cbMenu
+            // 
+            this.cbMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.cbMenu.FormattingEnabled = true;
+            this.cbMenu.Items.AddRange(new object[] {
+            "DELETED TRANSACTIONS",
+            "DELETED PRODUCTS"});
+            this.cbMenu.Location = new System.Drawing.Point(-1, -1);
+            this.cbMenu.Name = "cbMenu";
+            this.cbMenu.Size = new System.Drawing.Size(347, 25);
+            this.cbMenu.TabIndex = 2;
+            this.cbMenu.SelectedIndexChanged += new System.EventHandler(this.cbMenu_SelectedIndexChanged);
             // 
             // Dashboard
             // 
@@ -126,13 +163,13 @@ namespace Inventory_System_Management_Alliance28.Delete
             this.dataGridDeletedProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridDeletedProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridDeletedProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDeletedProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDeletedProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridDeletedProduct.ColumnHeadersHeight = 50;
             this.dataGridDeletedProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DELETE_PRODUCT,
@@ -144,15 +181,15 @@ namespace Inventory_System_Management_Alliance28.Delete
             this.DESCRIPTION,
             this.IMAGE,
             this.Column9});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ScrollBar;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridDeletedProduct.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ScrollBar;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridDeletedProduct.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridDeletedProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.dataGridDeletedProduct.Location = new System.Drawing.Point(1, 66);
             this.dataGridDeletedProduct.MultiSelect = false;
@@ -245,13 +282,13 @@ namespace Inventory_System_Management_Alliance28.Delete
             this.dataGridDeletedTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridDeletedTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridDeletedTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDeletedTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDeletedTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridDeletedTransaction.ColumnHeadersHeight = 50;
             this.dataGridDeletedTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DELETE_TRANSACTION,
@@ -265,15 +302,15 @@ namespace Inventory_System_Management_Alliance28.Delete
             this.WITHDRAWAL_DATE,
             this.dataGridViewTextBoxColumn3,
             this.PICTURE});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ScrollBar;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridDeletedTransaction.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ScrollBar;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridDeletedTransaction.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridDeletedTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.dataGridDeletedTransaction.Location = new System.Drawing.Point(1, 66);
             this.dataGridDeletedTransaction.MultiSelect = false;
@@ -378,33 +415,6 @@ namespace Inventory_System_Management_Alliance28.Delete
             this.PICTURE.Name = "PICTURE";
             this.PICTURE.ReadOnly = true;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cbMenu);
-            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(534, 14);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(347, 29);
-            this.panel1.TabIndex = 14;
-            // 
-            // cbMenu
-            // 
-            this.cbMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbMenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.cbMenu.FormattingEnabled = true;
-            this.cbMenu.Items.AddRange(new object[] {
-            "DELETED TRANSACTIONS",
-            "DELETED PRODUCTS"});
-            this.cbMenu.Location = new System.Drawing.Point(-1, -1);
-            this.cbMenu.Name = "cbMenu";
-            this.cbMenu.Size = new System.Drawing.Size(347, 25);
-            this.cbMenu.TabIndex = 2;
-            this.cbMenu.SelectedIndexChanged += new System.EventHandler(this.cbMenu_SelectedIndexChanged);
-            // 
             // panelBgProd
             // 
             this.panelBgProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
@@ -436,22 +446,12 @@ namespace Inventory_System_Management_Alliance28.Delete
             this.label1.Text = "No Deleted Products";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbHeaderText
-            // 
-            this.lbHeaderText.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHeaderText.Location = new System.Drawing.Point(88, 24);
-            this.lbHeaderText.Name = "lbHeaderText";
-            this.lbHeaderText.Size = new System.Drawing.Size(231, 19);
-            this.lbHeaderText.TabIndex = 15;
-            this.lbHeaderText.Text = "Header Text";
-            this.lbHeaderText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // panelBgTrans
             // 
             this.panelBgTrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panelBgTrans.Controls.Add(this.pictureBox2);
             this.panelBgTrans.Controls.Add(this.label2);
-            this.panelBgTrans.Location = new System.Drawing.Point(3, 119);
+            this.panelBgTrans.Location = new System.Drawing.Point(1, 117);
             this.panelBgTrans.Name = "panelBgTrans";
             this.panelBgTrans.Size = new System.Drawing.Size(1017, 631);
             this.panelBgTrans.TabIndex = 21;
@@ -496,9 +496,9 @@ namespace Inventory_System_Management_Alliance28.Delete
             this.Load += new System.EventHandler(this.UserControlDelete_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDeletedProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDeletedTransaction)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.panelBgProd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBgTrans.ResumeLayout(false);

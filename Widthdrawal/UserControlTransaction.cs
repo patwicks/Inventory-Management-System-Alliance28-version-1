@@ -42,6 +42,17 @@ namespace Inventory_System_Management_Alliance28.Widthdrawal
 
             //counter
             countTransactions();
+
+            if (totalRow <= 0)
+            {
+                btnExport.Enabled = false;
+
+            }
+            else
+            {
+                btnExport.Enabled = true;
+            }
+
         }
 
         //count transactions

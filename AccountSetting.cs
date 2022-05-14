@@ -140,9 +140,7 @@ namespace Inventory_System_Management_Alliance28
                         txtUsername.Text = "";
                         txtAccountType.Text = "";
                         MessageBox.Show("Account updated successfully!");
-                        this.Hide();
-                        Login login = new Login();
-                        login.ShowDialog();
+                        this.Close();
                     }
 
                 }
